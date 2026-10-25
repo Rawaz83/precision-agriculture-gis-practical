@@ -244,7 +244,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using Markdown</a>
+        <a href="introduction.html">1. </a>
     </div>
 <!--/div.accordion-header-->
 
@@ -326,7 +326,7 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>All in One View</h1>
         
-<section id="aio-introduction"><p>Content from <a href="introduction.html">Using Markdown</a></p>
+<section id="aio-introduction"><p>Content from <a href="introduction.html"></a></p>
 <hr>
 <p>Last updated on 2026-10-25 |
 
@@ -342,8 +342,11 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>What is precision agriculture?</li>
+<li>Why is spatial variability important in farming?</li>
+<li>How can GPS, GIS, and satellite imagery support farm
+management?</li>
+<li>How can we create a basic digital farm map?</li>
 </ul>
 </div>
 </div>
@@ -352,128 +355,410 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul>
-<li>Explain how to use markdown with The Carpentries Workbench</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
-</ul>
+<p>By the end of this lecture, students will be able to:</p>
+<ol style="list-style-type: decimal">
+<li>Define precision agriculture and explain its objectives.</li>
+<li>Identify common precision agriculture technologies.</li>
+<li>Distinguish between points, lines, polygons, and raster data.</li>
+<li>Locate an agricultural field using Google Earth Pro.</li>
+<li>Create and export a digital farm boundary.</li>
+<li>Explain how spatial information supports agricultural
+decisions.</li>
+</ol>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="introduction">1. Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
+<p>Precision agriculture (PA) is a farm management approach that uses
+spatial, temporal, and other data to support management decisions.</p>
+<p>Its purpose is to account for variability within agricultural fields
+and improve the efficiency of agricultural inputs and operations.</p>
+<p>Traditional farming often applies uniform treatments across a
+field.</p>
+<p>Precision agriculture allows farmers to make location-specific
+decisions based on measured conditions.</p>
+<div class="section level3">
+<h3 id="example-fertilizer-application">Example: Fertilizer Application<a class="anchor" aria-label="anchor" href="#example-fertilizer-application"></a>
+</h3>
+<p>Consider a wheat field in Sulaymaniyah.</p>
+<p>Soil fertility may vary across the field:</p>
+<ul>
+<li>Zone A: Low nitrogen availability</li>
+<li>Zone B: Moderate nitrogen availability</li>
+<li>Zone C: High nitrogen availability</li>
+</ul>
+<p>Applying the same fertilizer rate everywhere may be inefficient.</p>
+<p>Using soil sampling, GPS, and GIS, the farmer can create a fertility
+map and develop different fertilizer recommendations for each zone.</p>
+<div id="key-concept" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="key-concept" class="callout-inner">
+<h3 class="callout-title">Key Concept</h3>
+<div class="callout-content">
+<p>Precision agriculture does not simply mean using advanced
+machinery.</p>
+<p>It means collecting relevant data, analyzing variability, making
+informed decisions, and evaluating the results.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="important-precision-agriculture-technologies">2. Important Precision Agriculture Technologies<a class="anchor" aria-label="anchor" href="#important-precision-agriculture-technologies"></a>
+</h2>
+<hr class="half-width">
+<table class="table">
+<thead><tr>
+<th>Technology</th>
+<th>Agricultural Application</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>GPS/GNSS</td>
+<td>Field positioning and machinery guidance</td>
+</tr>
+<tr>
+<td>GIS</td>
+<td>Agricultural mapping and spatial analysis</td>
+</tr>
+<tr>
+<td>Remote sensing</td>
+<td>Monitoring crop and land conditions</td>
+</tr>
+<tr>
+<td>Satellite imagery</td>
+<td>Vegetation and land-cover monitoring</td>
+</tr>
+<tr>
+<td>Drones (UAVs)</td>
+<td>High-resolution field observations</td>
+</tr>
+<tr>
+<td>Soil sensors</td>
+<td>Measuring soil conditions</td>
+</tr>
+<tr>
+<td>Weather stations</td>
+<td>Monitoring agricultural weather</td>
+</tr>
+<tr>
+<td>Variable-rate technology</td>
+<td>Adjusting agricultural inputs by location</td>
+</tr>
+</tbody>
+</table></section><section><h2 class="section-heading" id="understanding-spatial-data">3. Understanding Spatial Data<a class="anchor" aria-label="anchor" href="#understanding-spatial-data"></a>
+</h2>
+<hr class="half-width">
+<p>GIS commonly uses vector and raster data.</p>
+<div class="section level3">
+<h3 id="vector-data">Vector Data<a class="anchor" aria-label="anchor" href="#vector-data"></a>
+</h3>
+<p>Vector data represents geographic objects using:</p>
+<p><strong>Points</strong></p>
+<p>Examples: - Soil sampling locations - Irrigation wells - Weather
+stations</p>
+<p><strong>Lines</strong></p>
+<p>Examples: - Irrigation pipelines - Tractor routes - Farm access
+roads</p>
+<p><strong>Polygons</strong></p>
+<p>Examples: - Agricultural field boundaries - Irrigation zones - Soil
+management zones</p>
+</div>
+<div class="section level3">
+<h3 id="raster-data">Raster Data<a class="anchor" aria-label="anchor" href="#raster-data"></a>
+</h3>
+<p>Raster data consists of a grid of cells.</p>
+<p>Examples: - Satellite images - NDVI maps - Digital elevation models -
+Temperature maps</p>
+<div id="exercise-1-identify-the-data-type" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
+<div id="exercise-1-identify-the-data-type" class="callout-inner">
+<h3 class="callout-title">Exercise 1: Identify the Data Type</h3>
 <div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
-</div>
+<p>Identify the most suitable GIS data representation for each
+feature:</p>
+<ol style="list-style-type: decimal">
+<li>An agricultural weather station</li>
+<li>A tractor travel path</li>
+<li>A wheat field boundary</li>
+<li>A satellite-derived NDVI image</li>
+</ol>
 </div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
+  <h4 class="accordion-header" id="headingSolution1">
+  Answers
+  </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<ol style="list-style-type: decimal">
+<li>Weather station: Point</li>
+<li>Tractor path: Line</li>
+<li>Wheat field boundary: Polygon</li>
+<li>NDVI image: Raster</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="practical-activity-digital-farm-mapping">4. Practical Activity: Digital Farm Mapping<a class="anchor" aria-label="anchor" href="#practical-activity-digital-farm-mapping"></a>
+</h2>
+<hr class="half-width">
+<p><strong>Software:</strong> Google Earth Pro</p>
+<p><strong>Study area:</strong> Sulaymaniyah, Kurdistan Region of
+Iraq</p>
+<p><strong>Estimated practical time:</strong> 20 minutes</p>
+<div class="section level3">
+<h3 id="step-1-open-google-earth-pro">Step 1: Open Google Earth Pro<a class="anchor" aria-label="anchor" href="#step-1-open-google-earth-pro"></a>
 </h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+<ol style="list-style-type: decimal">
+<li>Launch Google Earth Pro.</li>
+<li>Enter “Sulaymaniyah, Iraq” into the search box.</li>
+<li>Navigate toward an agricultural area.</li>
+<li>Zoom in until agricultural field boundaries are visible.</li>
+</ol>
+</div>
+<div class="section level3">
+<h3 id="step-2-observe-the-landscape">Step 2: Observe the Landscape<a class="anchor" aria-label="anchor" href="#step-2-observe-the-landscape"></a>
+</h3>
+<p>Identify at least three of the following features:</p>
+<ul>
+<li>Agricultural fields</li>
+<li>Roads</li>
+<li>Irrigation canals</li>
+<li>Orchards</li>
+<li>Buildings</li>
+<li>Water resources</li>
+</ul>
+<p>Record your observations.</p>
+</div>
+<div class="section level3">
+<h3 id="step-3-create-a-farm-boundary">Step 3: Create a Farm Boundary<a class="anchor" aria-label="anchor" href="#step-3-create-a-farm-boundary"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>Select a visible agricultural field.</li>
+<li>Click <strong>Add &gt; Polygon</strong>.</li>
+<li>Enter the name <code>Training Farm 01</code>.</li>
+<li>Click around the boundary of the selected field.</li>
+<li>Choose a suitable outline color.</li>
+<li>Click OK to save the polygon.</li>
+</ol>
+</div>
+<div class="section level3">
+<h3 id="step-4-inspect-the-boundary">Step 4: Inspect the Boundary<a class="anchor" aria-label="anchor" href="#step-4-inspect-the-boundary"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>Right-click your polygon.</li>
+<li>Select Properties.</li>
+<li>Open the Measurements tab.</li>
+<li>Inspect the perimeter and area.</li>
+<li>Record the area in hectares, if available.</li>
+</ol>
+</div>
+<div class="section level3">
+<h3 id="step-5-add-a-point">Step 5: Add a Point<a class="anchor" aria-label="anchor" href="#step-5-add-a-point"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>Click <strong>Add &gt; Placemark</strong>.</li>
+<li>Place the marker on an identifiable feature.</li>
+<li>Name the marker <code>Observation Point 01</code>.</li>
+<li>Record its latitude and longitude.</li>
+</ol>
+</div>
+<div class="section level3">
+<h3 id="step-6-export-the-data">Step 6: Export the Data<a class="anchor" aria-label="anchor" href="#step-6-export-the-data"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>Create a folder in the Places panel.</li>
+<li>Move the farm polygon and observation point into it.</li>
+<li>Right-click the folder.</li>
+<li>Choose <strong>Save Place As</strong>.</li>
+<li>Export it as a KMZ file.</li>
+</ol>
+<p>Suggested filename:</p>
+<p><code>Lecture01_Farm_Observation.kmz</code></p>
+<div id="important-note" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<span class="callout-header">Caution</span>
+<div id="important-note" class="callout-inner">
+<h3 class="callout-title">Important Note</h3>
+<div class="callout-content">
+<p>The training field is selected for educational purposes.</p>
+<p>Google Earth imagery is not necessarily current, and visually
+identified boundaries should not be treated as legally surveyed property
+boundaries.</p>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
+</section><section><h2 class="section-heading" id="guided-discussion">5. Guided Discussion<a class="anchor" aria-label="anchor" href="#guided-discussion"></a>
+</h2>
+<hr class="half-width">
+<div id="exercise-2-why-does-location-matter" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within
-challenge blocks?</h3>
+<div id="exercise-2-why-does-location-matter" class="callout-inner">
+<h3 class="callout-title">Exercise 2: Why Does Location Matter?</h3>
 <div class="callout-content">
-
+<p>Two soil samples from the same agricultural field have different
+nitrogen concentrations.</p>
+<p><strong>Question:</strong> Why might a farmer use different
+fertilizer rates in these locations?</p>
 </div>
 </div>
 </div>
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution2">
+  Suggested Answer
+  </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
+<p>Different soil nitrogen levels may indicate different fertilizer
+requirements.</p>
+<p>The farmer can use georeferenced soil sampling results and GIS
+analysis to identify management zones.</p>
+<p>However, fertilizer recommendations should also consider crop
+requirements, soil test interpretation, expected yield, and other
+relevant agronomic factors.</p>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
-</h2>
-<hr class="half-width">
-<p>You can use standard markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
+<div id="exercise-3-choose-the-appropriate-technology" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
+<span class="callout-header">Challenge</span>
+<div id="exercise-3-choose-the-appropriate-technology" class="callout-inner">
+<h3 class="callout-title">Exercise 3: Choose the Appropriate
+Technology</h3>
 <div class="callout-content">
-<p>Callout sections can highlight information.</p>
-<p>They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present “asides”: content that is
-not central to the narrative of the lesson, e.g. by providing the answer
-to a commonly-asked question.</p>
+<p>Select the most appropriate technology for each task.</p>
+<ol style="list-style-type: decimal">
+<li>Measuring the position of a tractor</li>
+<li>Producing a vegetation index from satellite imagery</li>
+<li>Creating a digital soil sampling map</li>
+<li>Automatically changing fertilizer application rates</li>
+</ol>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3">
+  Suggested Answers
+  </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div class="accordion-body">
+<ol style="list-style-type: decimal">
+<li>GNSS/GPS</li>
+<li>Satellite remote sensing</li>
+<li>GIS combined with georeferenced soil observations</li>
+<li>Variable-rate application equipment and a prescription or control
+system</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="student-assignment">6. Student Assignment<a class="anchor" aria-label="anchor" href="#student-assignment"></a>
 </h2>
 <hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+<div class="section level3">
+<h3 id="assignment-title">Assignment Title<a class="anchor" aria-label="anchor" href="#assignment-title"></a>
+</h3>
+<p><strong>Creating a Basic Agricultural Field Map</strong></p>
+<p>Students must create a digital agricultural map using Google Earth
+Pro.</p>
+</div>
+<div class="section level3">
+<h3 id="required-outputs">Required Outputs<a class="anchor" aria-label="anchor" href="#required-outputs"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>One agricultural field boundary polygon</li>
+<li>At least two point markers</li>
+<li>A screenshot showing the mapped features</li>
+<li>A KMZ file containing the mapped features</li>
+<li>A short written explanation of the map and its agricultural
+relevance</li>
+</ol>
+</div>
+<div class="section level3">
+<h3 id="submission-filename">Submission Filename<a class="anchor" aria-label="anchor" href="#submission-filename"></a>
+</h3>
+<p><code>Lecture01_StudentID.kmz</code></p>
+</div>
+<div class="section level3">
+<h3 id="assessment-rubric">Assessment Rubric<a class="anchor" aria-label="anchor" href="#assessment-rubric"></a>
+</h3>
+<table class="table">
+<thead><tr>
+<th>Assessment Criterion</th>
+<th align="right">Marks</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Correct field boundary</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>Two observation points</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>Correct KMZ export</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>Map screenshot</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>Agricultural explanation</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td align="right"><strong>10</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Submit the files through the submission method specified by your
+lecturer.</p>
+</div>
+</section><section><h2 class="section-heading" id="further-reading">7. Further Reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li><a href="https://qgis.org/" class="external-link">QGIS Official Website</a></li>
+<li><a href="https://earth.google.com/" class="external-link">Google Earth</a></li>
+<li><a href="https://www.earthdata.nasa.gov/" class="external-link">NASA Earthdata</a></li>
+<li><a href="https://www.fao.org/geospatial/" class="external-link">FAO Geospatial
+Information</a></li>
+</ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -482,14 +767,17 @@ this:</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>Precision agriculture uses data to support location-specific farm
+management.</li>
+<li>Agricultural fields may contain significant spatial
+variability.</li>
+<li>GPS/GNSS provides geographic positioning.</li>
+<li>GIS supports the storage, visualization, and analysis of spatial
+information.</li>
+<li>Points, lines, polygons, and rasters are fundamental GIS data
+structures.</li>
+<li>Google Earth Pro can create and export basic agricultural maps.</li>
+<li>KML and KMZ files can be used to exchange geographic features.</li>
 </ul>
 </div>
 </div>
