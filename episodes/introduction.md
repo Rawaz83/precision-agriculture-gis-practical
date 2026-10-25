@@ -1,114 +1,312 @@
+
 ---
-title: "Using Markdown"
-teaching: 10 # teaching time in minutes
-exercises: 2 # exercise time in minutes
+title: "Lecture 1: Introduction to Precision Agriculture"
+teaching: 30
+exercises: 30
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::::::::: questions
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- What is precision agriculture?
+- Why is spatial variability important in farming?
+- How can GPS, GIS, and satellite imagery support farm management?
+- How can we create a basic digital farm map?
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: objectives
+:::::::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+By the end of this lecture, students will be able to:
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+1. Define precision agriculture and explain its objectives.
+2. Identify common precision agriculture technologies.
+3. Distinguish between points, lines, polygons, and raster data.
+4. Locate an agricultural field using Google Earth Pro.
+5. Create and export a digital farm boundary.
+6. Explain how spatial information supports agricultural decisions.
 
-## Introduction
+::::::::::::::::::::::::::::::::::::::::::::
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
-Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
+## 1. Introduction
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson:
+Precision agriculture (PA) is a farm management approach that uses spatial, temporal, and other data to support management decisions.
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+Its purpose is to account for variability within agricultural fields and improve the efficiency of agricultural inputs and operations.
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+Traditional farming often applies uniform treatments across a field.
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
+Precision agriculture allows farmers to make location-specific decisions based on measured conditions.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+### Example: Fertilizer Application
 
-::::::::::::::::::::::::::::::::::::: challenge 
+Consider a wheat field in Sulaymaniyah.
 
-## Challenge 1: Can you do it?
+Soil fertility may vary across the field:
 
-What is the output of this command?
+- Zone A: Low nitrogen availability
+- Zone B: Moderate nitrogen availability
+- Zone C: High nitrogen availability
 
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
+Applying the same fertilizer rate everywhere may be inefficient.
 
-:::::::::::::::::::::::: solution 
+Using soil sampling, GPS, and GIS, the farmer can create a fertility map and develop different fertilizer recommendations for each zone.
 
-## Output
- 
-```output
-[1] "This new lesson looks good"
-```
+:::::::::::::::::::::::::::::::::::::::::::: callout
 
-:::::::::::::::::::::::::::::::::
+### Key Concept
 
+Precision agriculture does not simply mean using advanced machinery.
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+It means collecting relevant data, analyzing variability, making informed decisions, and evaluating the results.
 
-:::::::::::::::::::::::: solution 
+::::::::::::::::::::::::::::::::::::::::::::
 
-You can add a line with at least three colons and a `solution` tag.
+## 2. Important Precision Agriculture Technologies
 
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
+| Technology | Agricultural Application |
+|---|---|
+| GPS/GNSS | Field positioning and machinery guidance |
+| GIS | Agricultural mapping and spatial analysis |
+| Remote sensing | Monitoring crop and land conditions |
+| Satellite imagery | Vegetation and land-cover monitoring |
+| Drones (UAVs) | High-resolution field observations |
+| Soil sensors | Measuring soil conditions |
+| Weather stations | Monitoring agricultural weather |
+| Variable-rate technology | Adjusting agricultural inputs by location |
 
-## Figures
+## 3. Understanding Spatial Data
 
-You can use standard markdown for static figures with the following syntax:
+GIS commonly uses vector and raster data.
 
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
+### Vector Data
 
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
+Vector data represents geographic objects using:
 
-::::::::::::::::::::::::::::::::::::: callout
+**Points**
 
-Callout sections can highlight information.
+Examples:
+- Soil sampling locations
+- Irrigation wells
+- Weather stations
 
-They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present "asides": 
-content that is not central to the narrative of the lesson,
-e.g. by providing the answer to a commonly-asked question.
+**Lines**
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+Examples:
+- Irrigation pipelines
+- Tractor routes
+- Farm access roads
 
+**Polygons**
 
-## Math
+Examples:
+- Agricultural field boundaries
+- Irrigation zones
+- Soil management zones
 
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
+### Raster Data
 
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
+Raster data consists of a grid of cells.
 
-Cool, right?
+Examples:
+- Satellite images
+- NDVI maps
+- Digital elevation models
+- Temperature maps
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+:::::::::::::::::::::::::::::::::::::::::::: challenge
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+### Exercise 1: Identify the Data Type
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+Identify the most suitable GIS data representation for each feature:
 
-[r-markdown]: https://rmarkdown.rstudio.com/
+1. An agricultural weather station
+2. A tractor travel path
+3. A wheat field boundary
+4. A satellite-derived NDVI image
+
+:::::::::::::::::::::::: solution
+
+### Answers
+
+1. Weather station: Point
+2. Tractor path: Line
+3. Wheat field boundary: Polygon
+4. NDVI image: Raster
+
+::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::
+
+## 4. Practical Activity: Digital Farm Mapping
+
+**Software:** Google Earth Pro
+
+**Study area:** Sulaymaniyah, Kurdistan Region of Iraq
+
+**Estimated practical time:** 20 minutes
+
+### Step 1: Open Google Earth Pro
+
+1. Launch Google Earth Pro.
+2. Enter "Sulaymaniyah, Iraq" into the search box.
+3. Navigate toward an agricultural area.
+4. Zoom in until agricultural field boundaries are visible.
+
+### Step 2: Observe the Landscape
+
+Identify at least three of the following features:
+
+- Agricultural fields
+- Roads
+- Irrigation canals
+- Orchards
+- Buildings
+- Water resources
+
+Record your observations.
+
+### Step 3: Create a Farm Boundary
+
+1. Select a visible agricultural field.
+2. Click **Add > Polygon**.
+3. Enter the name `Training Farm 01`.
+4. Click around the boundary of the selected field.
+5. Choose a suitable outline color.
+6. Click OK to save the polygon.
+
+### Step 4: Inspect the Boundary
+
+1. Right-click your polygon.
+2. Select Properties.
+3. Open the Measurements tab.
+4. Inspect the perimeter and area.
+5. Record the area in hectares, if available.
+
+### Step 5: Add a Point
+
+1. Click **Add > Placemark**.
+2. Place the marker on an identifiable feature.
+3. Name the marker `Observation Point 01`.
+4. Record its latitude and longitude.
+
+### Step 6: Export the Data
+
+1. Create a folder in the Places panel.
+2. Move the farm polygon and observation point into it.
+3. Right-click the folder.
+4. Choose **Save Place As**.
+5. Export it as a KMZ file.
+
+Suggested filename:
+
+`Lecture01_Farm_Observation.kmz`
+
+:::::::::::::::::::::::::::::::::::::::::::: caution
+
+### Important Note
+
+The training field is selected for educational purposes.
+
+Google Earth imagery is not necessarily current, and visually identified boundaries should not be treated as legally surveyed property boundaries.
+
+::::::::::::::::::::::::::::::::::::::::::::
+
+## 5. Guided Discussion
+
+:::::::::::::::::::::::::::::::::::::::::::: challenge
+
+### Exercise 2: Why Does Location Matter?
+
+Two soil samples from the same agricultural field have different nitrogen concentrations.
+
+**Question:** Why might a farmer use different fertilizer rates in these locations?
+
+:::::::::::::::::::::::: solution
+
+### Suggested Answer
+
+Different soil nitrogen levels may indicate different fertilizer requirements.
+
+The farmer can use georeferenced soil sampling results and GIS analysis to identify management zones.
+
+However, fertilizer recommendations should also consider crop requirements, soil test interpretation, expected yield, and other relevant agronomic factors.
+
+::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::: challenge
+
+### Exercise 3: Choose the Appropriate Technology
+
+Select the most appropriate technology for each task.
+
+1. Measuring the position of a tractor
+2. Producing a vegetation index from satellite imagery
+3. Creating a digital soil sampling map
+4. Automatically changing fertilizer application rates
+
+:::::::::::::::::::::::: solution
+
+### Suggested Answers
+
+1. GNSS/GPS
+2. Satellite remote sensing
+3. GIS combined with georeferenced soil observations
+4. Variable-rate application equipment and a prescription or control system
+
+::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::
+
+## 6. Student Assignment
+
+### Assignment Title
+
+**Creating a Basic Agricultural Field Map**
+
+Students must create a digital agricultural map using Google Earth Pro.
+
+### Required Outputs
+
+1. One agricultural field boundary polygon
+2. At least two point markers
+3. A screenshot showing the mapped features
+4. A KMZ file containing the mapped features
+5. A short written explanation of the map and its agricultural relevance
+
+### Submission Filename
+
+`Lecture01_StudentID.kmz`
+
+### Assessment Rubric
+
+| Assessment Criterion | Marks |
+|---|---:|
+| Correct field boundary | 3 |
+| Two observation points | 2 |
+| Correct KMZ export | 2 |
+| Map screenshot | 1 |
+| Agricultural explanation | 2 |
+| **Total** | **10** |
+
+Submit the files through the submission method specified by your lecturer.
+
+## 7. Further Reading
+
+- [QGIS Official Website](https://qgis.org/)
+- [Google Earth](https://earth.google.com/)
+- [NASA Earthdata](https://www.earthdata.nasa.gov/)
+- [FAO Geospatial Information](https://www.fao.org/geospatial/)
+
+:::::::::::::::::::::::::::::::::::::::::::: keypoints
+
+- Precision agriculture uses data to support location-specific farm management.
+- Agricultural fields may contain significant spatial variability.
+- GPS/GNSS provides geographic positioning.
+- GIS supports the storage, visualization, and analysis of spatial information.
+- Points, lines, polygons, and rasters are fundamental GIS data structures.
+- Google Earth Pro can create and export basic agricultural maps.
+- KML and KMZ files can be used to exchange geographic features.
+
+::::::::::::::::::::::::::::::::::::::::::::
