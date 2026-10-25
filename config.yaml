@@ -30,7 +30,7 @@ source: 'https://github.com/Rawaz83/precision-agriculture-gis-practical'
 # Default branch
 branch: 'main'
 
-# Contact email (add an academic email later if desired)
+# Contact email
 contact: ''
 
 #------------------------------------------------------------
@@ -39,19 +39,19 @@ contact: ''
 
 # Lesson pages
 episodes:
-  - introduction.md
+- introduction.md
 
-# Learner information pages
-learners: []
+# Information for Learners
+learners:
 
-# Instructor information pages
-instructors: []
+# Information for Instructors
+instructors:
 
-# Learner profiles
-profiles: []
+# Learner Profiles
+profiles:
 
 #------------------------------------------------------------
 # Customisation
 #------------------------------------------------------------
 
-# Future course customization can be added here.
+# Additional settings can be added here later.
