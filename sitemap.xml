@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/02-gis-coordinate-systems.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/03-gnss-agricultural-positioning.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/04-google-earth-farm-mapping.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/05-google-my-maps-field-data.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/06-introduction-to-qgis.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/07-vector-layers-agricultural-mapping.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/08-raster-data-spatial-analysis.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/09-soil-sampling-fertility-mapping.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/10-remote-sensing-agriculture.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/11-satellite-imagery-ndvi.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/12-drone-mapping-crop-monitoring.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/13-management-zones-variable-rate.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/14-final-practical-gis-project.html</loc>
+  </url>
+  <url>
     <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/404.html</loc>
   </url>
   <url>
@@ -20,6 +59,45 @@
   </url>
   <url>
     <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/index.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/instructor/02-gis-coordinate-systems.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/instructor/03-gnss-agricultural-positioning.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/instructor/04-google-earth-farm-mapping.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/instructor/05-google-my-maps-field-data.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/instructor/06-introduction-to-qgis.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/instructor/07-vector-layers-agricultural-mapping.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/instructor/08-raster-data-spatial-analysis.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/instructor/09-soil-sampling-fertility-mapping.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/instructor/10-remote-sensing-agriculture.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/instructor/11-satellite-imagery-ndvi.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/instructor/12-drone-mapping-crop-monitoring.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/instructor/13-management-zones-variable-rate.html</loc>
+  </url>
+  <url>
+    <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/instructor/14-final-practical-gis-project.html</loc>
   </url>
   <url>
     <loc>https://Rawaz83.github.io/precision-agriculture-gis-practical/instructor/404.html</loc>

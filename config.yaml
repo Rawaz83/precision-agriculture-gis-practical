@@ -1,57 +1,31 @@
-
-#------------------------------------------------------------
 # Precision Agriculture & GIS — Practical
-# University of Sulaimani
-# Lecturer: Rawaz Hama Ali
-# Academic Year: 2026–2027
-#------------------------------------------------------------
-
-# Lesson framework
+# University of Sulaimani | Lecturer: Rawaz Hama Ali
 carpentry: 'incubator'
-
-# Course title
 title: 'Precision Agriculture & GIS — Practical'
-
-# Date created
 created: '2026-10-25'
-
-# Course keywords
 keywords: 'precision agriculture, GIS, QGIS, Google Earth, Google My Maps, GNSS, GPS, remote sensing, NDVI, agricultural engineering, Kurdistan, Iraq'
-
-# Development stage
 life_cycle: 'pre-alpha'
-
-# Content license
 license: 'CC-BY 4.0'
-
-# GitHub repository
 source: 'https://github.com/Rawaz83/precision-agriculture-gis-practical'
-
-# Default branch
 branch: 'main'
-
-# Contact email
 contact: ''
 
-#------------------------------------------------------------
-# Navigation
-#------------------------------------------------------------
-
-# Lesson pages
+# Lesson navigation (keep unfilled page collections blank, not [])
 episodes:
 - introduction.md
-
-# Information for Learners
+- 02-gis-coordinate-systems.md
+- 03-gnss-agricultural-positioning.md
+- 04-google-earth-farm-mapping.md
+- 05-google-my-maps-field-data.md
+- 06-introduction-to-qgis.md
+- 07-vector-layers-agricultural-mapping.md
+- 08-raster-data-spatial-analysis.md
+- 09-soil-sampling-fertility-mapping.md
+- 10-remote-sensing-agriculture.md
+- 11-satellite-imagery-ndvi.md
+- 12-drone-mapping-crop-monitoring.md
+- 13-management-zones-variable-rate.md
+- 14-final-practical-gis-project.md
 learners:
-
-# Information for Instructors
 instructors:
-
-# Learner Profiles
 profiles:
-
-#------------------------------------------------------------
-# Customisation
-#------------------------------------------------------------
-
-# Additional settings can be added here later.
