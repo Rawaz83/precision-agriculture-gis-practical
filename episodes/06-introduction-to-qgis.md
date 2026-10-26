@@ -6,15 +6,18 @@ exercises: 30
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What agricultural problem does this technology address?
-- What information and software are needed to use it responsibly?
-- What evidence is required before making a field-management decision?
+- How can this lesson's technique support a mapped agricultural field observation?
+- Which coordinate systems, measurement units and source files must be checked?
+- What limitations would affect a real farm management decision?
 
 ::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: objectives
 
-After this lecture students should be able to explain the topic, complete its practical workflow, preserve the source data and interpret its limitations.
+By the end of this lecture, students should be able to:
+
+- Locate QGIS panels, import source data with correct CRS, and save a portable GIS project with its layer files.
+- Prepare a reproducible practical exercise with named output files and documented uncertainty.
 
 ::::::::::::::::::::::::::::::::::::::::
 
@@ -35,7 +38,24 @@ All supplied course CSV data are **synthetic educational examples**, not real fi
 
 ::::::::::::::::::::::::::::::::::::::::
 
+## 1A. Original visual examples and image interpretation
+
+![Original image 1: A real screenshot of QGIS demonstrates the Layers panel, map canvas and other basic desktop GIS elements, though menus can differ by software version.](https://commons.wikimedia.org/wiki/Special:FilePath/QGIS%20screenshot.webp)
+
+*Figure 1. A real screenshot of QGIS demonstrates the Layers panel, map canvas and other basic desktop GIS elements, though menus can differ by software version. Creator: [Wikideas1](https://commons.wikimedia.org/wiki/File:QGIS_screenshot.webp). License: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). External original reproduced unchanged; not AI-generated.*
+
+**Observation task:** For each figure, explain which mapped property is actually observable and which agricultural decision would still require a field measurement.
+
 ## 2. Practical exercise — step by step
+
+### Watch: Import/export CSV coordinates with QGIS
+
+Watch the delimited text import and check the X/Y coordinate fields against the soil dataset.
+
+<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/jP-9kekpXYo" title="Import/export CSV coordinates with QGIS" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+*Video: [Import/export CSV coordinates with QGIS](https://www.youtube.com/watch?v=jP-9kekpXYo), by GIS & RS Made Easy. Hosted by its creator on YouTube. If playback is blocked, follow the direct link. A video embed does not mean that the video is openly licensed for copying.*
+
 
 1. Create folders data, project and outputs in a Lecture06 workspace.
 2. Download the synthetic soil CSV linked below into data.
@@ -60,6 +80,31 @@ Why might a QGIS project show a missing-layer warning after copying only its .qg
 ### Answer and explanation
 
 The project references source files that were not copied or whose paths changed. Reconnect the layers or move the project with its source data.
+
+::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::
+
+## 2A. Guided dataset extension
+
+**Original, downloadable teaching datasets:**
+
+- [Download demo_soil_samples.csv](https://raw.githubusercontent.com/Rawaz83/precision-agriculture-gis-practical/main/data/demo_soil_samples.csv)
+- [Download synthetic_training_field.geojson](https://raw.githubusercontent.com/Rawaz83/precision-agriculture-gis-practical/main/data/synthetic_training_field.geojson)
+
+Add the soil points and GeoJSON farm layers to one QGIS project. Confirm point CRS EPSG:4326. Save a copy of the polygon in EPSG:32638 using Export > Save Features As and explain why reprojection alters stored numbers without moving geographic features. Reopen the `.qgz` file after closing QGIS.
+
+:::::::::::::::::::::::::::::::::::::::: challenge
+
+### Data quality check
+
+List the source CRS, project CRS and any exported target CRS separately. Why can all three differ?
+
+:::::::::::::::::::::::: solution
+
+### Suggested answer guidance
+
+A strong answer clearly distinguishes **synthetic teaching data** from measured agricultural observations, identifies the relevant software operations, records coordinate systems and units, and explains the uncertainty or validation needed. Compare your answer with the specific interpretation requirements of this lesson.
 
 ::::::::::::::::::::::::
 
@@ -99,6 +144,13 @@ Name the agricultural objective, describe the location-based information needed,
 ## 4. Further reading
 
 - [Reference 1](https://docs.qgis.org/3.40/en/docs/training_manual/)
+
+
+## 5. Media source and copyright notes
+
+Every image in this lecture is externally sourced from Wikimedia Commons; see the caption for its individual creator, original file page and license. Images have been linked unchanged and are not AI-generated. The course's original written text may use CC BY 4.0, but third-party images retain their individual licenses. YouTube videos remain hosted by their authors; no video file has been copied.
+
+Original exercise CSVs, KML, GeoJSON and raster samples are constructed **synthetic educational data**. They are not measured field, crop or topographic records.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
