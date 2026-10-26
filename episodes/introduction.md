@@ -74,6 +74,15 @@ It means collecting relevant data, analyzing variability, making informed decisi
 | Weather stations | Monitoring agricultural weather |
 | Variable-rate technology | Adjusting agricultural inputs by location |
 
+
+### Photo: GNSS guidance equipment
+
+![A TeeJet Matrix 430 agricultural GNSS guidance display beside a GNSS antenna receiver](https://upload.wikimedia.org/wikipedia/commons/1/1c/Teejet_Matrix_430.jpg)
+
+*Figure 1. A real agricultural GNSS guidance display and receiver. This is an example of positioning equipment, not a screenshot of a field map. Photograph: [Mr. Justice USA, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Teejet_Matrix_430.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Image reproduced unchanged.*
+
+**Look closely:** Which component displays information to the tractor operator, and which component receives satellite navigation signals? How could knowing a tractor's location reduce missed passes or overlapping applications?
+
 ## 3. Understanding Spatial Data
 
 GIS commonly uses vector and raster data.
@@ -103,6 +112,15 @@ Examples:
 - Irrigation zones
 - Soil management zones
 
+
+### Visual guide: Points, lines, and polygons
+
+![Original diagram of a simple GIS vector map identifying point wells, line rivers and a polygon lake](https://upload.wikimedia.org/wikipedia/commons/3/38/Simple_vector_map.svg)
+
+*Figure 2. Vector data illustrated by wells (points), a river (line), and a lake (polygon). Illustration: [M. W. Toews, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Simple_vector_map.svg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Image reproduced unchanged.*
+
+**Apply this to farming:** Replace the well with a soil-sampling location, the river with an irrigation pipe or tractor route, and the lake with a field boundary.
+
 ### Raster Data
 
 Raster data consists of a grid of cells.
@@ -112,6 +130,23 @@ Examples:
 - NDVI maps
 - Digital elevation models
 - Temperature maps
+
+
+### Visual guide: Vector versus raster representation
+
+![Comparison of a continuous area represented by a precise vector polygon boundary and by raster grid cells](https://upload.wikimedia.org/wikipedia/commons/2/24/Area_in_spatial_raster_and_vector_data.svg)
+
+*Figure 3. The same area represented by vector and raster models. Illustration: [Gegot, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Area_in_spatial_raster_and_vector_data.svg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Image reproduced unchanged.*
+
+A **vector polygon** follows connected boundary vertices. A **raster** covers space with individual grid cells, so an edge is represented at the raster's cell resolution.
+
+### Watch: Vector versus raster in GIS
+
+This short video introduces points, lines, polygons, and raster grids. Watch before attempting Exercise 1.
+
+<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/hc842pelnOw" title="Vector vs. Raster Data Explained — Atlas GIS" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+*Video: [Vector vs. Raster Data Explained | Beginner-Friendly GIS Course](https://www.youtube.com/watch?v=hc842pelnOw), Atlas (2025), via YouTube. Video remains hosted by its creator. If the embedded player is unavailable, use the linked YouTube page.*
 
 :::::::::::::::::::::::::::::::::::::::::::: challenge
 
@@ -164,6 +199,15 @@ Identify at least three of the following features:
 - Water resources
 
 Record your observations.
+
+
+#### Watch before digitizing: Drawing a polygon in Google Earth Pro
+
+This walkthrough shows how to create a polygon, edit its vertices, and correct an outline. It demonstrates the same type of polygon students will use for their training-field boundary.
+
+<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/jAvZduECF0I" title="Google Earth Pro: How to Create and Edit Polygons — Sabankou Kpatadoa" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+*Video: [Google Earth Pro | How to Create and Edit Polygons](https://www.youtube.com/watch?v=jAvZduECF0I), Sabankou Kpatadoa (2023), via YouTube. Polygon creation begins at 0:13; editing begins around 3:46. Video remains hosted by its creator.*
 
 ### Step 3: Create a Farm Boundary
 
@@ -298,6 +342,13 @@ Submit the files through the submission method specified by your lecturer.
 - [Google Earth](https://earth.google.com/)
 - [NASA Earthdata](https://www.earthdata.nasa.gov/)
 - [FAO Geospatial Information](https://www.fao.org/geospatial/)
+
+
+## 8. Media attribution and reuse
+
+The photographs and diagrams in this lesson are **original works by the credited external creators**, not AI-generated images. They are embedded from Wikimedia Commons without alteration. Their **CC BY-SA 4.0** licenses apply to each individual image, even though original written course content has a CC BY 4.0 license. See each caption for creator, source and license.
+
+The videos are embedded from YouTube, attributed to their respective channels, and remain hosted on YouTube. Their presence in this lesson does not mean the videos are openly licensed for copying, redistribution or editing. Use the linked YouTube page if an embed is blocked by network or privacy settings.
 
 :::::::::::::::::::::::::::::::::::::::::::: keypoints
 
