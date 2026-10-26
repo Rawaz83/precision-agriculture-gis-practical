@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><name>SYNTHETIC Agriculture Training Features</name>
+<description>Imaginary teaching field near Sulaymaniyah, not surveyed and not for field operations.</description>
+<Placemark><name>Training Field A</name><description>SYNTHETIC polygon for teaching</description><Polygon><outerBoundaryIs><LinearRing>
+<coordinates>45.3635,35.53631,0 45.36485,35.53631,0 45.36485,35.53812,0 45.3635,35.53812,0 45.3635,35.53631,0</coordinates>
+</LinearRing></outerBoundaryIs></Polygon></Placemark>
+<Placemark><name>Teaching Irrigation Line</name><LineString><coordinates>45.36364,35.53648,0 45.36385,35.53706,0 45.36448,35.53783,0</coordinates></LineString></Placemark>
+<Placemark><name>OBS_01</name><Point><coordinates>45.36373,35.53659,0</coordinates></Point></Placemark>
+<Placemark><name>OBS_02</name><Point><coordinates>45.36414,35.53686,0</coordinates></Point></Placemark>
+<Placemark><name>OBS_03</name><Point><coordinates>45.36455,35.53716,0</coordinates></Point></Placemark>
+<Placemark><name>OBS_04</name><Point><coordinates>45.36383,35.53763,0</coordinates></Point></Placemark>
+<Placemark><name>OBS_05</name><Point><coordinates>45.36445,35.53793,0</coordinates></Point></Placemark>
+</Document></kml>
