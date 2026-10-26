@@ -1029,7 +1029,7 @@ any links that you are not going to use.
 <p>Last updated on 2026-10-26 |
 
         <a href="https://github.com/Rawaz83/precision-agriculture-gis-practical/edit/main/episodes/02-gis-coordinate-systems.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 60 minutes</p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 75 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -1041,10 +1041,11 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What agricultural problem does this technology address?</li>
-<li>What information and software are needed to use it responsibly?</li>
-<li>What evidence is required before making a field-management
-decision?</li>
+<li>How does a GIS store locations and their attributes?</li>
+<li>What is the difference between latitude and longitude?</li>
+<li>Why do EPSG:4326 and EPSG:32638 use different coordinate units?</li>
+<li>How can Google Earth Pro show decimal degrees and UTM
+coordinates?</li>
 </ul>
 </div>
 </div>
@@ -1053,63 +1054,116 @@ decision?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<p>After this lecture students should be able to explain the topic,
-complete its practical workflow, preserve the source data and interpret
-its limitations.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<section><h2 class="section-heading" id="principles">1. Principles<a class="anchor" aria-label="anchor" href="#principles"></a>
-</h2>
-<hr class="half-width">
-<p>A GIS combines spatial geometries, attributes and a coordinate
-reference system (CRS). Latitude and longitude in WGS 84 (EPSG:4326) are
-expressed in degrees. For metric mapping in Sulaymaniyah, WGS 84 / UTM
-zone 38N (EPSG:32638) is suitable for many local tasks; its coordinates
-are in metres. Reprojecting data is different from incorrectly assigning
-it a CRS.</p>
-<div id="course-context" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="course-context" class="callout-inner">
-<h3 class="callout-title">Course context</h3>
-<div class="callout-content">
-<p><strong>University:</strong> University of Sulaimani<br><strong>Software:</strong> Google Earth Pro; QGIS optional<br><strong>Study region:</strong> Sulaymaniyah, Kurdistan Region of
-Iraq<br><strong>Practice time:</strong> Approximately 60 minutes</p>
-<p>All supplied course CSV data are <strong>synthetic educational
-examples</strong>, not real field measurements.</p>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="practical-exercise-step-by-step">2. Practical exercise — step by step<a class="anchor" aria-label="anchor" href="#practical-exercise-step-by-step"></a>
-</h2>
-<hr class="half-width">
+<p>By the end of this lesson, students should be able to:</p>
 <ol style="list-style-type: decimal">
-<li>Search for Sulaymaniyah in Google Earth Pro and zoom to an
-agricultural area.</li>
-<li>In Tools &gt; Options &gt; 3D View, select decimal degree
+<li>Explain the role of geometry, attributes and coordinate reference
+systems in GIS.</li>
+<li>Read latitude and longitude and convert degrees-minutes-seconds to
+decimal degrees.</li>
+<li>Distinguish geographic coordinates from projected metre-based
 coordinates.</li>
-<li>Add two placemarks and record their latitude and longitude.</li>
-<li>Change the display to Universal Transverse Mercator and record zone,
-easting and northing.</li>
-<li>Export both placemarks together as a KMZ.</li>
-<li>Explain why geographical degrees should not be treated as
-metres.</li>
+<li>Identify WGS 84 (EPSG:4326) and WGS 84 / UTM Zone 38N
+(EPSG:32638).</li>
+<li>Record two agricultural observations in Google Earth Pro and export
+a KMZ file.</li>
+<li>Explain the difference between changing coordinate
+<strong>display</strong> and reprojecting GIS data.</li>
 </ol>
-<div id="knowledge-check" class="callout challenge">
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="what-does-gis-store">1. What does GIS store?<a class="anchor" aria-label="anchor" href="#what-does-gis-store"></a>
+</h2>
+<hr class="half-width">
+<p>A Geographic Information System (GIS) links <strong>where</strong>
+something is (geometry) with <strong>what</strong> it is (attributes). A
+record also needs a coordinate reference system, or
+<strong>CRS</strong>, so software can interpret its numeric position
+correctly.</p>
+<p>For example, one agricultural observation can contain:</p>
+<table class="table">
+<thead><tr>
+<th>Element</th>
+<th>Example</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>Point</td>
+</tr>
+<tr>
+<td>Latitude</td>
+<td>35.5600° N</td>
+</tr>
+<tr>
+<td>Longitude</td>
+<td>45.4300° E</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>Soil observation</td>
+</tr>
+<tr>
+<td>CRS</td>
+<td>WGS 84 / EPSG:4326</td>
+</tr>
+</tbody>
+</table>
+<p>The coordinates above are <strong>illustrative</strong>, not survey
+measurements of a specific field.</p>
+<p>A GIS may combine points (soil samples), lines (irrigation pipes),
+polygons (field boundaries) and rasters (satellite imagery or
+elevation).</p>
+</section><section><h2 class="section-heading" id="latitude-and-longitude">2. Latitude and longitude<a class="anchor" aria-label="anchor" href="#latitude-and-longitude"></a>
+</h2>
+<hr class="half-width">
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Latitude_and_Longitude_of_the_Earth.svg" alt="Original educational diagram showing how latitude and longitude divide the Earth" class="figure mx-auto d-block"><div class="figcaption">Original educational diagram showing how
+latitude and longitude divide the Earth</div>
+</figure><p><em>Figure 1. Latitude and longitude on Earth. Original illustration
+by <a href="https://commons.wikimedia.org/wiki/File:Latitude_and_Longitude_of_the_Earth.svg" class="external-link">Djexplo
+on Wikimedia Commons</a>, dedicated to the public domain under <a href="https://creativecommons.org/publicdomain/zero/1.0/" class="external-link">CC0 1.0</a>.
+Unmodified.</em></p>
+<p><strong>Latitude</strong> measures angular position north or south of
+the Equator (0° latitude). <strong>Longitude</strong> measures angular
+position east or west of the Prime Meridian (0° longitude).</p>
+<ul>
+<li>Geographic latitude ranges from -90° to +90°.</li>
+<li>Longitude is commonly represented between -180° and +180°.</li>
+<li>North and east values are positive in signed decimal-degree
+notation; south and west values are negative.</li>
+</ul>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Earth_coordinates.svg" alt="Original globe diagram showing latitude and longitude angles used to locate a point" class="figure mx-auto d-block"><div class="figcaption">Original globe diagram showing latitude and
+longitude angles used to locate a point</div>
+</figure><p><em>Figure 2. Latitude and longitude angles for one point on Earth’s
+surface. Original diagram by Brews ohare, vector version by <a href="https://commons.wikimedia.org/wiki/File:Earth_coordinates.svg" class="external-link">CheChe
+on Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC BY-SA 4.0</a>.
+Unmodified.</em></p>
+<div class="section level3">
+<h3 id="exercise-reading-a-position">Exercise: Reading a position<a class="anchor" aria-label="anchor" href="#exercise-reading-a-position"></a>
+</h3>
+<p>An illustrative position near Sulaymaniyah is <strong>35.5600° N,
+45.4300° E</strong>.</p>
+<ul>
+<li>Which number is latitude? <strong>35.5600</strong>
+</li>
+<li>Which number is longitude? <strong>45.4300</strong>
+</li>
+<li>In which hemispheres is the point? <strong>Northern and
+Eastern</strong>
+</li>
+</ul>
+<div id="quick-check-coordinate-order" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="knowledge-check" class="callout-inner">
-<h3 class="callout-title">Knowledge check</h3>
+<div id="quick-check-coordinate-order" class="callout-inner">
+<h3 class="callout-title">Quick check: Coordinate order</h3>
 <div class="callout-content">
-<p>Convert 35 degrees 30 minutes 00 seconds N into decimal degrees. Why
-is area measured in squared degrees not directly hectares?</p>
+<p>A CSV has columns called `longitude` and `latitude`. When importing
+into QGIS as a point layer, which should be the X and Y fields?</p>
 </div>
 </div>
 </div>
@@ -1117,69 +1171,45 @@ is area measured in squared degrees not directly hectares?</p>
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">
-  Answer and explanation
+  Answer
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<p>35.5000 degrees N. Degrees are angular units; use an appropriate
-projected metric CRS or geodesic area calculation for real ground
-area.</p>
+<p>For this CSV, select <strong>X = longitude</strong> and <strong>Y =
+latitude</strong>, and set the source geographic CRS to
+<strong>EPSG:4326</strong>. Do not confuse the column order used in some
+web APIs with the X/Y fields in the QGIS importer.</p>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="student-assignment">3. Student assignment<a class="anchor" aria-label="anchor" href="#student-assignment"></a>
+</div>
+</section><section><h2 class="section-heading" id="decimal-degrees-and-degrees-minutes-seconds">3. Decimal degrees and degrees-minutes-seconds<a class="anchor" aria-label="anchor" href="#decimal-degrees-and-degrees-minutes-seconds"></a>
 </h2>
 <hr class="half-width">
-<p><strong>Required submission:</strong> Two-point KMZ, coordinates
-table, screenshot, and 100-word CRS explanation.</p>
-<p>Use a descriptive filename beginning with Lecture02. Explain what the
-map or output shows, give its coordinate reference system and units when
-relevant, and mention at least one uncertainty.</p>
-<table class="table">
-<thead><tr>
-<th>Marking criterion</th>
-<th align="right">Marks</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>Correct preparation of data, location and CRS</td>
-<td align="right">2</td>
-</tr>
-<tr>
-<td>Practical workflow completed accurately</td>
-<td align="right">3</td>
-</tr>
-<tr>
-<td>Clear map or specified output files</td>
-<td align="right">2</td>
-</tr>
-<tr>
-<td>Agricultural interpretation and limitations</td>
-<td align="right">2</td>
-</tr>
-<tr>
-<td>Organized, reproducible submission</td>
-<td align="right">1</td>
-</tr>
-<tr>
-<td><strong>Total</strong></td>
-<td align="right"><strong>10</strong></td>
-</tr>
-</tbody>
-</table>
-<div id="reflection" class="callout challenge">
+<p>The same position can be expressed using different
+<strong>formats</strong>:</p>
+<ul>
+<li>Decimal degrees (DD): <strong>35.5000° N</strong>
+</li>
+<li>Degrees, minutes, seconds (DMS): <strong>35° 30′ 00″ N</strong>
+</li>
+</ul>
+<p>Convert DMS to decimal degrees:</p>
+<p>`DD = degrees + minutes/60 + seconds/3600`</p>
+<p>For a south or west position, apply a negative sign to the absolute
+converted value.</p>
+<div id="practice-dms-conversion" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="reflection" class="callout-inner">
-<h3 class="callout-title">Reflection</h3>
+<div id="practice-dms-conversion" class="callout-inner">
+<h3 class="callout-title">Practice: DMS conversion</h3>
 <div class="callout-content">
-<p>Describe one agricultural application of this technique in
-Sulaymaniyah. Which extra evidence or checking would be needed before
-applying the result on an actual farm?</p>
+<p>Convert <strong>35° 30′ 00″ N</strong> and <strong>45° 26′ 00″
+E</strong> to decimal degrees.</p>
 </div>
 </div>
 </div>
@@ -1187,27 +1217,390 @@ applying the result on an actual farm?</p>
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">
-  Suggested approach
+  Worked answer
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<p>Name the agricultural objective, describe the location-based
-information needed, and specify data quality, field validation and
-operational constraints. Avoid making real management recommendations
-from synthetic datasets.</p>
+<p>Latitude: 35 + 30/60 = <strong>35.5000° N</strong>.</p>
+<p>Longitude: 45 + 26/60 = <strong>45.4333° E</strong> (rounded to four
+decimal places).</p>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="further-reading">4. Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>
+</section><section><h2 class="section-heading" id="geographic-crs-versus-projected-crs">4. Geographic CRS versus projected CRS<a class="anchor" aria-label="anchor" href="#geographic-crs-versus-projected-crs"></a>
+</h2>
+<hr class="half-width">
+<p>A <strong>geographic CRS</strong> describes locations with angular
+coordinates such as latitude and longitude. WGS 84 geographic
+coordinates use <strong>EPSG:4326</strong>, with degrees as units.</p>
+<p>A <strong>projected CRS</strong> represents the curved Earth on a
+flat coordinate plane. Many projected coordinate systems use metres for
+X and Y.</p>
+<table class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr>
+<th>Attribute</th>
+<th>WGS 84 geographic</th>
+<th>WGS 84 / UTM Zone 38N</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>EPSG code</td>
+<td><strong>4326</strong></td>
+<td><strong>32638</strong></td>
+</tr>
+<tr>
+<td>Typical coordinates</td>
+<td>Latitude, longitude</td>
+<td>Easting, northing</td>
+</tr>
+<tr>
+<td>Coordinate units</td>
+<td>Degrees</td>
+<td>Metres</td>
+</tr>
+<tr>
+<td>Use in this course</td>
+<td>Recording positions</td>
+<td>Local field measurements and mapped analysis</td>
+</tr>
+</tbody>
+</table>
+<div id="important-assigning-a-crs-is-not-the-same-as-reprojecting" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="important-assigning-a-crs-is-not-the-same-as-reprojecting" class="callout-inner">
+<h3 class="callout-title">Important: Assigning a CRS is not the same as
+reprojecting</h3>
+<div class="callout-content">
+<p><strong>Assigning</strong> a source CRS tells QGIS what the existing
+numbers mean. <strong>Reprojecting</strong> transforms those numbers
+into another CRS. Changing the <strong>display format</strong> in Google
+Earth Pro only changes how coordinates are shown; it does not mean the
+exported placemark has become a projected UTM dataset.</p>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="watch-coordinate-reference-systems-in-qgis">Watch: Coordinate reference systems in QGIS<a class="anchor" aria-label="anchor" href="#watch-coordinate-reference-systems-in-qgis"></a>
+</h3>
+<p>The original video below demonstrates multiple GIS layers using
+different CRSs and how QGIS displays them together using on-the-fly
+reprojection.</p>
+<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/qhFs_Z78ItE" title="Coordinate Reference Systems (CRS) and QGIS — GIS Tools to Understand the World" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+</iframe>
+<p><em>Video: <a href="https://www.youtube.com/watch?v=qhFs_Z78ItE" class="external-link">Coordinate Reference
+Systems (CRS) and QGIS</a>, GIS - Tools to understand the world, 2024.
+Video hosted and owned by its YouTube creator.</em></p>
+</div>
+</section><section><h2 class="section-heading" id="how-utm-zones-work">5. How UTM zones work<a class="anchor" aria-label="anchor" href="#how-utm-zones-work"></a>
+</h2>
+<hr class="half-width">
+<p>The Universal Transverse Mercator (UTM) system divides most of
+Earth’s land areas into 60 longitudinal zones, typically <strong>6
+degrees</strong> wide. Zones are numbered from west to east. Coordinates
+use a zone, hemisphere and metric <strong>easting</strong> and
+<strong>northing</strong>.</p>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Universal_Transverse_Mercator_zones.svg" alt="Original Wikimedia Commons world map of Universal Transverse Mercator grid zones" class="figure mx-auto d-block"><div class="figcaption">Original Wikimedia Commons world map of
+Universal Transverse Mercator grid zones</div>
+</figure><p><em>Figure 3. Original UTM zone world map by <a href="https://commons.wikimedia.org/wiki/File:Universal_Transverse_Mercator_zones.svg" class="external-link">cmglee,
+STyx, Wikialine and Goran tek-en on Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC BY-SA 4.0</a>.
+Unmodified; irregular zones are highlighted in the original
+map.</em></p>
+<p><strong>Sulaymaniyah is in UTM Zone 38N.</strong> The regular
+longitudinal span of Zone 38 is <strong>42°E–48°E</strong>, and its
+central meridian is <strong>45°E</strong>. A useful projected reference
+for many local agricultural mapping tasks is
+<strong>EPSG:32638</strong>.</p>
+<div id="exercise-choose-the-correct-crs" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-choose-the-correct-crs" class="callout-inner">
+<h3 class="callout-title">Exercise: Choose the correct CRS</h3>
+<div class="callout-content">
+<p>You have coordinates for a wheat-field boundary near Sulaymaniyah.
+You want to calculate its approximate area in square metres. Which is
+the more suitable choice for a local <em>planar</em> area
+calculation?</p>
+<p>A. WGS 84 geographic, EPSG:4326<br>
+B. WGS 84 / UTM Zone 38N, EPSG:32638</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3">
+  Worked answer
+  </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div class="accordion-body">
+<p><strong>B</strong>. EPSG:32638 uses metres and is well suited for
+many local mapping tasks near Sulaymaniyah. It is still important to
+check source accuracy and field digitization quality; no map projection
+eliminates those errors.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="guided-practical-show-dd-and-utm-in-google-earth-pro">6. Guided practical: Show DD and UTM in Google Earth Pro<a class="anchor" aria-label="anchor" href="#guided-practical-show-dd-and-utm-in-google-earth-pro"></a>
+</h2>
+<hr class="half-width">
+<p><strong>Software:</strong> Google Earth Pro on Windows<br><strong>Duration:</strong> About 30–35 minutes<br><strong>Study area:</strong> Agricultural landscape near
+Sulaymaniyah</p>
+<div class="section level3">
+<h3 id="step-1-navigate-to-a-field">Step 1 — Navigate to a field<a class="anchor" aria-label="anchor" href="#step-1-navigate-to-a-field"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>Launch <strong>Google Earth Pro</strong>.</li>
+<li>Search for `Sulaymaniyah, Iraq`.</li>
+<li>Navigate to a visible agricultural area outside the urban
+centre.</li>
+<li>Observe roads, fields and orchard blocks; select two illustrative
+observation locations.</li>
+</ol>
+</div>
+<div class="section level3">
+<h3 id="step-2-set-coordinate-display-to-decimal-degrees">Step 2 — Set coordinate display to decimal degrees<a class="anchor" aria-label="anchor" href="#step-2-set-coordinate-display-to-decimal-degrees"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>Select <strong>Tools → Options → 3D View</strong>.</li>
+<li>Under <strong>Show Lat/Long</strong>, choose <strong>Decimal
+Degrees</strong>.</li>
+<li>Click <strong>Apply</strong> or <strong>OK</strong>.</li>
+<li>Move the mouse over the map to observe the position display, or open
+a new placemark to inspect its location.</li>
+</ol>
+</div>
+<div class="section level3">
+<h3 id="watch-changing-coordinate-formats-in-google-earth-pro">Watch: Changing coordinate formats in Google Earth Pro<a class="anchor" aria-label="anchor" href="#watch-changing-coordinate-formats-in-google-earth-pro"></a>
+</h3>
+<p>This YouTube walkthrough specifically covers latitude/longitude, UTM
+format and measurement-unit settings.</p>
+<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/vRfOrvIo0RU" title="How to Change Units and Coordinate System in Google Earth Pro — John Okello" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+</iframe>
+<p><em>Video: <a href="https://www.youtube.com/watch?v=vRfOrvIo0RU" class="external-link">How
+to Change Units &amp; Coordinate System in Google Earth Pro</a>, John
+Okello, 2023. Video hosted and owned by its YouTube creator.</em></p>
+</div>
+<div class="section level3">
+<h3 id="step-3-create-two-placemarks">Step 3 — Create two placemarks<a class="anchor" aria-label="anchor" href="#step-3-create-two-placemarks"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>Select <strong>Add → Placemark</strong>.</li>
+<li>Move the placemark to your first observation position.</li>
+<li>Name it `Observation_A` and record latitude and longitude.</li>
+<li>Repeat for a second point named `Observation_B`.</li>
+<li>Save the points in a folder named `Lecture02_Coordinates` in the
+Places panel.</li>
+</ol>
+</div>
+<div class="section level3">
+<h3 id="step-4-inspect-the-utm-display">Step 4 — Inspect the UTM display<a class="anchor" aria-label="anchor" href="#step-4-inspect-the-utm-display"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>Reopen <strong>Tools → Options → 3D View</strong>.</li>
+<li>Change <strong>Show Lat/Long</strong> to <strong>Universal
+Transverse Mercator</strong>.</li>
+<li>For each placemark, inspect the displayed UTM zone, easting and
+northing.</li>
+<li>Record the results in the following table.</li>
+</ol>
+<table style="width:100%;" class="table">
+<colgroup>
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+</colgroup>
+<thead><tr>
+<th>Observation</th>
+<th>Latitude (°)</th>
+<th>Longitude (°)</th>
+<th>UTM zone</th>
+<th>Easting (m)</th>
+<th>Northing (m)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Observation_A</td>
+<td>Student reading</td>
+<td>Student reading</td>
+<td>Student reading</td>
+<td>Student reading</td>
+<td>Student reading</td>
+</tr>
+<tr>
+<td>Observation_B</td>
+<td>Student reading</td>
+<td>Student reading</td>
+<td>Student reading</td>
+<td>Student reading</td>
+<td>Student reading</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section level3">
+<h3 id="step-5-export-and-verify">Step 5 — Export and verify<a class="anchor" aria-label="anchor" href="#step-5-export-and-verify"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>Right-click the folder `Lecture02_Coordinates`.</li>
+<li>Choose <strong>Save Place As</strong> and export
+`Lecture02_Coordinates.kmz`.</li>
+<li>Open that saved KMZ to confirm that both placemarks are
+present.</li>
+<li>Keep your coordinate-recording table and a screenshot of both
+markers.</li>
+</ol>
+<div id="do-not-confuse-display-format-with-stored-coordinates" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<span class="callout-header">Caution</span>
+<div id="do-not-confuse-display-format-with-stored-coordinates" class="callout-inner">
+<h3 class="callout-title">Do not confuse display format with stored
+coordinates</h3>
+<div class="callout-content">
+<p>KML/KMZ geographic positions are conventionally stored as
+<strong>longitude, latitude</strong> (and optional altitude) using WGS
+84. Showing UTM in Google Earth does <strong>not</strong> change that
+internal geographic representation. The KMZ is a useful teaching file,
+not survey-certified land data.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="optional-qgis-comparison">7. Optional QGIS comparison<a class="anchor" aria-label="anchor" href="#optional-qgis-comparison"></a>
+</h2>
+<hr class="half-width">
+<p>If QGIS is already installed:</p>
+<ol style="list-style-type: decimal">
+<li>Create a new QGIS project.</li>
+<li>Drag `Lecture02_Coordinates.kmz` into QGIS, choosing a suitable
+vector layer if prompted.</li>
+<li>Inspect the point layer’s CRS.</li>
+<li>Set the <strong>project CRS</strong> to <strong>EPSG:32638</strong>
+and note how the coordinates shown in the QGIS status area change.</li>
+<li>Explain why changing the project CRS does not automatically rewrite
+the original KMZ.</li>
+<li>If asked to create projected data, use <strong>Export → Save
+Features As</strong> and select <strong>EPSG:32638</strong> for a new
+GeoPackage output.</li>
+</ol></section><section><h2 class="section-heading" id="student-assignment-and-rubric">8. Student assignment and rubric<a class="anchor" aria-label="anchor" href="#student-assignment-and-rubric"></a>
+</h2>
+<hr class="half-width">
+<p>Submit:</p>
+<ul>
+<li>`Lecture02_Coordinates.kmz` containing both named observation
+points.</li>
+<li>One screenshot of the two locations in Google Earth Pro.</li>
+<li>The completed decimal-degree and UTM coordinate table.</li>
+<li>A 100–150 word explanation comparing EPSG:4326 and EPSG:32638.</li>
+<li>A short note explaining image-based location uncertainty.</li>
+</ul>
+<table class="table">
+<thead><tr>
+<th>Assessment criterion</th>
+<th align="right">Marks</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Two correctly saved locations</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>Correct decimal-degree readings</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>Correct UTM zone and coordinates</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>Verified KMZ and screenshot</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>CRS explanation and limitations</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td align="right"><strong>10</strong></td>
+</tr>
+</tbody>
+</table>
+<div id="reflection-agricultural-measurements" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="reflection-agricultural-measurements" class="callout-inner">
+<h3 class="callout-title">Reflection: Agricultural measurements</h3>
+<div class="callout-content">
+<p>Why does it matter whether a field boundary comes from rough imagery
+interpretation or a surveyed GNSS boundary?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4">
+  Suggested explanation
+  </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div class="accordion-body">
+<p>A GIS can calculate an area from either, but the reliability of that
+number depends on the <strong>quality of the boundary</strong>, not just
+the CRS. Digitizing unclear image edges may introduce substantial error,
+whereas a well-designed survey can provide more defensible field
+measurements.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="sources-and-media-credits">9. Sources and media credits<a class="anchor" aria-label="anchor" href="#sources-and-media-credits"></a>
 </h2>
 <hr class="half-width">
 <ul>
-<li><a href="https://epsg.io/32638" class="external-link">Reference 1</a></li>
-<li><a href="https://docs.qgis.org/3.40/en/docs/gentle_gis_introduction/coordinate_reference_systems.html" class="external-link">Reference
-2</a></li>
+<li>
+<a href="https://epsg.io/4326" class="external-link">EPSG:4326 — WGS 84</a>.</li>
+<li>
+<a href="https://epsg.io/32638" class="external-link">EPSG:32638 — WGS 84 / UTM zone
+38N</a>.</li>
+<li>
+<a href="https://docs.qgis.org/3.40/en/docs/gentle_gis_introduction/coordinate_reference_systems.html" class="external-link">QGIS
+guidance on coordinate reference systems</a>.</li>
+<li>
+<a href="https://developers.google.com/kml/documentation/kmlreference" class="external-link">Google
+KML documentation</a>.</li>
 </ul>
+<p>All three illustrations above are <strong>original works of their
+credited third-party creators</strong> and have not been AI-generated or
+modified for this lesson. The first is CC0; the second and third are
+individually licensed CC BY-SA 4.0. Their respective image licenses
+remain in effect independently from the CC BY 4.0 license for the
+course’s original text.</p>
+<p>Both videos are embedded from their creators’ YouTube channels, not
+copied or re-uploaded. YouTube videos are not assumed to be open-license
+material; if an embedded player is blocked, open its linked video
+page.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1216,10 +1609,18 @@ from synthetic datasets.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Document data origin, accuracy, CRS, units and dates.</li>
-<li>Check the validity of measurements, analyses and map exports.</li>
-<li>Treat synthetic examples as demonstrations only.</li>
-<li>Keep projects and supporting data together for reproducibility.</li>
+<li><strong>GIS = geometry + attributes + a valid CRS.</strong></li>
+<li>Latitude and longitude are angles, generally expressed in
+degrees.</li>
+<li>
+<strong>EPSG:4326</strong> is a geographic WGS 84 CRS.</li>
+<li>
+<strong>EPSG:32638</strong> is projected WGS 84 / UTM Zone 38N,
+useful for local metric mapping around Sulaymaniyah.</li>
+<li>Changing coordinate display formats is <strong>not</strong>
+reprojection.</li>
+<li>Save field observations with appropriate source, accuracy and CRS
+information.</li>
 </ul>
 </div>
 </div>
@@ -1734,7 +2135,7 @@ rather than simply x and y?</p>
   Answer and explanation
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Explicit coordinate labels prevent import errors and help students
 recognize coordinate order and spatial reference.</p>
@@ -1804,7 +2205,7 @@ applying the result on an actual farm?</p>
   Suggested approach
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Name the agricultural objective, describe the location-based
 information needed, and specify data quality, field validation and
@@ -2553,7 +2954,7 @@ sample observations?</p>
   Answer and explanation
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Many rendered pixels are model estimates, not additional
 observations. Sampling density, method and uncertainty limit reliable
@@ -2624,7 +3025,7 @@ applying the result on an actual farm?</p>
   Suggested approach
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Name the agricultural objective, describe the location-based
 information needed, and specify data quality, field validation and
@@ -2963,7 +3364,7 @@ practice CSV</a></p>
   Answer and explanation
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>(0.62 − 0.18)/(0.62 + 0.18) = 0.44/0.80 = 0.55.</p>
 </div>
@@ -3032,7 +3433,7 @@ applying the result on an actual farm?</p>
   Suggested approach
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Name the agricultural objective, describe the location-based
 information needed, and specify data quality, field validation and
@@ -3373,7 +3774,7 @@ a fertilizer rate?</p>
   Answer and explanation
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>No. A short synthetic dataset cannot determine response, cause or
 suitable rate. Local crop requirements, representative testing,
@@ -3444,7 +3845,7 @@ applying the result on an actual farm?</p>
   Suggested approach
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Name the agricultural objective, describe the location-based
 information needed, and specify data quality, field validation and
@@ -3580,7 +3981,7 @@ demonstration data?</p>
   Answer and explanation
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Clearly label it a teaching demonstration and refrain from asserting
 real field yield, nutrient levels, or management benefits.</p>
@@ -3649,7 +4050,7 @@ applying the result on an actual farm?</p>
   Suggested approach
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Name the agricultural objective, describe the location-based
 information needed, and specify data quality, field validation and
