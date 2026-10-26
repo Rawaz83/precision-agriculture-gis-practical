@@ -530,6 +530,23 @@ alone, to assess student performance.</p>
 test with student devices, low-bandwidth mobile connections, and
 relevant accessibility tools. Review external library CDN availability,
 OpenStreetMap tile policy, and accessibility of map drawing.</p>
+</div>
+<div class="section level2">
+<h2 id="classroom-acceptance-check">Classroom acceptance check<a class="anchor" aria-label="anchor" href="#classroom-acceptance-check"></a>
+</h2>
+<p>Before each course offering, open the published <a href="files/interactive-lab.html">laboratory</a> in a student browser
+and verify that: the field map appears; layers can be toggled; soil
+markers show their synthetic attributes; polygon drawing changes the
+displayed area and exports GeoJSON; NDVI sliders update the formula; the
+five-question quiz returns feedback; and local progress is retained
+after a same-browser refresh. Repeat on at least one phone. If the map
+library or OpenStreetMap tiles are unavailable, use a QGIS-based
+alternative.</p>
+<p>The separate <code>02 Publish: Interactive GIS Laboratory</code>
+GitHub workflow restores the standalone app to the <code>gh-pages</code>
+publishing branch after routine Workbench builds, because Workbench does
+not automatically publish arbitrary standalone HTML from its source
+<code>files/</code> directory.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
