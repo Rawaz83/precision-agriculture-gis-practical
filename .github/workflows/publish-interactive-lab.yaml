@@ -1,0 +1,47 @@
+name: "02 Publish: Interactive GIS Laboratory"
+
+# The Carpentries Workbench rebuilds gh-pages from Markdown and may replace
+# additional standalone static files. Restore the laboratory after each
+# successful main-site build. This never modifies main course content.
+on:
+  workflow_run:
+    workflows: ["01 Maintain: Build and Deploy Site"]
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "publish-interactive-lab"
+  cancel-in-progress: false
+
+jobs:
+  sync-lab:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the lesson source
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Copy interactive lab into generated gh-pages branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp files/interactive-lab.html "$RUNNER_TEMP/interactive-lab.html"
+          git fetch origin gh-pages
+          git switch --detach origin/gh-pages
+          mkdir -p files
+          cp "$RUNNER_TEMP/interactive-lab.html" files/interactive-lab.html
+          git add files/interactive-lab.html
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Sync interactive GIS lab into published website"
+            git push origin HEAD:gh-pages
+          else
+            echo "Interactive laboratory already up to date."
+          fi
