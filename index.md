@@ -11,6 +11,13 @@ site: sandpaper::sandpaper_site
 
 ## Welcome
 
+## Interactive GIS laboratory — start here
+
+**[Open the Interactive Farm GIS Laboratory](files/interactive-lab.html)** — a free browser-based practical activity using synthetic agricultural training data from this course. Students can turn map layers on and off, inspect soil-sampling attributes, draw and export their own field polygon, measure approximate area, experiment with NDVI, and complete a five-question self-marking quiz.
+
+The activity records progress **only in the same browser** (not in Moodle or a university gradebook). OpenStreetMap tiles and Leaflet require internet access; the written questions and NDVI exercise remain usable if the map cannot load. All coordinates and readings are fictional classroom demonstrations.
+
+
 This practical course teaches undergraduate agricultural engineering students agricultural field mapping, GPS/GNSS, QGIS, remote sensing, soil sampling and data-driven management. Each lesson includes a hands-on exercise, an expandable knowledge-check answer, and a submission rubric.
 
 ## 14-week practical schedule

@@ -1,4 +1,3 @@
-
 ---
 title: "Lecture 1: Introduction to Precision Agriculture"
 teaching: 30
@@ -14,7 +13,15 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::::::::: objectives
+:::::::::::::::::::::::::::::::::::::::: callout
+
+### Interactive GIS laboratory — guided practice
+
+Before or after this lecture, open the **[Interactive Farm GIS Laboratory](files/interactive-lab.html)**. Explore the synthetic field, inspect layers, practise drawing a polygon, try an NDVI calculation, and complete the self-marking knowledge check. The activity is formative and is **not** an official grade.
+
+::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: objectives
 
 By the end of this lecture, students will be able to:
 
