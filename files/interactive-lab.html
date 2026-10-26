@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Free interactive precision agriculture GIS laboratory using a synthetic training field near Sulaymaniyah, Iraq.">
+  <title>Interactive Farm GIS Laboratory | University of Sulaimani</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoOMd7uyWDCk5+E0=" crossorigin="">
+  <style>
+    :root{--ink:#152d36;--muted:#526874;--accent:#176a53;--accent2:#f0faf4;--line:#d9e3e2;--white:#fff;--bg:#f5f8f6;--orange:#996210;--nav:#0e312b}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+    a{color:#125c70}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #eb9f36;outline-offset:3px}
+    .topbar{background:var(--nav);color:#fff;padding:12px max(20px,calc((100vw - 1260px)/2));display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .topbar a{color:#def3e9;font-size:.89rem}.brand{font-weight:750;letter-spacing:.01em}
+    .shell{max-width:1260px;margin:0 auto;padding:24px 20px 60px}
+    .hero{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;flex-wrap:wrap;margin-bottom:20px}
+    h1{font-size:clamp(1.8rem,3.3vw,2.7rem);line-height:1.14;letter-spacing:-.025em;margin:7px 0 12px}
+    h2{font-size:1.25rem;line-height:1.3;margin:0 0 8px}h3{font-size:1.02rem;margin:2px 0 9px}p{margin:0 0 12px}
+    .eyebrow{font-size:.78rem;color:var(--accent);letter-spacing:.10em;text-transform:uppercase;font-weight:750}
+    .hero p{max-width:765px;color:var(--muted)}
+    .pill{background:#e6f2eb;color:#195b46;border:1px solid #cbe3d8;display:inline-block;border-radius:100px;padding:6px 12px;font-size:.8rem;font-weight:700}
+    .layout{display:grid;grid-template-columns: minmax(0,1.8fr) minmax(280px,1fr);gap:17px;align-items:start}
+    .card{background:var(--white);border:1px solid var(--line);border-radius:14px;box-shadow:0 2px 14px #19352d0b;padding:20px}
+    .map-card{padding:0;overflow:hidden}
+    .map-top{padding:18px 20px 14px}
+    #map{height:min(55vw,530px);min-height:365px;background:#e8efe7;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .map-footer{padding:13px 20px}
+    .small{font-size:.85rem;color:var(--muted)}
+    .controls{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.control-set{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{font-size:.83rem;border:1px solid var(--line);border-radius:10px;display:inline-flex;gap:6px;align-items:center;padding:7px 10px;background:#fff}
+    input[type=checkbox],input[type=radio]{accent-color:var(--accent);cursor:pointer}
+    button,.button{cursor:pointer;font:inherit;border-radius:9px;border:1px solid var(--accent);background:var(--accent);color:#fff;padding:9px 12px;font-size:.87rem;font-weight:650;text-decoration:none;display:inline-block}
+    button.secondary{color:var(--accent);background:white;border-color:#b8d9cc}
+    button.warning{color:#8a4c00;background:#fff;border-color:#d6b98a}
+    button[disabled]{cursor:not-allowed;opacity:.48}
+    .status{display:block;color:var(--muted);font-size:.83rem;min-height:22px}
+    .metric{font-size:1.6rem;font-weight:750;line-height:1.2;color:var(--accent);font-variant-numeric:tabular-nums}
+    .side{display:grid;gap:17px}
+    .meter{height:9px;border-radius:100px;overflow:hidden;background:#e4ebe8;margin:7px 0 9px}.meter>div{height:100%;width:0%;background:var(--accent);transition:width .15s}
+    .task{display:block;margin:10px 0;border-bottom:1px solid #eef2f0;padding-bottom:9px}
+    .task:last-child{border-bottom:0}
+    .stack{display:grid;gap:16px;margin-top:17px}.two{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+    fieldset{border:1px solid var(--line);border-radius:10px;padding:12px;margin:13px 0}legend{font-weight:700;padding:0 5px}
+    .option{display:block;padding:6px 4px;font-size:.94rem}
+    .feedback{white-space:pre-line;border-left:3px solid var(--accent);background:#f2f9f5;padding:12px;margin:14px 0;border-radius:0 8px 8px 0;font-size:.9rem}
+    .notice{padding:12px;border:1px solid #e7d3aa;background:#fff8e8;color:#795516;border-radius:9px;font-size:.84rem}
+    .data-table{width:100%;border-collapse:collapse;font-size:.83rem}.data-table th{text-align:left;color:#3c5961}.data-table td,.data-table th{border-bottom:1px solid var(--line);padding:8px 3px}
+    .scroll{max-height:240px;overflow:auto}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .range{display:flex;gap:10px;align-items:center}.range input{flex:1;min-width:100px;accent-color:var(--accent)}
+    .bar{height:12px;border-radius:7px;background:#eff1f0;overflow:hidden;margin-bottom:10px}.bar>div{height:100%;width:0;background:#469e77}
+    .hint{color:var(--muted);font-size:.8rem}.sectionline{margin:16px 0;border:0;border-top:1px solid var(--line)}
+    .footer{margin-top:28px;text-align:center;color:var(--muted);font-size:.85rem}
+    .fallback{padding:35px 22px;color:#53686f;max-width:700px}
+    .tag{font-size:.73rem;background:#ebf5f0;color:#23614e;border-radius:5px;padding:3px 6px}
+    @media(max-width:830px){.layout,.two{grid-template-columns:1fr}#map{height:430px;min-height:300px}.shell{padding:20px 12px 44px}.card{padding:16px}.map-card{padding:0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.meter>div{transition:none}}
+    @media print{.topbar,.controls,.map-top button,.no-print{display:none}body{background:#fff}.card{box-shadow:none}.layout,.two{display:block}.card{break-inside:avoid;margin-bottom:14px}#map{height:350px}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><span class="brand">UNIVERSITY OF SULAIMANI · AGRICULTURAL ENGINEERING</span><a href="../index.html">← Return to the 14-lecture course</a></header>
+  <main class="shell">
+    <div class="hero">
+      <div><div class="eyebrow">Precision Agriculture & GIS · Practical 01</div><h1>Interactive Farm GIS Laboratory</h1>
+      <p>Explore a training field near Sulaymaniyah. Inspect points, lines and polygons, calculate approximate area, practise NDVI, and assess your understanding.</p></div>
+      <span class="pill">Free · No account required</span>
+    </div>
+    <div class="notice" role="note"><strong>Teaching data only.</strong> Field boundaries, sample readings and tractor observations are synthetic. They do not represent actual measured farming conditions, surveyed property or management prescriptions. Map background © OpenStreetMap contributors.</div>
+    <div class="layout" style="margin-top:17px">
+      <section class="card map-card" aria-label="Interactive farm GIS map">
+        <div class="map-top"><div class="row"><h2>01 · Explore the map</h2><span class="tag">GeoJSON · WGS 84</span></div>
+          <p class="small">Switch layers on and off, select features to inspect their attributes, or draw your own field boundary. Use the zoom controls in the map.</p>
+          <div class="control-set" aria-label="Visible map layers">
+            <label class="chip"><input type="checkbox" id="layer-field" checked> Field polygon</label>
+            <label class="chip"><input type="checkbox" id="layer-soil" checked> Soil samples</label>
+            <label class="chip"><input type="checkbox" id="layer-irrigation" checked> Irrigation route</label>
+            <label class="chip"><input type="checkbox" id="layer-track"> Tractor track</label>
+            <label class="chip"><input type="checkbox" id="layer-obs"> Observation points</label>
+          </div>
+        </div>
+        <div id="map" role="region" aria-label="Leaflet interactive map with synthetic agricultural features"><p class="fallback">Loading the interactive map. The exercises below work even if the map library or background map cannot load.</p></div>
+        <div class="map-footer">
+          <div class="controls no-print" aria-label="Polygon editing controls">
+            <button id="draw" type="button">Draw a polygon</button><button id="finish" type="button" class="secondary" disabled>Finish boundary</button>
+            <button id="undo" type="button" class="secondary" disabled>Undo vertex</button><button id="restore" type="button" class="warning">Restore training field</button>
+          </div>
+          <div class="row"><div><span class="small">Approximate field area</span><div class="metric" id="area">— ha</div></div><div><span class="small">Boundary vertices</span><div class="metric" id="vertices">—</div></div></div>
+          <p class="status" id="map-status" role="status" aria-live="polite">Click a map feature to view its attributes.</p>
+          <div class="controls no-print"><button id="export" class="secondary" type="button">Download current polygon (GeoJSON)</button><a class="button" href="https://github.com/Rawaz83/precision-agriculture-gis-practical/tree/main/data" target="_blank" rel="noopener">Training data files</a></div>
+          <p class="hint">Area uses a spherical-Earth approximation, not a cadastral survey. For formal measurement, use properly surveyed boundaries and an appropriate projected/geodesic calculation in GIS software.</p>
+        </div>
+      </section>
+      <aside class="side">
+        <section class="card"><h2>Learning progress</h2><p class="small">Four tasks. Progress is saved only in this browser, not sent to your lecturer.</p>
+          <div class="row"><strong id="progress-label">0 / 4 completed</strong><span id="progress-percent">0%</span></div><div class="meter" aria-hidden="true"><div id="progress-bar"></div></div>
+          <label class="task"><input type="checkbox" id="task-explore"> Inspect any field or soil feature</label>
+          <label class="task"><input type="checkbox" id="task-polygon"> Calculate or edit a field polygon</label>
+          <label class="task"><input type="checkbox" id="task-ndvi"> Change red/NIR and evaluate NDVI</label>
+          <label class="task"><input type="checkbox" id="task-quiz"> Pass the knowledge check (4/5)</label>
+          <div class="controls no-print"><button id="reset-progress" type="button" class="secondary">Reset progress</button><button id="download-report" type="button" class="secondary">Download self-report</button></div>
+        </section>
+        <section class="card"><h2>Feature inspector</h2><p class="small" id="inspector">Select a field, soil sampling marker or path to see data here.</p>
+          <div class="scroll"><table class="data-table"><thead><tr><th>Feature attribute</th><th>Value</th></tr></thead><tbody id="attributes"><tr><td>Dataset</td><td>Synthetic demonstration</td></tr></tbody></table></div>
+        </section>
+        <section class="card"><h2>Map legend</h2><p class="small">A polygon outlines a field. Points identify observations. Lines show paths.</p>
+          <p><span style="color:#207a57">■</span> Green outline: field polygon</p>
+          <p><span style="color:#c17215">●</span> Orange circles: synthetic soil pH samples</p>
+          <p><span style="color:#2272ad">━━</span> Blue line: irrigation route</p>
+          <p><span style="color:#9756a0">━━</span> Purple line: tractor path</p>
+        </section>
+      </aside>
+    </div>
+
+    <div class="two" style="margin-top:17px">
+      <section class="card" id="ndvi-section"><div class="eyebrow">02 · Crop remote sensing</div><h2>NDVI experiment</h2>
+        <p>Change near-infrared (NIR) and red reflectance to see the Normalized Difference Vegetation Index update instantly.</p>
+        <p><strong>NDVI = (NIR − Red) / (NIR + Red)</strong></p>
+        <label for="nir" class="row"><strong>Near-infrared reflectance</strong><output id="nir-value">0.62</output></label>
+        <div class="range"><span>0</span><input type="range" id="nir" min="0" max="100" value="62" step="1"><span>1</span></div>
+        <label for="red" class="row"><strong>Red reflectance</strong><output id="red-value">0.18</output></label>
+        <div class="range"><span>0</span><input type="range" id="red" min="0" max="100" value="18" step="1"><span>1</span></div>
+        <hr class="sectionline"><div class="row"><div><span class="small">Computed NDVI</span><div class="metric" id="ndvi-result">0.55</div></div><span id="ndvi-note" class="tag">Interpret with caution</span></div>
+        <div class="bar" aria-hidden="true"><div id="ndvi-bar"></div></div><p class="hint">High NDVI can indicate green vegetation, but it does not directly measure disease, fertilizer need or yield. These values are simulated, not satellite observations.</p>
+        <button id="ndvi-reset" class="secondary no-print" type="button">Reset to worked example</button>
+      </section>
+      <section class="card"><div class="eyebrow">03 · Geographic coordinates</div><h2>Degrees to DMS converter</h2>
+        <p>Enter a signed latitude or longitude in decimal degrees and display it as degrees, minutes and seconds.</p>
+        <label for="coord"><strong>Decimal degrees</strong></label>
+        <div class="controls"><input id="coord" type="number" min="-180" max="180" step="any" value="35.56" style="max-width:200px;padding:8px;border:1px solid #b7c8c2;border-radius:8px"><button type="button" id="convert">Convert</button></div>
+        <p id="coord-output" class="feedback" role="status" aria-live="polite">35° 33′ 36.00″</p>
+        <p class="small">For latitude, valid values lie between −90° and +90°. This tool accepts up to ±180° to also support longitude. Direction (N/S/E/W) depends on whether the number represents latitude or longitude.</p>
+        <hr class="sectionline"><h3>Why coordinate reference matters</h3><p class="small"><strong>EPSG:4326</strong> uses geographic degrees. <strong>EPSG:32638</strong> uses metres in UTM Zone 38N near Sulaymaniyah. Merely changing the label of a CRS does not reproject existing coordinates.</p>
+        <a href="../02-gis-coordinate-systems.html">Read Lecture 2: GIS & coordinate systems</a>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top:17px" id="quiz"><div class="eyebrow">04 · Assessment</div><h2>Knowledge check · 5 questions</h2>
+      <p class="small">Choose one answer per question, then check your score. A score of 4/5 or more marks this practice quiz complete. This is formative practice, not a university grade.</p>
+      <form id="quiz-form">
+        <fieldset><legend>1. Which geometry represents a field boundary?</legend>
+          <label class="option"><input name="q1" type="radio" value="point"> Point</label>
+          <label class="option"><input name="q1" type="radio" value="line"> Line</label>
+          <label class="option"><input name="q1" type="radio" value="polygon"> Polygon</label>
+        </fieldset>
+        <fieldset><legend>2. What units does EPSG:4326 use for coordinate values?</legend>
+          <label class="option"><input name="q2" type="radio" value="degrees"> Degrees</label>
+          <label class="option"><input name="q2" type="radio" value="metres"> Metres</label>
+          <label class="option"><input name="q2" type="radio" value="hectares"> Hectares</label>
+        </fieldset>
+        <fieldset><legend>3. NDVI for NIR = 0.62 and Red = 0.18 is approximately:</legend>
+          <label class="option"><input name="q3" type="radio" value="0.12"> 0.12</label>
+          <label class="option"><input name="q3" type="radio" value="0.55"> 0.55</label>
+          <label class="option"><input name="q3" type="radio" value="1.20"> 1.20</label>
+        </fieldset>
+        <fieldset><legend>4. In GeoJSON, a position array normally has which order?</legend>
+          <label class="option"><input name="q4" type="radio" value="latlon"> [latitude, longitude]</label>
+          <label class="option"><input name="q4" type="radio" value="lonlat"> [longitude, latitude]</label>
+          <label class="option"><input name="q4" type="radio" value="north"> [northing, hectares]</label>
+        </fieldset>
+        <fieldset><legend>5. A polygon traced from satellite imagery is:</legend>
+          <label class="option"><input name="q5" type="radio" value="legal"> A legally surveyed boundary</label>
+          <label class="option"><input name="q5" type="radio" value="exact"> Exact to the nearest centimetre</label>
+          <label class="option"><input name="q5" type="radio" value="approx"> An approximate interpretation requiring verification</label>
+        </fieldset>
+        <button type="submit">Check answers</button><button type="reset" id="quiz-reset" class="secondary">Clear answers</button>
+      </form>
+      <div id="quiz-feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+    </section>
+    <section class="card" style="margin-top:17px"><h2>Academic and data notes</h2>
+      <p><strong>Learning outcomes:</strong> Identify spatial feature geometry; inspect field and observation attributes; draw and export a GeoJSON polygon; calculate approximate area; evaluate the NDVI formula; demonstrate coordinate-format understanding.</p>
+      <p><strong>Source data:</strong> GeoJSON training field, original soil sample CSV and tractor-track CSV from this course. All records are synthetic. Vector geometry is represented using WGS 84 longitude/latitude. No spatial interpolation or real agronomic prescription is performed here.</p>
+      <p><strong>Map data:</strong> © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> under the ODbL. This page uses <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet 1.9.4</a> for the interactive map. Leaflet source code is licensed BSD-2-Clause.</p>
+      <p><strong>Study exercise:</strong> Download an exported polygon and open it in QGIS using Layer → Add Vector Layer. Compare this lab's area estimate against a projected metric calculation in EPSG:32638. Document differences, and explain why source geometry accuracy still limits measurement accuracy.</p>
+      <p><a href="../index.html">Return to course homepage</a> · <a href="../07-vector-layers-agricultural-mapping.html">Vector GIS lesson</a> · <a href="../11-satellite-imagery-ndvi.html">NDVI lesson</a></p>
+    </section>
+    <p class="footer">Precision Agriculture & GIS — Practical · College of Agricultural Engineering Sciences, University of Sulaimani · 2026–2027</p>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+  'use strict';
+  const FIELD_DATA={"polygon":[[45.3635,35.53631],[45.36485,35.53631],[45.36485,35.53812],[45.3635,35.53812],[45.3635,35.53631]],"irrigation":[[45.36364,35.53648],[45.36385,35.53706],[45.36448,35.53783]],"observations":[{"id":"OBS_01","lon":45.36373,"lat":35.53659},{"id":"OBS_02","lon":45.36414,"lat":35.53686},{"id":"OBS_03","lon":45.36455,"lat":35.53716},{"id":"OBS_04","lon":45.36383,"lat":35.53763},{"id":"OBS_05","lon":45.36445,"lat":35.53793}],"soil":[{"id":"S01","lat":35.53631,"lon":45.36341,"ph":7.8,"n":45},{"id":"S02","lat":35.53642,"lon":45.36375,"ph":7.5,"n":52},{"id":"S03","lat":35.53658,"lon":45.36402,"ph":7.3,"n":57},{"id":"S04","lat":35.53673,"lon":45.36431,"ph":7.6,"n":49},{"id":"S05","lat":35.53692,"lon":45.36456,"ph":7.9,"n":42},{"id":"S06","lat":35.53711,"lon":45.3648,"ph":7.4,"n":55},{"id":"S07","lat":35.53729,"lon":45.36444,"ph":7.1,"n":62},{"id":"S08","lat":35.53745,"lon":45.36412,"ph":7.2,"n":61},{"id":"S09","lat":35.53762,"lon":45.36388,"ph":7.6,"n":48},{"id":"S10","lat":35.53776,"lon":45.36422,"ph":7.7,"n":46},{"id":"S11","lat":35.53791,"lon":45.36451,"ph":7.5,"n":53},{"id":"S12","lat":35.53806,"lon":45.36477,"ph":7.3,"n":59}],"track":[[45.36368,35.5364],[45.363722,35.536492],[45.363744,35.536584],[45.363736,35.536676],[45.363702,35.536768],[45.363657,35.53686],[45.363623,35.536952],[45.363616,35.537044],[45.363639,35.537136],[45.363681,35.537228],[45.363723,35.53732],[45.363744,35.537412],[45.363736,35.537504],[45.363701,35.537596],[45.363656,35.537688],[45.363623,35.53778],[45.363616,35.537872],[45.36364,35.537964]]};
+  const $=id=>document.getElementById(id);
+  const state={active:null,draw:false,vertices:[],draft:null,map:null,features:{},ring:FIELD_DATA.polygon.slice(),steps:{"task-explore":false,"task-polygon":false,"task-ndvi":false,"task-quiz":false}};
+  const stepKeys=Object.keys(state.steps);
+  const savedKey='pa-gis-interactive-lab-v1';
+  const quizKey='pa-gis-quiz-attempt-v1';
+  function loadProgress(){try{let x=JSON.parse(localStorage.getItem(savedKey)||'{}');for(const k of stepKeys){state.steps[k]=x[k]===true;$(k).checked=state.steps[k];}}catch(e){/* storage disabled */}updateProgress();}
+  function saveProgress(){try{localStorage.setItem(savedKey,JSON.stringify(state.steps));}catch(e){}updateProgress();}
+  function markStep(k){state.steps[k]=true;$(k).checked=true;saveProgress();}
+  function updateProgress(){const count=stepKeys.filter(k=>state.steps[k]).length;$('progress-label').textContent=count+' / 4 completed';$('progress-percent').textContent=(count*25)+'%';$('progress-bar').style.width=(count*25)+'%';}
+  for(const k of stepKeys){$(k).addEventListener('change',function(){if(k==='task-quiz'&&!this.checked){state.steps[k]=false;}else if(k==='task-quiz'){this.checked=state.steps[k];return;}else{state.steps[k]=this.checked;}saveProgress();});}
+  $('reset-progress').addEventListener('click',function(){if(!confirm('Reset saved practice progress in this browser?'))return;for(const k of stepKeys){state.steps[k]=false;$(k).checked=false;}saveProgress();$('quiz-feedback').hidden=true;});
+  function asCSV(pairs){$('attributes').replaceChildren();for(const pair of pairs){const tr=document.createElement('tr');const a=document.createElement('td'),b=document.createElement('td');a.textContent=pair[0];b.textContent=String(pair[1]);tr.append(a,b);$('attributes').appendChild(tr);}}
+  function inspect(title,pairs){$('inspector').textContent=title;asCSV(pairs);markStep('task-explore');}
+  const deg=Math.PI/180,R=6371008.8;
+  function areaMeters2(ring){if(!ring||ring.length<3)return 0;let total=0;for(let i=0;i<ring.length;i++){const a=ring[i],b=ring[(i+1)%ring.length];total+=(b[0]-a[0])*deg*(2+Math.sin(a[1]*deg)+Math.sin(b[1]*deg));}return Math.abs(total*R*R/2);}
+  function signedAreaHa(){return areaMeters2(state.ring)/10000;}
+  function showArea(){let n=Math.max(0,state.ring.length-(state.ring.length>1&&state.ring[0][0]===state.ring[state.ring.length-1][0]&&state.ring[0][1]===state.ring[state.ring.length-1][1]?1:0));$('vertices').textContent=String(n);$('area').textContent=signedAreaHa().toFixed(2)+' ha';}
+  function setStatus(s){$('map-status').textContent=s;}
+  function mapFeature(layer){if(state.map){state.features.field=layer;}}
+  function initMap(){
+    if(typeof L==='undefined'){setStatus('Map library unavailable. Quiz, NDVI and coordinate activities are still usable.');$('map').innerHTML='<p class="fallback">Interactive map could not load. Check network access to Leaflet and OpenStreetMap. Other exercises below still work.</p>';return;}
+    $('map').replaceChildren();
+    let center=[35.53722,45.36417];state.map=L.map('map',{scrollWheelZoom:false}).setView(center,17);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(state.map);
+    let groupField=L.layerGroup(),groupSoil=L.layerGroup(),groupIrrigation=L.layerGroup(),groupTrack=L.layerGroup(),groupObs=L.layerGroup();
+    state.features={field:groupField,soil:groupSoil,irrigation:groupIrrigation,track:groupTrack,obs:groupObs};
+    groupField.addTo(state.map);groupSoil.addTo(state.map);groupIrrigation.addTo(state.map);groupObs.addTo(state.map);
+    refreshPolygon();
+    let irrigation=L.polyline(FIELD_DATA.irrigation.map(p=>[p[1],p[0]]),{color:'#217cb4',weight:4}).addTo(groupIrrigation);
+    irrigation.on('click',()=>inspect('Synthetic irrigation route',[['Geometry','LineString'],['ID','IRRIGATION_01'],['Status','Synthetic line']]));
+    FIELD_DATA.soil.forEach(s=>{
+      const marker=L.circleMarker([s.lat,s.lon],{radius:6,weight:1.5,color:'#a85e0b',fillColor:'#e8a652',fillOpacity:.9}).addTo(groupSoil);
+      marker.bindTooltip(s.id+' · pH '+s.ph.toFixed(1));
+      marker.on('click',()=>inspect('Synthetic soil sample '+s.id,[['Geometry','Point'],['Latitude',s.lat],['Longitude',s.lon],['Soil pH',s.ph],['Nitrogen index',s.n+' (dimensionless)'],['Provenance','Synthetic teaching data']]));
+    });
+    FIELD_DATA.observations.forEach(p=>{const dot=L.circleMarker([p.lat,p.lon],{radius:5,color:'#117a8b',fillColor:'#5cc4d2',fillOpacity:1}).addTo(groupObs);dot.bindTooltip(p.id);dot.on('click',()=>inspect('Observation '+p.id,[['Geometry','Point'],['Longitude',p.lon],['Latitude',p.lat],['Source','Synthetic classroom record']]));});
+    L.polyline(FIELD_DATA.track.map(p=>[p[1],p[0]]),{color:'#9756a0',weight:3,dashArray:'7 5'}).addTo(groupTrack).on('click',()=>inspect('Synthetic tractor track',[['Geometry','LineString'],['Records',FIELD_DATA.track.length],['Source','Synthetic classroom positions']]));
+    const names={field:'field',soil:'soil',irrigation:'irrigation',track:'track',obs:'obs'};
+    Object.keys(names).forEach(id=>{$('layer-'+id).addEventListener('change',function(){if(this.checked)state.map.addLayer(state.features[id]);else state.map.removeLayer(state.features[id]);});});
+    state.map.on('click',e=>{if(!state.draw)return;state.vertices.push([e.latlng.lng,e.latlng.lat]);paintDraft();setStatus('Drawing: '+state.vertices.length+' vertices. Add at least 3 then finish.');});
+    state.map.fitBounds(L.latLngBounds(FIELD_DATA.polygon.map(p=>[p[1],p[0]])).pad(.45));
+    showArea();
+  }
+  function refreshPolygon(){if(!state.map)return;state.features.field.clearLayers();const s=state.ring.map(p=>[p[1],p[0]]);const poly=L.polygon(s,{color:'#176a53',fillColor:'#59b98b',weight:3,fillOpacity:.2}).addTo(state.features.field);poly.on('click',()=>inspect('Synthetic field boundary',[['Geometry','Polygon'],['ID','SYN_FARM_01 / student edit'],['Area (approx)',signedAreaHa().toFixed(2)+' ha'],['Coordinate CRS','WGS 84 geographic'],['Status','Not surveyed']]));showArea();}
+  function paintDraft(){if(!state.map)return;if(state.draft)state.map.removeLayer(state.draft);state.draft=L.layerGroup().addTo(state.map);if(state.vertices.length>0){L.polyline(state.vertices.map(p=>[p[1],p[0]]),{color:'#c26a20',weight:3,dashArray:'5 4'}).addTo(state.draft);state.vertices.forEach(p=>L.circleMarker([p[1],p[0]],{radius:5,color:'#994819',fillColor:'#ffdc91',fillOpacity:1}).addTo(state.draft));}$('finish').disabled=state.vertices.length<3;$('undo').disabled=state.vertices.length===0;}
+  function stopDraft(){state.draw=false;state.vertices=[];if(state.draft&&state.map)state.map.removeLayer(state.draft);state.draft=null;$('draw').textContent='Draw a polygon';$('finish').disabled=true;$('undo').disabled=true;}
+  $('draw').addEventListener('click',()=>{if(!state.map)return setStatus('Map unavailable on this network.');if(state.draw){stopDraft();setStatus('Drawing cancelled.');return;}state.draw=true;state.vertices=[];$('draw').textContent='Cancel drawing';paintDraft();setStatus('Click the map to place at least three polygon vertices.');});
+  $('undo').addEventListener('click',()=>{state.vertices.pop();paintDraft();});
+  $('finish').addEventListener('click',()=>{if(!state.draw||state.vertices.length<3)return;state.ring=state.vertices.slice();stopDraft();refreshPolygon();markStep('task-polygon');setStatus('Polygon saved for this session. Area is approximate; download GeoJSON to keep it.');});
+  $('restore').addEventListener('click',()=>{stopDraft();state.ring=FIELD_DATA.polygon.slice();refreshPolygon();setStatus('Original synthetic training boundary restored.');});
+  function download(name,text,mime){let blob=new Blob([text],{type:mime});let url=URL.createObjectURL(blob);let a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);}
+  $('export').addEventListener('click',()=>{const ring=state.ring.slice();if(ring.length<3)return;const a=ring[0],b=ring[ring.length-1];if(a[0]!==b[0]||a[1]!==b[1])ring.push([...a]);const file={type:'FeatureCollection',features:[{type:'Feature',properties:{name:'Student training polygon',source:'Synthetic instructional sketch, not surveyed',area_ha_approx:Number(signedAreaHa().toFixed(4))},geometry:{type:'Polygon',coordinates:[ring]}}]};download('student-training-polygon.geojson',JSON.stringify(file,null,2),'application/geo+json');markStep('task-polygon');setStatus('Your training polygon has been downloaded as GeoJSON.');});
+  $('download-report').addEventListener('click',()=>{const report={title:'Interactive Farm GIS Laboratory - self-report',course:'Precision Agriculture & GIS Practical',scope:'Local non-verified practice only',completed:new Date().toISOString(),tasks:state.steps,approxFieldAreaHa:+signedAreaHa().toFixed(3),source:'Synthetic field and soil data',gradebook:false};download('farm-gis-self-report.json',JSON.stringify(report,null,2),'application/json');});
+  function updateNdvi(user){let nir=+$('nir').value/100,red=+$('red').value/100;$('nir-value').textContent=nir.toFixed(2);$('red-value').textContent=red.toFixed(2);let denom=nir+red,n=denom===0?null:(nir-red)/denom;
+    $('ndvi-result').textContent=n===null?'Undefined':n.toFixed(2);$('ndvi-bar').style.width=n===null?'0%':Math.min(100,Math.max(0,50*(n+1)))+'%';
+    $('ndvi-note').textContent=n===null?'Zero denominator':n>0.5?'Relatively higher NDVI':n>0.15?'Intermediate NDVI':'Low NDVI';
+    if(user)markStep('task-ndvi');
+  }
+  ['nir','red'].forEach(k=>$(k).addEventListener('input',()=>updateNdvi(true)));$('ndvi-reset').addEventListener('click',()=>{$('nir').value=62;$('red').value=18;updateNdvi(false);});updateNdvi(false);
+  $('convert').addEventListener('click',()=>{const val=Number($('coord').value);if(!Number.isFinite(val)||Math.abs(val)>180||$('coord').value.trim()===''){$('coord-output').textContent='Enter a valid number between -180 and 180.';return;}
+    const abs=Math.abs(val),d=Math.floor(abs),minutes=(abs-d)*60,m=Math.floor(minutes),sec=(minutes-m)*60;
+    $('coord-output').textContent=(val<0?'-':'')+d+'° '+m+'′ '+sec.toFixed(2)+'″';
+  });
+  const correct=['polygon','degrees','0.55','lonlat','approx'];
+  const explanations=[
+    'Fields are areas, so polygons represent their boundaries.',
+    'EPSG:4326 geographic coordinates are angular degrees.',
+    'NDVI = (0.62 − 0.18) / (0.62 + 0.18) = 0.55.',
+    'GeoJSON normally uses longitude first, latitude second.',
+    'Image-based digitization can be approximate; validate boundaries on the ground.'
+  ];
+  $('quiz-form').addEventListener('submit',e=>{e.preventDefault();let score=0,miss=[];for(let i=0;i<correct.length;i++){const checked=document.querySelector('input[name=q'+(i+1)+']:checked');if(checked&&checked.value===correct[i])score++;else miss.push((i+1)+'. '+explanations[i]);}
+    const feedback=$('quiz-feedback');feedback.hidden=false;feedback.textContent='Score: '+score+'/5 — '+(score>=4?'Practice passed.':'Review and retry.')+(miss.length?'\nReview:\n'+miss.join('\n'):'\nAll correct. Well done.');
+    if(score>=4)markStep('task-quiz');try{localStorage.setItem(quizKey,String(score));}catch(e){}
+    feedback.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+  $('quiz-reset').addEventListener('click',()=>{$('quiz-feedback').hidden=true;});
+  loadProgress();
+  showArea();
+  initMap();
+  </script>
+</body>
+</html>
