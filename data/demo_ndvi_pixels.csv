@@ -1,0 +1,9 @@
+pixel_id,nir,red,context_label,source_note
+P01,0.62,0.18,vigorous_vegetation,SYNTHETIC_TRAINING_DATA
+P02,0.53,0.22,moderate_vegetation,SYNTHETIC_TRAINING_DATA
+P03,0.35,0.27,sparse_vegetation,SYNTHETIC_TRAINING_DATA
+P04,0.30,0.29,bare_soil,SYNTHETIC_TRAINING_DATA
+P05,0.04,0.06,water_example,SYNTHETIC_TRAINING_DATA
+P06,0.47,0.11,vigorous_vegetation,SYNTHETIC_TRAINING_DATA
+P07,0.28,0.19,sparse_vegetation,SYNTHETIC_TRAINING_DATA
+P08,0.00,0.00,invalid_zero_denominator,SYNTHETIC_TRAINING_DATA
