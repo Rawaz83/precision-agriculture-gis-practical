@@ -1,4 +1,3 @@
-
 ---
 title: "Lecture 1: Introduction to Precision Agriculture"
 teaching: 30
@@ -14,7 +13,6 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::::::::::
 
-::::
 :::::::::::::::::::::::::::::::::::::::: callout
 
 ### Interactive GIS laboratory — guided practice
