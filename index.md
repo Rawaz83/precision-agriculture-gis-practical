@@ -32,6 +32,42 @@ This practical course teaches undergraduate agricultural engineering students ag
 | 13 | Management Zones and Variable-Rate Technology | [Lecture 13](13-management-zones-variable-rate.html) |
 | 14 | Final Practical GIS Project | [Lecture 14](14-final-practical-gis-project.html) |
 
+## Illustrated lessons — real photographs, diagrams and videos
+
+The course now includes **original, externally sourced educational images** and
+**embedded YouTube tutorials** in the first two lectures. This section provides
+quick previews; open the full lessons to see each item in its teaching context.
+
+### Lecture 1 — Vector data and drawing a field polygon
+
+![Original vector-map illustration of points, lines and polygons](https://upload.wikimedia.org/wikipedia/commons/3/38/Simple_vector_map.svg)
+
+*Original illustration by [M. W. Toews (Wikimedia Commons)](https://commons.wikimedia.org/wiki/File:Simple_vector_map.svg), CC BY-SA 4.0; unchanged.*
+
+**Watch the real Google Earth Pro polygon tutorial:**
+
+<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/jAvZduECF0I" title="Google Earth Pro — how to create and edit polygons" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+*Tutorial by [Sabankou Kpatadoa on YouTube](https://www.youtube.com/watch?v=jAvZduECF0I). If the player cannot load, open the linked video directly.*
+
+[See all 3 images, both videos and practical exercises in Lecture 1](introduction.html).
+
+### Lecture 2 — Latitude, longitude and projected coordinates
+
+![Original illustration showing Earth's latitude and longitude lines](https://upload.wikimedia.org/wikipedia/commons/6/62/Latitude_and_Longitude_of_the_Earth.svg)
+
+*Original illustration by [Djexplo (Wikimedia Commons)](https://commons.wikimedia.org/wiki/File:Latitude_and_Longitude_of_the_Earth.svg), CC0 1.0; unchanged.*
+
+**Watch the original QGIS tutorial on coordinate reference systems:**
+
+<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/BRe1CpqziZk" title="QGIS for beginners — Coordinate Reference Systems with Gavin Fleming" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+*Tutorial by the [official QGIS YouTube channel](https://www.youtube.com/watch?v=BRe1CpqziZk). If the player cannot load, open the linked video directly.*
+
+[See all 3 diagrams, both videos and practical exercises in Lecture 2](02-gis-coordinate-systems.html).
+
+---
+
 ## Learning goals
 
 By the end of the course, students should be able to collect and validate geographic data, create maps in Google Earth and QGIS, work with vector and raster data, interpret crop-related maps cautiously, and submit a reproducible GIS project.
