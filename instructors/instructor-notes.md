@@ -28,3 +28,19 @@ Use the official course assignment rubric, not the practice quiz alone, to asses
 ## Further development
 
 The interactive laboratory is a first pilot. Before formal adoption, test with student devices, low-bandwidth mobile connections, and relevant accessibility tools. Review external library CDN availability, OpenStreetMap tile policy, and accessibility of map drawing.
+
+
+## Classroom acceptance check
+
+Before each course offering, open the published [laboratory](files/interactive-lab.html)
+in a student browser and verify that: the field map appears; layers can be
+toggled; soil markers show their synthetic attributes; polygon drawing changes
+the displayed area and exports GeoJSON; NDVI sliders update the formula;
+the five-question quiz returns feedback; and local progress is retained after
+a same-browser refresh. Repeat on at least one phone. If the map library or
+OpenStreetMap tiles are unavailable, use a QGIS-based alternative.
+
+The separate `02 Publish: Interactive GIS Laboratory` GitHub workflow restores
+the standalone app to the `gh-pages` publishing branch after routine Workbench
+builds, because Workbench does not automatically publish arbitrary standalone
+HTML from its source `files/` directory.
