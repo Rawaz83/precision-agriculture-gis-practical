@@ -140,9 +140,9 @@ A **projected CRS** represents the curved Earth on a flat coordinate plane. Many
 
 The original video below demonstrates multiple GIS layers using different CRSs and how QGIS displays them together using on-the-fly reprojection.
 
-<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/qhFs_Z78ItE" title="Coordinate Reference Systems (CRS) and QGIS — GIS Tools to Understand the World" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/BRe1CpqziZk" title="QGIS for beginners: Coordinate Reference Systems with Gavin Fleming" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-*Video: [Coordinate Reference Systems (CRS) and QGIS](https://www.youtube.com/watch?v=qhFs_Z78ItE), GIS - Tools to understand the world, 2024. Video hosted and owned by its YouTube creator.*
+*Video: [QGIS for beginners: Coordinate Reference Systems with Gavin Fleming](https://www.youtube.com/watch?v=BRe1CpqziZk), QGIS official channel, 2022. Video hosted and owned by its YouTube creator.*
 
 ## 5. How UTM zones work
 
@@ -197,9 +197,9 @@ B. WGS 84 / UTM Zone 38N, EPSG:32638
 
 This YouTube walkthrough specifically covers latitude/longitude, UTM format and measurement-unit settings.
 
-<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/vRfOrvIo0RU" title="How to Change Units and Coordinate System in Google Earth Pro — John Okello" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/3ySwElnHlBY" title="Google Earth Pro: Change Coordinate Formats — Sabankou Kpatadoa" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-*Video: [How to Change Units & Coordinate System in Google Earth Pro](https://www.youtube.com/watch?v=vRfOrvIo0RU), John Okello, 2023. Video hosted and owned by its YouTube creator.*
+*Video: [Google Earth Pro: Change Coordinate System, DD, DMS, DMM and UTM](https://www.youtube.com/watch?v=3ySwElnHlBY), Sabankou Kpatadoa, 2023. Video hosted and owned by its YouTube creator.*
 
 ### Step 3 — Create two placemarks
 

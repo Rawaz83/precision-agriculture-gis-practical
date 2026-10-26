@@ -144,9 +144,9 @@ A **vector polygon** follows connected boundary vertices. A **raster** covers sp
 
 This short video introduces points, lines, polygons, and raster grids. Watch before attempting Exercise 1.
 
-<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/hc842pelnOw" title="Vector vs. Raster Data Explained — Atlas GIS" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/N-3zF10LbHg" title="Vector vs Raster Data in GIS — Felt" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-*Video: [Vector vs. Raster Data Explained | Beginner-Friendly GIS Course](https://www.youtube.com/watch?v=hc842pelnOw), Atlas (2025), via YouTube. Video remains hosted by its creator. If the embedded player is unavailable, use the linked YouTube page.*
+*Video: [Vector vs Raster Data in GIS: Key Differences for Mapping and Analysis](https://www.youtube.com/watch?v=N-3zF10LbHg), Felt (2024), via YouTube. Video remains hosted by its creator. If the embedded player is unavailable, use the linked YouTube page.*
 
 :::::::::::::::::::::::::::::::::::::::::::: challenge
 
