@@ -4,6 +4,7 @@
 "config.yaml" "a65647d17c3379f1b60fef0409756014" "site/built/config.yaml" "2026-10-26"
 "index.md" "4f97178ab2e4b22640ac0bdeafaff1a5" "site/built/index.md" "2026-10-26"
 "links.md" "8184cf4149eafbf03ce8da8ff0778c14" "site/built/links.md" "2026-10-25"
+"data/PRACTICE-PACK.md" "0a756a4c37068040e1e1f9445b4b4f0d" "site/built/PRACTICE-PACK.md" "2026-10-26"
 "episodes/introduction.md" "99e1299ce70cfda5a587c98edd93bef3" "site/built/introduction.md" "2026-10-26"
 "episodes/02-gis-coordinate-systems.md" "bbc9ac1ce380ee0e085f8d741aee4f6b" "site/built/02-gis-coordinate-systems.md" "2026-10-26"
 "episodes/03-gnss-agricultural-positioning.md" "c0e45e517559a3219a9a8776f89cc311" "site/built/03-gnss-agricultural-positioning.md" "2026-10-26"
