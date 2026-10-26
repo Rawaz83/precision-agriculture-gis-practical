@@ -225,6 +225,7 @@
 <li><a href="#guided-discussion">5. Guided Discussion</a></li>
 <li><a href="#student-assignment">6. Student Assignment</a></li>
 <li><a href="#further-reading">7. Further Reading</a></li>
+<li><a href="#media-attribution-and-reuse">8. Media attribution and reuse</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -420,7 +421,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1></h1>
-        <p>Last updated on 2026-10-25 |
+        <p>Last updated on 2026-10-26 |
 
         <a href="https://github.com/Rawaz83/precision-agriculture-gis-practical/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -518,7 +519,21 @@ informed decisions, and evaluating the results.</p>
 <td>Monitoring agricultural weather</td>
 </tr><tr><td>Variable-rate technology</td>
 <td>Adjusting agricultural inputs by location</td>
-</tr></tbody></table></section><section><h2 class="section-heading" id="understanding-spatial-data">3. Understanding Spatial Data<a class="anchor" aria-label="anchor" href="#understanding-spatial-data"></a></h2>
+</tr></tbody></table><div class="section level3">
+<h3 id="photo-gnss-guidance-equipment">Photo: GNSS guidance equipment<a class="anchor" aria-label="anchor" href="#photo-gnss-guidance-equipment"></a></h3>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Teejet_Matrix_430.jpg" alt="A TeeJet Matrix 430 agricultural GNSS guidance display beside a GNSS antenna receiver" class="figure mx-auto d-block"><div class="figcaption">A TeeJet Matrix 430 agricultural GNSS guidance
+display beside a GNSS antenna receiver</div>
+</figure><p><em>Figure 1. A real agricultural GNSS guidance display and receiver.
+This is an example of positioning equipment, not a screenshot of a field
+map. Photograph: <a href="https://commons.wikimedia.org/wiki/File:Teejet_Matrix_430.jpg" class="external-link">Mr. Justice
+USA, Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC BY-SA 4.0</a>.
+Image reproduced unchanged.</em></p>
+<p><strong>Look closely:</strong> Which component displays information
+to the tractor operator, and which component receives satellite
+navigation signals? How could knowing a tractor’s location reduce missed
+passes or overlapping applications?</p>
+</div>
+</section><section><h2 class="section-heading" id="understanding-spatial-data">3. Understanding Spatial Data<a class="anchor" aria-label="anchor" href="#understanding-spatial-data"></a></h2>
 <hr class="half-width"><p>GIS commonly uses vector and raster data.</p>
 <div class="section level3">
 <h3 id="vector-data">Vector Data<a class="anchor" aria-label="anchor" href="#vector-data"></a></h3>
@@ -534,10 +549,45 @@ roads</p>
 management zones</p>
 </div>
 <div class="section level3">
+<h3 id="visual-guide-points-lines-and-polygons">Visual guide: Points, lines, and polygons<a class="anchor" aria-label="anchor" href="#visual-guide-points-lines-and-polygons"></a></h3>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Simple_vector_map.svg" alt="Original diagram of a simple GIS vector map identifying point wells, line rivers and a polygon lake" class="figure mx-auto d-block"><div class="figcaption">Original diagram of a simple GIS vector map
+identifying point wells, line rivers and a polygon lake</div>
+</figure><p><em>Figure 2. Vector data illustrated by wells (points), a river
+(line), and a lake (polygon). Illustration: <a href="https://commons.wikimedia.org/wiki/File:Simple_vector_map.svg" class="external-link">M.
+W. Toews, Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC BY-SA 4.0</a>.
+Image reproduced unchanged.</em></p>
+<p><strong>Apply this to farming:</strong> Replace the well with a
+soil-sampling location, the river with an irrigation pipe or tractor
+route, and the lake with a field boundary.</p>
+</div>
+<div class="section level3">
 <h3 id="raster-data">Raster Data<a class="anchor" aria-label="anchor" href="#raster-data"></a></h3>
 <p>Raster data consists of a grid of cells.</p>
 <p>Examples: - Satellite images - NDVI maps - Digital elevation models -
 Temperature maps</p>
+</div>
+<div class="section level3">
+<h3 id="visual-guide-vector-versus-raster-representation">Visual guide: Vector versus raster representation<a class="anchor" aria-label="anchor" href="#visual-guide-vector-versus-raster-representation"></a></h3>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Area_in_spatial_raster_and_vector_data.svg" alt="Comparison of a continuous area represented by a precise vector polygon boundary and by raster grid cells" class="figure mx-auto d-block"><div class="figcaption">Comparison of a continuous area represented by a
+precise vector polygon boundary and by raster grid cells</div>
+</figure><p><em>Figure 3. The same area represented by vector and raster models.
+Illustration: <a href="https://commons.wikimedia.org/wiki/File:Area_in_spatial_raster_and_vector_data.svg" class="external-link">Gegot,
+Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC BY-SA 4.0</a>.
+Image reproduced unchanged.</em></p>
+<p>A <strong>vector polygon</strong> follows connected boundary
+vertices. A <strong>raster</strong> covers space with individual grid
+cells, so an edge is represented at the raster’s cell resolution.</p>
+</div>
+<div class="section level3">
+<h3 id="watch-vector-versus-raster-in-gis">Watch: Vector versus raster in GIS<a class="anchor" aria-label="anchor" href="#watch-vector-versus-raster-in-gis"></a></h3>
+<p>This short video introduces points, lines, polygons, and raster
+grids. Watch before attempting Exercise 1.</p>
+<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/hc842pelnOw" title="Vector vs. Raster Data Explained — Atlas GIS" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+</iframe>
+<p><em>Video: <a href="https://www.youtube.com/watch?v=hc842pelnOw" class="external-link">Vector vs. Raster
+Data Explained | Beginner-Friendly GIS Course</a>, Atlas (2025), via
+YouTube. Video remains hosted by its creator. If the embedded player is
+unavailable, use the linked YouTube page.</em></p>
 <div id="exercise-1-identify-the-data-type" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -595,6 +645,18 @@ Iraq</p>
 <li>Buildings</li>
 <li>Water resources</li>
 </ul><p>Record your observations.</p>
+<div class="section level4">
+<h4 id="watch-before-digitizing-drawing-a-polygon-in-google-earth-pro">Watch before digitizing: Drawing a polygon in Google Earth Pro<a class="anchor" aria-label="anchor" href="#watch-before-digitizing-drawing-a-polygon-in-google-earth-pro"></a></h4>
+<p>This walkthrough shows how to create a polygon, edit its vertices,
+and correct an outline. It demonstrates the same type of polygon
+students will use for their training-field boundary.</p>
+<iframe width="720" height="405" style="max-width:100%; border:0; aspect-ratio:16/9;" src="https://www.youtube-nocookie.com/embed/jAvZduECF0I" title="Google Earth Pro: How to Create and Edit Polygons — Sabankou Kpatadoa" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+</iframe>
+<p><em>Video: <a href="https://www.youtube.com/watch?v=jAvZduECF0I" class="external-link">Google Earth Pro |
+How to Create and Edit Polygons</a>, Sabankou Kpatadoa (2023), via
+YouTube. Polygon creation begins at 0:13; editing begins around 3:46.
+Video remains hosted by its creator.</em></p>
+</div>
 </div>
 <div class="section level3">
 <h3 id="step-3-create-a-farm-boundary">Step 3: Create a Farm Boundary<a class="anchor" aria-label="anchor" href="#step-3-create-a-farm-boundary"></a></h3>
@@ -761,7 +823,19 @@ lecturer.</p>
 <li><a href="https://www.earthdata.nasa.gov/" class="external-link">NASA Earthdata</a></li>
 <li><a href="https://www.fao.org/geospatial/" class="external-link">FAO Geospatial
 Information</a></li>
-</ul><div id="keypoints1" class="callout keypoints">
+</ul></section><section><h2 class="section-heading" id="media-attribution-and-reuse">8. Media attribution and reuse<a class="anchor" aria-label="anchor" href="#media-attribution-and-reuse"></a></h2>
+<hr class="half-width"><p>The photographs and diagrams in this lesson are <strong>original
+works by the credited external creators</strong>, not AI-generated
+images. They are embedded from Wikimedia Commons without alteration.
+Their <strong>CC BY-SA 4.0</strong> licenses apply to each individual
+image, even though original written course content has a CC BY 4.0
+license. See each caption for creator, source and license.</p>
+<p>The videos are embedded from YouTube, attributed to their respective
+channels, and remain hosted on YouTube. Their presence in this lesson
+does not mean the videos are openly licensed for copying, redistribution
+or editing. Use the linked YouTube page if an embed is blocked by
+network or privacy settings.</p>
+<div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -846,7 +920,7 @@ any links that you are not going to use.
   "url": "https://Rawaz83.github.io/precision-agriculture-gis-practical/introduction.html",
   "identifier": "https://Rawaz83.github.io/precision-agriculture-gis-practical/introduction.html",
   "dateCreated": "2026-10-25",
-  "dateModified": "2026-10-25",
+  "dateModified": "2026-10-26",
   "datePublished": "2026-10-26"
 }
 
