@@ -84,6 +84,10 @@ For this CSV, select **X = longitude** and **Y = latitude**, and set the source 
 
 ::::::::::::::::::::::::::::::::::::::::
 
+## Practice coordinate conversion interactively
+
+Use the **[interactive decimal-degree to DMS converter](files/interactive-lab.html#coord)** in the introductory Farm GIS Laboratory. Enter a signed geographic coordinate and compare the degree/minute/second result with the worked example below. This tool is a formative browser calculator, not a source of surveyed measurements.
+
 ## 3. Decimal degrees and degrees-minutes-seconds
 
 The same position can be expressed using different **formats**:
