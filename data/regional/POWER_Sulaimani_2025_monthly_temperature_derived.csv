@@ -1,0 +1,13 @@
+year,month,latitude,longitude,mean_temperature_c,source_class
+2025,1,35.5266,45.3195,4.68,"NASA POWER-derived instructor summary, MERRA-2 model"
+2025,2,35.5266,45.3195,2.58,"NASA POWER-derived instructor summary, MERRA-2 model"
+2025,3,35.5266,45.3195,11.04,"NASA POWER-derived instructor summary, MERRA-2 model"
+2025,4,35.5266,45.3195,16.24,"NASA POWER-derived instructor summary, MERRA-2 model"
+2025,5,35.5266,45.3195,23.89,"NASA POWER-derived instructor summary, MERRA-2 model"
+2025,6,35.5266,45.3195,28.68,"NASA POWER-derived instructor summary, MERRA-2 model"
+2025,7,35.5266,45.3195,32.23,"NASA POWER-derived instructor summary, MERRA-2 model"
+2025,8,35.5266,45.3195,32.6,"NASA POWER-derived instructor summary, MERRA-2 model"
+2025,9,35.5266,45.3195,25.58,"NASA POWER-derived instructor summary, MERRA-2 model"
+2025,10,35.5266,45.3195,20.14,"NASA POWER-derived instructor summary, MERRA-2 model"
+2025,11,35.5266,45.3195,13.67,"NASA POWER-derived instructor summary, MERRA-2 model"
+2025,12,35.5266,45.3195,5.91,"NASA POWER-derived instructor summary, MERRA-2 model"
