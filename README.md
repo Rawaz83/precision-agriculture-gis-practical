@@ -24,3 +24,10 @@ The Carpentries Workbench builds Markdown files from the `main` branch into the 
 Practice progress and quiz results are saved only in the student's own browser when local storage is permitted. There is no authenticated student identity or gradebook. Results can be self-reported or reset and **must not be treated as formal grades**. Students submit actual GIS files through university-approved means.
 
 **All internally created practice data are synthetic**, not actual farm boundaries, measured soil chemistry, real drone surveys or field prescriptions. Original course text and synthetic training data are CC BY 4.0 unless stated otherwise. External images, source datasets and videos retain their respective owners' license terms. See individual lesson captions and [CITATION.cff](CITATION.cff).
+
+## Moodle and modeled regional GIS resources
+
+- [Moodle XML formative question bank (65 questions)](moodle/GIS_Moodle_Question_Bank.xml); [14 assignment/rubric briefs](moodle/ASSIGNMENTS_AND_RUBRICS.md).
+- [Moodle setup instructions](moodle/README.md). The connected GitHub integration cannot reach the lecturer's local Moodle installation, so actual quizzes/assignments **have not been created in Moodle**.
+- [Interactive regional data explorer](https://rawaz83.github.io/precision-agriculture-gis-practical/files/regional-data-lab.html).
+- [NASA POWER-derived regional data and scientific caveats](data/regional/README.md). These are derived earlier summary files, not authenticated direct NASA API responses or weather/soil station observations.

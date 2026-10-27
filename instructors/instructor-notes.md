@@ -116,3 +116,9 @@ In every module: read the full lesson, discuss image/video examples, download sy
 Open all 11 deep links in a desktop browser and confirm that each displays the matching topic, reference image and linked source, embedded video or YouTube fallback, correct download filenames and question set. Check units, negative and zero inputs, mathematical output, feedback for wrong and correct answers, and local progress saving/reloading. For low-bandwidth or accessibility needs, let students complete the equivalent text- and QGIS-based activity offline. External media retains third-party author/license terms as detailed in the lesson captions.
 
 The Workbench publishing workflow now synchronizes all **three** standalone HTML apps into the generated `gh-pages` branch after successful course builds.
+
+## Moodle and regional reanalysis resources
+
+The `moodle/` directory contains a 65-question Moodle XML bank and 14 week-specific assignment/rubric briefs. These are **not installed in Moodle**: import into the lecturer's authenticated instance and create actual Assignment and Quiz activities separately. Public question-bank answers should be treated as formative preparation, never an undisclosed high-stakes test bank. Verify at least three imported questions across categories before assessment.
+
+The [Northern Iraq regional viewer](files/regional-data-lab.html) uses 28 soil-wetness grid locations and 12 monthly modeled temperatures derived from user-supplied NASA POWER-based summaries. Original raw provider API responses were not included. Assign students a data-provenance check, grid-versus-ground classification, EPSG:4326 import, style of July/August values, and report limitations. Avoid claims about farm-level moisture, measured temperature or irrigation prescriptions.

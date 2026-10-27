@@ -54,6 +54,10 @@ All supplied course CSV data are **synthetic educational examples**, not real fi
 
 **[Open the interactive practice module for Lecture 14](files/course-interactives.html?lecture=14)**. It includes a subject-specific scenario calculator, credited real third-party images and videos, downloadable teaching data, four explanatory quiz questions and locally saved progress. Complete any required QGIS work in the desktop application. These synthetic exercises do **not** produce verified grades or operational farm recommendations.
 
+## Regionally sourced model-data companion
+
+**[Explore the NASA POWER-derived northern Iraq environmental data laboratory](files/regional-data-lab.html)** and [download its regional CSV datasets](https://github.com/Rawaz83/precision-agriculture-gis-practical/tree/main/data/regional). Compare the 28 modeled top-layer relative soil-wetness grid centers and 12 modeled monthly air temperatures. The underlying summaries were provided earlier by the lecturer and their original API response records were not retained. This is **gridded modeled/reanalysis data**, not actual field soil samples or weather-station measurements. Read the limitations and do not use these files for real farm prescriptions.
+
 ## 2. Practical exercise — step by step
 
 ### Watch: QGIS Print Layout complete guide

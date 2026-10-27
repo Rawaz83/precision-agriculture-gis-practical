@@ -107,6 +107,12 @@ In addition to the **[Interactive Farm GIS Laboratory](files/interactive-lab.htm
 
 The exercises provide topic-specific calculations, original external imagery and embedded teaching videos, downloadable synthetic GIS datasets, 44 short explanatory quiz questions, and browser-only progress tracking. They are **formative practice**, not verified grades; complete and submit GIS deliverables through the university's approved channels.
 
+## Moodle assessment package and regional environmental data
+
+The [Moodle-ready assessment folder](https://github.com/Rawaz83/precision-agriculture-gis-practical/tree/main/moodle) contains a **65-item Moodle XML question bank**, import instructions and 14 practical assignment briefs with 10-mark grading rubrics. Import these resources into your own authenticated university Moodle site to enable formal quiz attempts and assignment submissions; the public GitHub course does not handle confidential grades.
+
+**[Open the Northern Iraq regional environmental data explorer](files/regional-data-lab.html)**. Examine 28 modeled soil-wetness grid centers and 12 months of modeled air-temperature summaries. [Download regional CSV files](https://github.com/Rawaz83/precision-agriculture-gis-practical/tree/main/data/regional) and review their limitations. These are *derived from NASA POWER-based tables supplied by the lecturer*, not independently authenticated original API downloads, and are distinct from the fully synthetic GIS teaching files.
+
 ## Learning goals
 
 By the end of the course, students should be able to collect and validate geographic data, create maps in Google Earth and QGIS, work with vector and raster data, interpret crop-related maps cautiously, and submit a reproducible GIS project.

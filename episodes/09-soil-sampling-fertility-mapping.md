@@ -63,6 +63,10 @@ All supplied course CSV data are **synthetic educational examples**, not real fi
 
 **[Open the interactive practice module for Lecture 9](files/course-interactives.html?lecture=9)**. Work with synthetic course data, real externally sourced teaching images, a relevant YouTube walkthrough, a topic-specific calculation and four instant-feedback questions. Practice progress is stored only in your browser. Complete the real GIS work in QGIS or the software specified in this lesson; browser results are **not official university grades**.
 
+## Regionally sourced model-data companion
+
+**[Explore the NASA POWER-derived northern Iraq environmental data laboratory](files/regional-data-lab.html)** and [download its regional CSV datasets](https://github.com/Rawaz83/precision-agriculture-gis-practical/tree/main/data/regional). Compare the 28 modeled top-layer relative soil-wetness grid centers and 12 modeled monthly air temperatures. The underlying summaries were provided earlier by the lecturer and their original API response records were not retained. This is **gridded modeled/reanalysis data**, not actual field soil samples or weather-station measurements. Read the limitations and do not use these files for real farm prescriptions.
+
 ## 2. Practical exercise — step by step
 
 ### Watch: IDW interpolation in QGIS

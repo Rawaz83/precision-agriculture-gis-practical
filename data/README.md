@@ -12,3 +12,7 @@ Coordinate source CRS: WGS 84, EPSG:4326. Use X = longitude and Y = latitude whe
 Coordinates are placed illustratively near Sulaymaniyah and do not describe an identified surveyed field.
 
 Created for University of Sulaimani Precision Agriculture & GIS — Practical. License: CC BY 4.0 for these original synthetic training datasets.
+
+## Regional modeled data (not synthetic, not field measured)
+
+See [data/regional/README.md](regional/README.md) and the [interactive regional explorer](https://rawaz83.github.io/precision-agriculture-gis-practical/files/regional-data-lab.html). These tables derive from a lecturer-supplied NASA POWER-based MERRA-2 summary. Their model origin differs from the **fabricated** data above, but original upstream API retrieval metadata was not retained. The tables must **not** be represented as independently authenticated ground/station observations.
