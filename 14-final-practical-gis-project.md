@@ -50,6 +50,10 @@ All supplied course CSV data are **synthetic educational examples**, not real fi
 
 **Observation task:** For each figure, explain which mapped property is actually observable and which agricultural decision would still require a field measurement.
 
+## Interactive practical — Lecture 14
+
+**[Open the interactive practice module for Lecture 14](files/course-interactives.html?lecture=14)**. It includes a subject-specific scenario calculator, credited real third-party images and videos, downloadable teaching data, four explanatory quiz questions and locally saved progress. Complete any required QGIS work in the desktop application. These synthetic exercises do **not** produce verified grades or operational farm recommendations.
+
 ## 2. Practical exercise — step by step
 
 ### Watch: QGIS Print Layout complete guide

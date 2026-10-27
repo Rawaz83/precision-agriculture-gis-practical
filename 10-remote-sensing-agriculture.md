@@ -46,6 +46,10 @@ All supplied course CSV data are **synthetic educational examples**, not real fi
 
 **Observation task:** For each figure, explain which mapped property is actually observable and which agricultural decision would still require a field measurement.
 
+## Interactive practical — Lecture 10
+
+**[Open the interactive practice module for Lecture 10](files/course-interactives.html?lecture=10)**. Work with synthetic course data, real externally sourced teaching images, a relevant YouTube walkthrough, a topic-specific calculation and four instant-feedback questions. Practice progress is stored only in your browser. Complete the real GIS work in QGIS or the software specified in this lesson; browser results are **not official university grades**.
+
 ## 2. Practical exercise — step by step
 
 ### Watch: Sentinel-2 data search and NDVI processing in QGIS
