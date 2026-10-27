@@ -1,0 +1,74 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Regional Environmental Data GIS Laboratory · University of Sulaimani</title>
+<style>:root{--dark:#17363a;--green:#18644e;--line:#d7e5de}*{box-sizing:border-box}body{margin:0;background:#f3f7f5;color:var(--dark);font:16px/1.5 system-ui,Arial,sans-serif}
+header{background:#12382f;color:white;padding:14px 18px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}header a{color:#e0f5e8}
+main{max-width:1140px;padding:24px 16px;margin:auto}h1{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.16}h2{font-size:1.3rem;margin:0 0 10px}
+.grid{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}.card{background:white;padding:20px;border:1px solid var(--line);border-radius:12px;margin:14px 0}.note{background:#fff7e4;border-left:4px solid #ad8320;padding:13px}.small{font-size:.86rem;color:#556f73}
+a{color:#076d73}select,input,button{font:inherit;padding:8px;border:1px solid #aac8b6;border-radius:7px}button{cursor:pointer;background:var(--green);color:white}
+select:focus-visible,input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #dba637;outline-offset:2px}
+#map,#chart{max-width:100%;height:auto;border:1px solid var(--line);background:#f9fcfa;border-radius:7px}
+.circle{cursor:pointer;stroke:#24483d;stroke-width:1.5}.circle:focus{stroke:#ffba55;stroke-width:4;outline:none}.circle.on{stroke:#ffba55;stroke-width:4}
+table{border-collapse:collapse;width:100%;font-size:.84rem}th,td{padding:7px;border-bottom:1px solid var(--line);text-align:left}.scroll{max-height:290px;overflow:auto}
+label{display:inline-block;margin:10px 12px 10px 0}.feedback{border-left:3px solid var(--green);padding:10px;background:#ebf6ef}
+footer{text-align:center;color:#617677;font-size:.85rem;padding:20px}@media(max-width:850px){.grid{grid-template-columns:1fr}.card{padding:15px}}</style></head><body>
+<header><strong>UNIVERSITY OF SULAIMANI · AGRICULTURAL ENGINEERING</strong><a href="../index.html">Back to course</a></header>
+<main><h1>Northern Iraq — Regional Environmental Data Laboratory</h1>
+<p>This GIS activity uses previously supplied <strong>NASA POWER-derived MERRA-2 modeled data</strong> instead of fabricated teaching examples. Examine model-grid locations, the July–August 2025 wetness comparison and 2025 monthly air temperatures near Sulaymaniyah.</p>
+<div class="note"><strong>Provenance limitation:</strong> The underlying API responses were not preserved and the values have not been independently revalidated against NASA POWER. These are derived model summaries, <strong>not actual station or soil measurements</strong>. They must not be used for fertilizer recommendations, farm-level moisture claims or research findings without original-product verification.</div>
+<div class="grid"><section class="card">
+<h2>Explore 28 modeled grid centers</h2>
+<label>Parameter <select id="variable"><option value="jul">July 2025 saturation</option><option value="aug">August 2025 saturation</option><option value="anJul">July anomaly</option><option value="anAug">August anomaly</option></select></label>
+<label>Threshold <input id="threshold" type="number" step="0.01" min="-0.1" max="1" value="0.12" style="width:90px"></label>
+<button type="button" id="apply">Apply</button>
+<svg id="map" viewBox="0 0 600 380" aria-label="Plot of 28 NASA POWER-derived model grid centers by latitude and longitude" role="img"><rect x="65" y="25" width="500" height="310" fill="#eef5ee"/><g id="plot"></g><g id="labels"></g></svg>
+<div id="selection" class="feedback" role="status">Select a circle or use the table below to examine a grid-center value.</div><p id="count" class="small"></p>
+<div class="scroll"><table><thead><tr><th>Latitude</th><th>Longitude</th><th>Value</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p class="small">The plot displays locations of model grid centers only, not cell footprints, administrative borders or actual farm boundaries.</p>
+</section><section class="card"><h2>2025 modeled temperature</h2>
+<svg id="chart" viewBox="0 0 500 320" aria-label="Twelve monthly two-metre modeled air-temperature means for 2025" role="img"></svg>
+<p id="range" class="feedback"></p>
+<h2>Download data</h2>
+<p><a href="https://raw.githubusercontent.com/Rawaz83/precision-agriculture-gis-practical/main/data/regional/POWER_Northern_Iraq_2025_soil_wetness_derived.csv" target="_blank" rel="noopener">Download 28-point modeled wetness CSV</a></p>
+<p><a href="https://raw.githubusercontent.com/Rawaz83/precision-agriculture-gis-practical/main/data/regional/POWER_Sulaimani_2025_monthly_temperature_derived.csv" target="_blank" rel="noopener">Download 12-month modeled temperature CSV</a></p>
+<p><a href="https://github.com/Rawaz83/precision-agriculture-gis-practical/blob/main/data/regional/README.md" target="_blank" rel="noopener">Read full provenance and limitations</a></p>
+<p><a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">Official NASA POWER source</a></p>
+</section></div>
+<section class="card"><h2>QGIS exercise and scientific assessment</h2>
+<ol><li>Import the wetness CSV through <strong>Delimited Text</strong>, X = longitude and Y = latitude, source CRS = EPSG:4326.</li>
+<li>Display graduated symbols for July, August and July anomaly separately. Compare classifications.</li>
+<li>Plot the monthly temperature CSV as a <strong>non-spatial table</strong> using month and mean_temperature_c.</li>
+<li>Create a PDF layout; explain that 28 modeled grid locations are not 28 ground soil-sampling sites.</li>
+<li>Document missing original API provenance and distinguish gridded modeled information from station or plot observations.</li></ol>
+<fieldset><legend>What do the GWETTOP values in this table represent?</legend><label><input type="radio" name="quiz" value="field"> Field-installed soil moisture sensors</label><label><input type="radio" name="quiz" value="model"> Modeled relative top-layer soil wetness (0–1)</label><label><input type="radio" name="quiz" value="fert"> Fertilizer rates in kg/ha</label></fieldset>
+<button id="check" type="button">Check my answer</button><div class="feedback" id="answer" role="status">Choose an answer and check it.</div></section>
+</main><footer>Precision Agriculture & GIS — Practical · University of Sulaimani · Reanalysis-derived products ≠ ground measurements</footer>
+<script>
+"use strict";
+const DATA={"w":[{"lat":35.5,"lon":43.125,"jul":0.14,"aug":0.17,"anJul":-0.02,"anAug":0.01},{"lat":35.5,"lon":43.75,"jul":0.14,"aug":0.15,"anJul":-0.03,"anAug":0},{"lat":35.5,"lon":44.375,"jul":0.08,"aug":0.08,"anJul":-0.04,"anAug":-0.01},{"lat":35.5,"lon":45,"jul":0.09,"aug":0.08,"anJul":-0.03,"anAug":-0.02},{"lat":35.5,"lon":45.625,"jul":0.11,"aug":0.09,"anJul":-0.03,"anAug":-0.03},{"lat":35.5,"lon":46.25,"jul":0.13,"aug":0.1,"anJul":-0.01,"anAug":-0.02},{"lat":35.5,"lon":46.875,"jul":0.18,"aug":0.13,"anJul":-0.01,"anAug":-0.03},{"lat":36,"lon":43.125,"jul":0.14,"aug":0.17,"anJul":-0.05,"anAug":0},{"lat":36,"lon":43.75,"jul":0.13,"aug":0.16,"anJul":-0.05,"anAug":0.01},{"lat":36,"lon":44.375,"jul":0.09,"aug":0.11,"anJul":-0.03,"anAug":0.01},{"lat":36,"lon":45,"jul":0.09,"aug":0.1,"anJul":-0.04,"anAug":-0.01},{"lat":36,"lon":45.625,"jul":0.11,"aug":0.09,"anJul":-0.04,"anAug":-0.03},{"lat":36,"lon":46.25,"jul":0.13,"aug":0.1,"anJul":-0.03,"anAug":-0.03},{"lat":36,"lon":46.875,"jul":0.15,"aug":0.11,"anJul":-0.04,"anAug":-0.04},{"lat":36.5,"lon":43.125,"jul":0.11,"aug":0.17,"anJul":-0.03,"anAug":0.05},{"lat":36.5,"lon":43.75,"jul":0.11,"aug":0.17,"anJul":-0.04,"anAug":0.05},{"lat":36.5,"lon":44.375,"jul":0.12,"aug":0.12,"anJul":-0.04,"anAug":-0.01},{"lat":36.5,"lon":45,"jul":0.12,"aug":0.12,"anJul":-0.05,"anAug":-0.01},{"lat":36.5,"lon":45.625,"jul":0.13,"aug":0.1,"anJul":-0.04,"anAug":-0.03},{"lat":36.5,"lon":46.25,"jul":0.13,"aug":0.09,"anJul":-0.03,"anAug":-0.03},{"lat":36.5,"lon":46.875,"jul":0.16,"aug":0.11,"anJul":-0.03,"anAug":-0.04},{"lat":37,"lon":43.125,"jul":0.11,"aug":0.16,"anJul":-0.04,"anAug":0.04},{"lat":37,"lon":43.75,"jul":0.12,"aug":0.17,"anJul":-0.03,"anAug":0.05},{"lat":37,"lon":44.375,"jul":0.13,"aug":0.14,"anJul":-0.04,"anAug":0},{"lat":37,"lon":45,"jul":0.16,"aug":0.14,"anJul":-0.04,"anAug":-0.01},{"lat":37,"lon":45.625,"jul":0.14,"aug":0.11,"anJul":-0.05,"anAug":-0.04},{"lat":37,"lon":46.25,"jul":0.13,"aug":0.1,"anJul":-0.04,"anAug":-0.03},{"lat":37,"lon":46.875,"jul":0.19,"aug":0.13,"anJul":-0.03,"anAug":-0.04}],"t":[{"month":1,"temp":4.68},{"month":2,"temp":2.58},{"month":3,"temp":11.04},{"month":4,"temp":16.24},{"month":5,"temp":23.89},{"month":6,"temp":28.68},{"month":7,"temp":32.23},{"month":8,"temp":32.6},{"month":9,"temp":25.58},{"month":10,"temp":20.14},{"month":11,"temp":13.67},{"month":12,"temp":5.91}]};
+const $=id=>document.getElementById(id),NS="http://www.w3.org/2000/svg";
+let selected=-1;
+function node(tag,attrs,text){const el=document.createElementNS(NS,tag);Object.keys(attrs||{}).forEach(k=>el.setAttribute(k,String(attrs[k])));if(text!==undefined)el.textContent=text;return el;}
+function plot(){
+const k=$("variable").value,thr=Number($("threshold").value),g=$("plot"),lab=$("labels");g.replaceChildren();lab.replaceChildren();let n=0;
+for(let lat of [35.5,36,36.5,37])lab.appendChild(node("text",{x:18,y:335-(lat-35.5)/1.5*310+4,"font-size":12},lat.toFixed(1)));
+for(let lon of [43.125,44.375,45.625,46.875])lab.appendChild(node("text",{x:65+(lon-43.125)/3.75*500-17,y:355,"font-size":11},lon.toFixed(2)));
+const tb=$("rows");tb.replaceChildren();
+DATA.w.forEach((r,i)=>{
+const v=r[k],hot=v>=thr;if(hot)n++;const c=node("circle",{cx:65+(r.lon-43.125)/3.75*500,cy:335-(r.lat-35.5)/1.5*310,r:12,fill:hot?"#288c62":"#e2ad53",class:"circle"+(i===selected?" on":""),tabindex:0,role:"button","aria-label":"Grid at "+r.lat+" north, "+r.lon+" east; value "+v});
+c.addEventListener("click",()=>{selected=i;plot();});c.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();selected=i;plot();}});g.appendChild(c);
+const tr=document.createElement("tr");[r.lat.toFixed(3),r.lon.toFixed(3),v.toFixed(3)].forEach(x=>{const td=document.createElement("td");td.textContent=x;tr.appendChild(td);});tb.appendChild(tr);
+});
+$("count").textContent=n+" / "+DATA.w.length+" modeled grid values at or above the selected threshold.";
+$("selection").textContent=selected<0?"Choose a grid center to inspect.":"Selected "+DATA.w[selected].lat+"°N, "+DATA.w[selected].lon+"°E — "+k+" = "+DATA.w[selected][k].toFixed(3)+". This is modeled relative saturation/anomaly, not a field reading.";
+}
+function chart(){
+const g=$("chart");g.replaceChildren();for(let level of [0,10,20,30,40]){let y=275-level/45*230;g.appendChild(node("line",{x1:40,y1:y,x2:485,y2:y,stroke:"#e1e9e4"}));g.appendChild(node("text",{x:11,y:y+4,"font-size":12},level));}
+DATA.t.forEach((v,i)=>{let h=v.temp/45*230,x=45+i*36;g.appendChild(node("rect",{x:x,y:275-h,width:24,height:h,fill:"#308766"}));g.appendChild(node("text",{x:x+11,y:295,"font-size":11,"text-anchor":"middle"},i+1));});
+const tt=DATA.t.map(z=>z.temp),lo=Math.min(...tt),hi=Math.max(...tt);
+$("range").textContent="2025 monthly modeled air-temperature means: "+lo.toFixed(2)+" to "+hi.toFixed(2)+" °C; values are not station observations.";
+}
+$("apply").addEventListener("click",plot);
+$("variable").addEventListener("change",plot);
+$("check").addEventListener("click",()=>{const z=document.querySelector('input[name="quiz"]:checked');$("answer").textContent=z&&z.value==="model"?"Correct. GWETTOP is modeled relative surface saturation, not a station or field measurement.":"GWETTOP is a modeled fraction of near-surface relative saturation (0–1), not kg/ha or a field sensor observation.";});
+plot();chart();
+</script></body></html>
