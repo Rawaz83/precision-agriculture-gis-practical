@@ -46,6 +46,10 @@ All supplied course CSV data are **synthetic educational examples**, not real fi
 
 **Observation task:** For each figure, explain which mapped property is actually observable and which agricultural decision would still require a field measurement.
 
+## Interactive practical — Lecture 5
+
+**[Open the interactive practice module for Lecture 5](files/course-interactives.html?lecture=5)**. It includes a topic-specific interactive calculation, the original images and videos credited in this lesson, four instant-feedback questions and browser-saved practice progress. Download the datasets and complete real GIS tasks in the relevant desktop application. All practice data are synthetic, and browser results are **not official university grades**.
+
 ## 2. Practical exercise — step by step
 
 ### Watch: Import a CSV into Google My Maps
