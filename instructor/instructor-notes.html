@@ -549,10 +549,66 @@ GitHub workflow restores the standalone app to the <code>gh-pages</code>
 publishing branch after routine Workbench builds, because Workbench does
 not automatically publish arbitrary standalone HTML from its source
 <code>files/</code> directory.</p>
+</div>
+<div class="section level2">
+<h2 id="lecture-6-phase-2-interactive-qgis-laboratory">Lecture 6 (Phase 2): Interactive QGIS laboratory<a class="anchor" aria-label="anchor" href="#lecture-6-phase-2-interactive-qgis-laboratory"></a>
+</h2>
+<p>Public student page: <a href="../files/qgis-training-lab.html">Interactive QGIS Training</a>.
+Source standalone HTML: files/qgis-training-lab.html on main.</p>
+<div class="section level3">
+<h3 id="teaching-sequence-7590-minutes">Teaching sequence (75–90 minutes)<a class="anchor" aria-label="anchor" href="#teaching-sequence-7590-minutes"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>0–10 min: identify menu, toolbar, Browser, Layers, map canvas,
+status bar.</li>
+<li>10–20 min: download 4 practice datasets and create project
+folders.</li>
+<li>20–40 min: CSV import with X longitude, Y latitude, EPSG:4326;
+expect 12 features.</li>
+<li>40–55 min: import 1 polygon, 1 line, 5 observation points from
+separate GeoJSON.</li>
+<li>55–70 min: project CRS EPSG:32638; export the field to EPSG:32638
+GeoPackage.</li>
+<li>70–80 min: save/reopen project including source files and screenshot
+evidence.</li>
+<li>80–90 min: six-question self-marking formative quiz and limitations
+discussion.</li>
+</ol>
+</div>
+<div class="section level3">
+<h3 id="instructor-verification-and-rubric">Instructor verification and rubric<a class="anchor" aria-label="anchor" href="#instructor-verification-and-rubric"></a>
+</h3>
+<p>Check that the downloaded GIS files have 1 polygon, 1 line, and 5
+point features; soil CSV contains 12 rows. Confirm the exported
+GeoPackage CRS is EPSG:32638 and the project reopens without
+missing-layer warnings.</p>
+<p>10 marks: correct CSV XY/CRS import (2), vector counts (2), projected
+GeoPackage (2), reproducible project (2), map and scientific limitations
+explanation (2).</p>
+<p>All practice features and soil values are SYNTHETIC and cannot
+support research findings or real farm management.</p>
+</div>
+<div class="section level3">
+<h3 id="browser-interactions-and-accessibility">Browser interactions and accessibility<a class="anchor" aria-label="anchor" href="#browser-interactions-and-accessibility"></a>
+</h3>
+<p>The annotated real QGIS screenshot has textual alternative controls,
+so students can identify components using a keyboard. Accept offline
+equivalent work where remote images or JavaScript cannot load. The
+browser’s progress tracker is self-reported and unverified; it does not
+capture student identity or submit work to Moodle or Google
+Classroom.</p>
+<p>Acceptance test: inspect screenshot source links; check 6 component
+explanations, download URLs, wrong/correct CSV and CRS feedback, quiz
+grading, refresh persistence and practice report download on PC and
+mobile.</p>
+<p>The existing 02 Publish workflow has been extended to republish both
+the farm GIS and QGIS training HTML files on every successful site
+rebuild.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </div>
 </div>
 
