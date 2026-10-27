@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="category"><category><text>$course$/top/Precision Agriculture GIS/Week 01</text></category></question>
+  <question type="multichoice">
+    <name><text>GIS Week 01 / Q45</text></name>
+    <questiontext format="html"><text>A farm boundary is most commonly represented by which vector geometry?</text></questiontext>
+    <generalfeedback format="html"><text>Field extents are represented by closed polygon geometry.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Polygon</text><feedback format="html"><text>Field extents are represented by closed polygon geometry.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Point</text><feedback format="html"><text>Review the course lesson and try again. Field extents are represented by closed polygon geometry.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Raster pixel</text><feedback format="html"><text>Review the course lesson and try again. Field extents are represented by closed polygon geometry.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 01 / Q46</text></name>
+    <questiontext format="html"><text>Which representation is most suitable for a single soil-sampling location?</text></questiontext>
+    <generalfeedback format="html"><text>Sampling positions are point observations.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>Line</text><feedback format="html"><text>Review the course lesson and try again. Sampling positions are point observations.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>Point</text><feedback format="html"><text>Sampling positions are point observations.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Polygon</text><feedback format="html"><text>Review the course lesson and try again. Sampling positions are point observations.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 01 / Q47</text></name>
+    <questiontext format="html"><text>Which representation stores an image as a grid of cells?</text></questiontext>
+    <generalfeedback format="html"><text>Rasters store measurements in rows and columns.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Raster</text><feedback format="html"><text>Rasters store measurements in rows and columns.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Polyline</text><feedback format="html"><text>Review the course lesson and try again. Rasters store measurements in rows and columns.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Placemark only</text><feedback format="html"><text>Review the course lesson and try again. Rasters store measurements in rows and columns.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 01 / Q48</text></name>
+    <questiontext format="html"><text>Which data item must be checked before mapping field observations?</text></questiontext>
+    <generalfeedback format="html"><text>Misidentified coordinate reference systems can move features to incorrect locations.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Source CRS and coordinate units</text><feedback format="html"><text>Misidentified coordinate reference systems can move features to incorrect locations.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Only a chart title</text><feedback format="html"><text>Review the course lesson and try again. Misidentified coordinate reference systems can move features to incorrect locations.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Only background colors</text><feedback format="html"><text>Review the course lesson and try again. Misidentified coordinate reference systems can move features to incorrect locations.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 01 / Q49</text></name>
+    <questiontext format="html"><text>What can synthetic teaching data legitimately support?</text></questiontext>
+    <generalfeedback format="html"><text>Synthetic records demonstrate methods, not actual agricultural conditions.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>Real fertilizer prescriptions</text><feedback format="html"><text>Review the course lesson and try again. Synthetic records demonstrate methods, not actual agricultural conditions.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>Teaching GIS workflows</text><feedback format="html"><text>Synthetic records demonstrate methods, not actual agricultural conditions.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A legally binding field boundary</text><feedback format="html"><text>Review the course lesson and try again. Synthetic records demonstrate methods, not actual agricultural conditions.</text></feedback></answer>
+  </question>
+  <question type="category"><category><text>$course$/top/Precision Agriculture GIS/Week 02</text></category></question>
+  <question type="multichoice">
+    <name><text>GIS Week 02 / Q50</text></name>
+    <questiontext format="html"><text>What are the usual units for EPSG:4326 geographic coordinates?</text></questiontext>
+    <generalfeedback format="html"><text>EPSG:4326 is a geographic WGS 84 coordinate reference system.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Degrees</text><feedback format="html"><text>EPSG:4326 is a geographic WGS 84 coordinate reference system.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Metres</text><feedback format="html"><text>Review the course lesson and try again. EPSG:4326 is a geographic WGS 84 coordinate reference system.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Hectares</text><feedback format="html"><text>Review the course lesson and try again. EPSG:4326 is a geographic WGS 84 coordinate reference system.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 02 / Q51</text></name>
+    <questiontext format="html"><text>Which EPSG code is WGS 84 / UTM Zone 38N?</text></questiontext>
+    <generalfeedback format="html"><text>EPSG:32638 represents UTM Zone 38N in metres.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>EPSG:32638</text><feedback format="html"><text>EPSG:32638 represents UTM Zone 38N in metres.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>EPSG:4326</text><feedback format="html"><text>Review the course lesson and try again. EPSG:32638 represents UTM Zone 38N in metres.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>EPSG:3857</text><feedback format="html"><text>Review the course lesson and try again. EPSG:32638 represents UTM Zone 38N in metres.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 02 / Q52</text></name>
+    <questiontext format="html"><text>35° 30′ 00″ N is equivalent to approximately:</text></questiontext>
+    <generalfeedback format="html"><text>Thirty minutes are half a degree.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>35.5° N</text><feedback format="html"><text>Thirty minutes are half a degree.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>35.03° N</text><feedback format="html"><text>Review the course lesson and try again. Thirty minutes are half a degree.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>35.3° N</text><feedback format="html"><text>Review the course lesson and try again. Thirty minutes are half a degree.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 02 / Q53</text></name>
+    <questiontext format="html"><text>When importing geographic points as X and Y, choose:</text></questiontext>
+    <generalfeedback format="html"><text>Longitude corresponds to horizontal X and latitude to vertical Y in a conventional GIS CSV importer.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>X longitude and Y latitude</text><feedback format="html"><text>Longitude corresponds to horizontal X and latitude to vertical Y in a conventional GIS CSV importer.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>X latitude and Y longitude</text><feedback format="html"><text>Review the course lesson and try again. Longitude corresponds to horizontal X and latitude to vertical Y in a conventional GIS CSV importer.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>X elevation and Y area</text><feedback format="html"><text>Review the course lesson and try again. Longitude corresponds to horizontal X and latitude to vertical Y in a conventional GIS CSV importer.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 02 / Q54</text></name>
+    <questiontext format="html"><text>Does switching QGIS project CRS automatically reproject stored layer data?</text></questiontext>
+    <generalfeedback format="html"><text>Project on-the-fly display is distinct from exporting actual transformed coordinates.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>Yes</text><feedback format="html"><text>Review the course lesson and try again. Project on-the-fly display is distinct from exporting actual transformed coordinates.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>No</text><feedback format="html"><text>Project on-the-fly display is distinct from exporting actual transformed coordinates.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Only if the attribute table is open</text><feedback format="html"><text>Review the course lesson and try again. Project on-the-fly display is distinct from exporting actual transformed coordinates.</text></feedback></answer>
+  </question>
+  <question type="category"><category><text>$course$/top/Precision Agriculture GIS/Week 03</text></category></question>
+  <question type="multichoice">
+    <name><text>GIS Week 03 / Q01</text></name>
+    <questiontext format="html"><text>GPS is best described as:</text></questiontext>
+    <generalfeedback format="html"><text>GPS is one constellation within the broader GNSS concept.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>One GNSS constellation</text><feedback format="html"><text>GPS is one constellation within the broader GNSS concept.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A digital elevation model</text><feedback format="html"><text>Review the course lesson and try again. GPS is one constellation within the broader GNSS concept.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A soil sensor</text><feedback format="html"><text>Review the course lesson and try again. GPS is one constellation within the broader GNSS concept.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 03 / Q02</text></name>
+    <questiontext format="html"><text>For EPSG:4326 point imports, X is normally:</text></questiontext>
+    <generalfeedback format="html"><text>The source CSV uses longitude as X and latitude as Y.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>Latitude</text><feedback format="html"><text>Review the course lesson and try again. The source CSV uses longitude as X and latitude as Y.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>Longitude</text><feedback format="html"><text>The source CSV uses longitude as X and latitude as Y.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Easting</text><feedback format="html"><text>Review the course lesson and try again. The source CSV uses longitude as X and latitude as Y.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 03 / Q03</text></name>
+    <questiontext format="html"><text>A smartphone coordinate proves:</text></questiontext>
+    <generalfeedback format="html"><text>Actual accuracy needs independent verification and suitable equipment.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>Centimetre survey accuracy</text><feedback format="html"><text>Review the course lesson and try again. Actual accuracy needs independent verification and suitable equipment.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>Nothing about its uncertainty on its own</text><feedback format="html"><text>Actual accuracy needs independent verification and suitable equipment.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>RTK correction is enabled</text><feedback format="html"><text>Review the course lesson and try again. Actual accuracy needs independent verification and suitable equipment.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 03 / Q04</text></name>
+    <questiontext format="html"><text>A GNSS point under trees may be affected by:</text></questiontext>
+    <generalfeedback format="html"><text>Reflections and obstruction can affect the satellite signals.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Multipath and obstructed sky</text><feedback format="html"><text>Reflections and obstruction can affect the satellite signals.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Soil nitrogen</text><feedback format="html"><text>Review the course lesson and try again. Reflections and obstruction can affect the satellite signals.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Raster cell size</text><feedback format="html"><text>Review the course lesson and try again. Reflections and obstruction can affect the satellite signals.</text></feedback></answer>
+  </question>
+  <question type="category"><category><text>$course$/top/Precision Agriculture GIS/Week 04</text></category></question>
+  <question type="multichoice">
+    <name><text>GIS Week 04 / Q05</text></name>
+    <questiontext format="html"><text>A field boundary is typically a:</text></questiontext>
+    <generalfeedback format="html"><text>A closed polygon represents a field area.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>Point</text><feedback format="html"><text>Review the course lesson and try again. A closed polygon represents a field area.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>Polygon</text><feedback format="html"><text>A closed polygon represents a field area.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Raster band</text><feedback format="html"><text>Review the course lesson and try again. A closed polygon represents a field area.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 04 / Q06</text></name>
+    <questiontext format="html"><text>A tractor access road is usually represented as:</text></questiontext>
+    <generalfeedback format="html"><text>A road or path is line geometry.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Line</text><feedback format="html"><text>A road or path is line geometry.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Point</text><feedback format="html"><text>Review the course lesson and try again. A road or path is line geometry.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>NDVI</text><feedback format="html"><text>Review the course lesson and try again. A road or path is line geometry.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 04 / Q07</text></name>
+    <questiontext format="html"><text>KML/KMZ can store:</text></questiontext>
+    <generalfeedback format="html"><text>KML is a structured format for geographic features.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>Only satellite images</text><feedback format="html"><text>Review the course lesson and try again. KML is a structured format for geographic features.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>Points, paths and polygons</text><feedback format="html"><text>KML is a structured format for geographic features.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Only maps as PDF</text><feedback format="html"><text>Review the course lesson and try again. KML is a structured format for geographic features.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 04 / Q08</text></name>
+    <questiontext format="html"><text>An image-digitized boundary is:</text></questiontext>
+    <generalfeedback format="html"><text>Digitization uncertainty must be considered.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>Automatically surveyed</text><feedback format="html"><text>Review the course lesson and try again. Digitization uncertainty must be considered.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>Approximate and requires checking</text><feedback format="html"><text>Digitization uncertainty must be considered.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Exactly accurate</text><feedback format="html"><text>Review the course lesson and try again. Digitization uncertainty must be considered.</text></feedback></answer>
+  </question>
+  <question type="category"><category><text>$course$/top/Precision Agriculture GIS/Week 05</text></category></question>
+  <question type="multichoice">
+    <name><text>GIS Week 05 / Q09</text></name>
+    <questiontext format="html"><text>To import point CSVs, use:</text></questiontext>
+    <generalfeedback format="html"><text>Longitude/latitude must be correctly mapped.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>X longitude, Y latitude</text><feedback format="html"><text>Longitude/latitude must be correctly mapped.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>X soil pH, Y name</text><feedback format="html"><text>Review the course lesson and try again. Longitude/latitude must be correctly mapped.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>X latitude, Y soil pH</text><feedback format="html"><text>Review the course lesson and try again. Longitude/latitude must be correctly mapped.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 05 / Q10</text></name>
+    <questiontext format="html"><text>A map layer can represent:</text></questiontext>
+    <generalfeedback format="html"><text>Layers organize spatial features.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>A grouping of features</text><feedback format="html"><text>Layers organize spatial features.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Only a screenshot</text><feedback format="html"><text>Review the course lesson and try again. Layers organize spatial features.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A scientific conclusion</text><feedback format="html"><text>Review the course lesson and try again. Layers organize spatial features.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 05 / Q11</text></name>
+    <questiontext format="html"><text>Synthetic coordinates should be:</text></questiontext>
+    <generalfeedback format="html"><text>Clearly disclose simulated origin.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>Presented as actual survey points</text><feedback format="html"><text>Review the course lesson and try again. Clearly disclose simulated origin.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>Labeled as fictional training examples</text><feedback format="html"><text>Clearly disclose simulated origin.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Shared as exact property data</text><feedback format="html"><text>Review the course lesson and try again. Clearly disclose simulated origin.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 05 / Q12</text></name>
+    <questiontext format="html"><text>Before sharing a My Maps project:</text></questiontext>
+    <generalfeedback format="html"><text>Privacy and permission settings matter.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Check visibility and permissions</text><feedback format="html"><text>Privacy and permission settings matter.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Remove the legend</text><feedback format="html"><text>Review the course lesson and try again. Privacy and permission settings matter.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Convert points to metres</text><feedback format="html"><text>Review the course lesson and try again. Privacy and permission settings matter.</text></feedback></answer>
+  </question>
+  <question type="category"><category><text>$course$/top/Precision Agriculture GIS/Week 06</text></category></question>
+  <question type="multichoice">
+    <name><text>GIS Week 06 / Q55</text></name>
+    <questiontext format="html"><text>For an agricultural delimited-text table with longitude/latitude columns, select X as:</text></questiontext>
+    <generalfeedback format="html"><text>X is longitude.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>latitude</text><feedback format="html"><text>Review the course lesson and try again. X is longitude.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>longitude</text><feedback format="html"><text>X is longitude.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>soil_ph</text><feedback format="html"><text>Review the course lesson and try again. X is longitude.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 06 / Q56</text></name>
+    <questiontext format="html"><text>The geographic source CRS for longitude/latitude in WGS84 degrees is:</text></questiontext>
+    <generalfeedback format="html"><text>Degrees are stored in EPSG:4326.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>EPSG:32638</text><feedback format="html"><text>Review the course lesson and try again. Degrees are stored in EPSG:4326.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>EPSG:4326</text><feedback format="html"><text>Degrees are stored in EPSG:4326.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>EPSG:3857</text><feedback format="html"><text>Review the course lesson and try again. Degrees are stored in EPSG:4326.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 06 / Q57</text></name>
+    <questiontext format="html"><text>How many rows are in the course&apos;s synthetic soil CSV?</text></questiontext>
+    <generalfeedback format="html"><text>There are 12 fabricated teaching points.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>5</text><feedback format="html"><text>Review the course lesson and try again. There are 12 fabricated teaching points.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>12</text><feedback format="html"><text>There are 12 fabricated teaching points.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>28</text><feedback format="html"><text>Review the course lesson and try again. There are 12 fabricated teaching points.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 06 / Q58</text></name>
+    <questiontext format="html"><text>The training irrigation feature is best modeled as:</text></questiontext>
+    <generalfeedback format="html"><text>An irrigation route is a line geometry.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>LineString</text><feedback format="html"><text>An irrigation route is a line geometry.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Polygon</text><feedback format="html"><text>Review the course lesson and try again. An irrigation route is a line geometry.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Raster</text><feedback format="html"><text>Review the course lesson and try again. An irrigation route is a line geometry.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 06 / Q59</text></name>
+    <questiontext format="html"><text>To save a field polygon with transformed EPSG:32638 coordinates you must:</text></questiontext>
+    <generalfeedback format="html"><text>Export with the target CRS creates a new projected dataset.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>Rename layer</text><feedback format="html"><text>Review the course lesson and try again. Export with the target CRS creates a new projected dataset.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>Export with target CRS EPSG:32638</text><feedback format="html"><text>Export with the target CRS creates a new projected dataset.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Change map zoom</text><feedback format="html"><text>Review the course lesson and try again. Export with the target CRS creates a new projected dataset.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 06 / Q60</text></name>
+    <questiontext format="html"><text>Why is a correctly imported synthetic soil map not sufficient for a real nutrient recommendation?</text></questiontext>
+    <generalfeedback format="html"><text>Fabricated values do not represent real soils.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Because data are fabricated</text><feedback format="html"><text>Fabricated values do not represent real soils.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Because EPSG is four digits</text><feedback format="html"><text>Review the course lesson and try again. Fabricated values do not represent real soils.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Because GPS does not exist</text><feedback format="html"><text>Review the course lesson and try again. Fabricated values do not represent real soils.</text></feedback></answer>
+  </question>
+  <question type="category"><category><text>$course$/top/Precision Agriculture GIS/Week 07</text></category></question>
+  <question type="multichoice">
+    <name><text>GIS Week 07 / Q13</text></name>
+    <questiontext format="html"><text>A soil-sampling site is:</text></questiontext>
+    <generalfeedback format="html"><text>A site is a single-location point.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Point</text><feedback format="html"><text>A site is a single-location point.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Line</text><feedback format="html"><text>Review the course lesson and try again. A site is a single-location point.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Polygon</text><feedback format="html"><text>Review the course lesson and try again. A site is a single-location point.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 07 / Q14</text></name>
+    <questiontext format="html"><text>A farm polygon should contain:</text></questiontext>
+    <generalfeedback format="html"><text>Polygon boundaries use a closed geometry.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>A closed ring</text><feedback format="html"><text>Polygon boundaries use a closed geometry.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Only one coordinate</text><feedback format="html"><text>Review the course lesson and try again. Polygon boundaries use a closed geometry.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A soil pH value instead of geometry</text><feedback format="html"><text>Review the course lesson and try again. Polygon boundaries use a closed geometry.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 07 / Q15</text></name>
+    <questiontext format="html"><text>1 hectare equals:</text></questiontext>
+    <generalfeedback format="html"><text>One hectare is 10,000 square metres.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>100 m²</text><feedback format="html"><text>Review the course lesson and try again. One hectare is 10,000 square metres.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>1,000 m²</text><feedback format="html"><text>Review the course lesson and try again. One hectare is 10,000 square metres.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>10,000 m²</text><feedback format="html"><text>One hectare is 10,000 square metres.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 07 / Q16</text></name>
+    <questiontext format="html"><text>For local metric planar area:</text></questiontext>
+    <generalfeedback format="html"><text>A metric projection enables consistent planar units.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Use suitable projected CRS</text><feedback format="html"><text>A metric projection enables consistent planar units.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Calculate in degrees squared</text><feedback format="html"><text>Review the course lesson and try again. A metric projection enables consistent planar units.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Ignore the source CRS</text><feedback format="html"><text>Review the course lesson and try again. A metric projection enables consistent planar units.</text></feedback></answer>
+  </question>
+  <question type="category"><category><text>$course$/top/Precision Agriculture GIS/Week 08</text></category></question>
+  <question type="multichoice">
+    <name><text>GIS Week 08 / Q17</text></name>
+    <questiontext format="html"><text>Raster data are organized as:</text></questiontext>
+    <generalfeedback format="html"><text>Raster pixels form rows and columns.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Grid cells</text><feedback format="html"><text>Raster pixels form rows and columns.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Only points</text><feedback format="html"><text>Review the course lesson and try again. Raster pixels form rows and columns.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Closed paths</text><feedback format="html"><text>Review the course lesson and try again. Raster pixels form rows and columns.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 08 / Q18</text></name>
+    <questiontext format="html"><text>Our synthetic grid&apos;s source X/Y values are:</text></questiontext>
+    <generalfeedback format="html"><text>The synthetic ASCII grid was constructed with metre-based UTM coordinates.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>UTM metres (EPSG:32638)</text><feedback format="html"><text>The synthetic ASCII grid was constructed with metre-based UTM coordinates.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Latitude and longitude</text><feedback format="html"><text>Review the course lesson and try again. The synthetic ASCII grid was constructed with metre-based UTM coordinates.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Unknown to the author</text><feedback format="html"><text>Review the course lesson and try again. The synthetic ASCII grid was constructed with metre-based UTM coordinates.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 08 / Q19</text></name>
+    <questiontext format="html"><text>A 10 m raster cell indicates:</text></questiontext>
+    <generalfeedback format="html"><text>Pixel size alone does not establish measurement accuracy.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Nominal spatial sampling</text><feedback format="html"><text>Pixel size alone does not establish measurement accuracy.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>10 m vertical accuracy</text><feedback format="html"><text>Review the course lesson and try again. Pixel size alone does not establish measurement accuracy.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Exact furrow detection</text><feedback format="html"><text>Review the course lesson and try again. Pixel size alone does not establish measurement accuracy.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 08 / Q20</text></name>
+    <questiontext format="html"><text>NoData marks:</text></questiontext>
+    <generalfeedback format="html"><text>NoData is a marker for invalid or absent pixels.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Cells without valid values</text><feedback format="html"><text>NoData is a marker for invalid or absent pixels.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>All field boundaries</text><feedback format="html"><text>Review the course lesson and try again. NoData is a marker for invalid or absent pixels.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A CRS code</text><feedback format="html"><text>Review the course lesson and try again. NoData is a marker for invalid or absent pixels.</text></feedback></answer>
+  </question>
+  <question type="category"><category><text>$course$/top/Precision Agriculture GIS/Week 09</text></category></question>
+  <question type="multichoice">
+    <name><text>GIS Week 09 / Q21</text></name>
+    <questiontext format="html"><text>An IDW raster between samples is:</text></questiontext>
+    <generalfeedback format="html"><text>IDW predicts unobserved values from nearby points and assumptions.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>Measured pH at every pixel</text><feedback format="html"><text>Review the course lesson and try again. IDW predicts unobserved values from nearby points and assumptions.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>An interpolated estimate</text><feedback format="html"><text>IDW predicts unobserved values from nearby points and assumptions.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A fertilizer prescription</text><feedback format="html"><text>Review the course lesson and try again. IDW predicts unobserved values from nearby points and assumptions.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 09 / Q22</text></name>
+    <questiontext format="html"><text>Soil pH is typically:</text></questiontext>
+    <generalfeedback format="html"><text>Soil pH is not a mass application rate.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>A dimensionless scale</text><feedback format="html"><text>Soil pH is not a mass application rate.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Measured in kg/ha</text><feedback format="html"><text>Review the course lesson and try again. Soil pH is not a mass application rate.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A longitude</text><feedback format="html"><text>Review the course lesson and try again. Soil pH is not a mass application rate.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 09 / Q23</text></name>
+    <questiontext format="html"><text>Twelve synthetic points justify:</text></questiontext>
+    <generalfeedback format="html"><text>Fictional samples cannot support field management.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>A real nutrient recommendation</text><feedback format="html"><text>Review the course lesson and try again. Fictional samples cannot support field management.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>A teaching map only</text><feedback format="html"><text>Fictional samples cannot support field management.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Legal soil classification</text><feedback format="html"><text>Review the course lesson and try again. Fictional samples cannot support field management.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 09 / Q24</text></name>
+    <questiontext format="html"><text>Interpolated uncertainty depends on:</text></questiontext>
+    <generalfeedback format="html"><text>Design and assumptions influence prediction quality.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Sampling design and method</text><feedback format="html"><text>Design and assumptions influence prediction quality.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Map title font</text><feedback format="html"><text>Review the course lesson and try again. Design and assumptions influence prediction quality.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Screenshot size alone</text><feedback format="html"><text>Review the course lesson and try again. Design and assumptions influence prediction quality.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 09 / Q61</text></name>
+    <questiontext format="html"><text>A NASA POWER GWETTOP model output near Sulaymaniyah is:</text></questiontext>
+    <generalfeedback format="html"><text>GWETTOP values are model-estimated relative surface saturation, not a station or plot measurement.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>A field-installed soil sensor reading</text><feedback format="html"><text>Review the course lesson and try again. GWETTOP values are model-estimated relative surface saturation, not a station or plot measurement.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>A gridded modeled/reanalysis soil-wetness estimate</text><feedback format="html"><text>GWETTOP values are model-estimated relative surface saturation, not a station or plot measurement.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A certified irrigation prescription</text><feedback format="html"><text>Review the course lesson and try again. GWETTOP values are model-estimated relative surface saturation, not a station or plot measurement.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 09 / Q62</text></name>
+    <questiontext format="html"><text>What does a GWETTOP value around 0.12 represent?</text></questiontext>
+    <generalfeedback format="html"><text>GWETTOP is dimensionless fraction 0–1 and is not volumetric water content.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>12% relative model saturation</text><feedback format="html"><text>GWETTOP is dimensionless fraction 0–1 and is not volumetric water content.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>12°C</text><feedback format="html"><text>Review the course lesson and try again. GWETTOP is dimensionless fraction 0–1 and is not volumetric water content.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>12 kg/ha nitrogen</text><feedback format="html"><text>Review the course lesson and try again. GWETTOP is dimensionless fraction 0–1 and is not volumetric water content.</text></feedback></answer>
+  </question>
+  <question type="category"><category><text>$course$/top/Precision Agriculture GIS/Week 10</text></category></question>
+  <question type="multichoice">
+    <name><text>GIS Week 10 / Q25</text></name>
+    <questiontext format="html"><text>Cloud coverage can:</text></questiontext>
+    <generalfeedback format="html"><text>Clouds and shadows reduce usable optical pixels.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Obscure optical imagery</text><feedback format="html"><text>Clouds and shadows reduce usable optical pixels.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Provide direct soil pH</text><feedback format="html"><text>Review the course lesson and try again. Clouds and shadows reduce usable optical pixels.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Convert CRS automatically</text><feedback format="html"><text>Review the course lesson and try again. Clouds and shadows reduce usable optical pixels.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 10 / Q26</text></name>
+    <questiontext format="html"><text>For seasonal comparison, check:</text></questiontext>
+    <generalfeedback format="html"><text>Crop stages and dates must be comparable.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Acquisition dates and phenology</text><feedback format="html"><text>Crop stages and dates must be comparable.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Video length only</text><feedback format="html"><text>Review the course lesson and try again. Crop stages and dates must be comparable.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>File color</text><feedback format="html"><text>Review the course lesson and try again. Crop stages and dates must be comparable.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 10 / Q27</text></name>
+    <questiontext format="html"><text>A false-color scene:</text></questiontext>
+    <generalfeedback format="html"><text>Spectral patterns need context and field verification.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Can emphasize spectral differences</text><feedback format="html"><text>Spectral patterns need context and field verification.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Always proves disease</text><feedback format="html"><text>Review the course lesson and try again. Spectral patterns need context and field verification.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Is a ground-based soil test</text><feedback format="html"><text>Review the course lesson and try again. Spectral patterns need context and field verification.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 10 / Q28</text></name>
+    <questiontext format="html"><text>Satellite pixel size means:</text></questiontext>
+    <generalfeedback format="html"><text>Resolution constrains observable spatial features.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Nominal ground sampling size</text><feedback format="html"><text>Resolution constrains observable spatial features.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Guaranteed agronomic diagnosis</text><feedback format="html"><text>Review the course lesson and try again. Resolution constrains observable spatial features.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Fertilizer requirement</text><feedback format="html"><text>Review the course lesson and try again. Resolution constrains observable spatial features.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 10 / Q63</text></name>
+    <questiontext format="html"><text>Which coordinate fields should be used to map regional NASA POWER grid centers?</text></questiontext>
+    <generalfeedback format="html"><text>Use X longitude, Y latitude, with EPSG:4326.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>X longitude, Y latitude</text><feedback format="html"><text>Use X longitude, Y latitude, with EPSG:4326.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>X July mean, Y August mean</text><feedback format="html"><text>Review the course lesson and try again. Use X longitude, Y latitude, with EPSG:4326.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>X point_id, Y month</text><feedback format="html"><text>Review the course lesson and try again. Use X longitude, Y latitude, with EPSG:4326.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 10 / Q64</text></name>
+    <questiontext format="html"><text>A July 2025 anomaly against a 1984–2025 mean baseline that includes 2025 is:</text></questiontext>
+    <generalfeedback format="html"><text>The reference period includes 2025; interpret comparisons accordingly.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>An independent historical comparison</text><feedback format="html"><text>Review the course lesson and try again. The reference period includes 2025; interpret comparisons accordingly.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>A difference against a baseline containing the target year</text><feedback format="html"><text>The reference period includes 2025; interpret comparisons accordingly.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A weather station reading</text><feedback format="html"><text>Review the course lesson and try again. The reference period includes 2025; interpret comparisons accordingly.</text></feedback></answer>
+  </question>
+  <question type="category"><category><text>$course$/top/Precision Agriculture GIS/Week 11</text></category></question>
+  <question type="multichoice">
+    <name><text>GIS Week 11 / Q29</text></name>
+    <questiontext format="html"><text>NDVI formula is:</text></questiontext>
+    <generalfeedback format="html"><text>NDVI normalizes the difference of NIR and red reflectance.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>(NIR−Red)/(NIR+Red)</text><feedback format="html"><text>NDVI normalizes the difference of NIR and red reflectance.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>NIR+Red</text><feedback format="html"><text>Review the course lesson and try again. NDVI normalizes the difference of NIR and red reflectance.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Red/NIR</text><feedback format="html"><text>Review the course lesson and try again. NDVI normalizes the difference of NIR and red reflectance.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 11 / Q30</text></name>
+    <questiontext format="html"><text>When NIR + Red is 0:</text></questiontext>
+    <generalfeedback format="html"><text>Division by zero is invalid.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>NDVI = 1</text><feedback format="html"><text>Review the course lesson and try again. Division by zero is invalid.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>NDVI is undefined</text><feedback format="html"><text>Division by zero is invalid.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>NDVI = 0.55</text><feedback format="html"><text>Review the course lesson and try again. Division by zero is invalid.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 11 / Q31</text></name>
+    <questiontext format="html"><text>NDVI 0.55 directly proves:</text></questiontext>
+    <generalfeedback format="html"><text>An index alone cannot specify nutrient need or disease.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>A fertilizer requirement</text><feedback format="html"><text>Review the course lesson and try again. An index alone cannot specify nutrient need or disease.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>Neither yield nor diagnosis alone</text><feedback format="html"><text>An index alone cannot specify nutrient need or disease.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A legally surveyed crop</text><feedback format="html"><text>Review the course lesson and try again. An index alone cannot specify nutrient need or disease.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 11 / Q32</text></name>
+    <questiontext format="html"><text>For raster NDVI, bands must:</text></questiontext>
+    <generalfeedback format="html"><text>Comparable reflectance rasters are required.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Be co-registered with compatible scaling</text><feedback format="html"><text>Comparable reflectance rasters are required.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Have unrelated pixels</text><feedback format="html"><text>Review the course lesson and try again. Comparable reflectance rasters are required.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Be from unrelated dates</text><feedback format="html"><text>Review the course lesson and try again. Comparable reflectance rasters are required.</text></feedback></answer>
+  </question>
+  <question type="category"><category><text>$course$/top/Precision Agriculture GIS/Week 12</text></category></question>
+  <question type="multichoice">
+    <name><text>GIS Week 12 / Q33</text></name>
+    <questiontext format="html"><text>GSD measures:</text></questiontext>
+    <generalfeedback format="html"><text>Pixel footprint is not geolocation accuracy.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Approximate ground pixel size</text><feedback format="html"><text>Pixel footprint is not geolocation accuracy.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Guaranteed horizontal accuracy</text><feedback format="html"><text>Review the course lesson and try again. Pixel footprint is not geolocation accuracy.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Crop nitrogen</text><feedback format="html"><text>Review the course lesson and try again. Pixel footprint is not geolocation accuracy.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 12 / Q34</text></name>
+    <questiontext format="html"><text>A georeferenced orthomosaic requires:</text></questiontext>
+    <generalfeedback format="html"><text>Processing quality and positioning are important.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Suitable alignment and positioning</text><feedback format="html"><text>Processing quality and positioning are important.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Only a screenshot</text><feedback format="html"><text>Review the course lesson and try again. Processing quality and positioning are important.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>No image overlap</text><feedback format="html"><text>Review the course lesson and try again. Processing quality and positioning are important.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 12 / Q35</text></name>
+    <questiontext format="html"><text>A drone photo is automatically:</text></questiontext>
+    <generalfeedback format="html"><text>Raw photography is not inherently orthorectified or accurately located.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>A cadastral map</text><feedback format="html"><text>Review the course lesson and try again. Raw photography is not inherently orthorectified or accurately located.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>Not necessarily a georeferenced product</text><feedback format="html"><text>Raw photography is not inherently orthorectified or accurately located.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A soil laboratory test</text><feedback format="html"><text>Review the course lesson and try again. Raw photography is not inherently orthorectified or accurately located.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 12 / Q36</text></name>
+    <questiontext format="html"><text>Real flights require:</text></questiontext>
+    <generalfeedback format="html"><text>Follow aviation and privacy requirements.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Applicable permissions and safety</text><feedback format="html"><text>Follow aviation and privacy requirements.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>No safety review</text><feedback format="html"><text>Review the course lesson and try again. Follow aviation and privacy requirements.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Only a CSV</text><feedback format="html"><text>Review the course lesson and try again. Follow aviation and privacy requirements.</text></feedback></answer>
+  </question>
+  <question type="category"><category><text>$course$/top/Precision Agriculture GIS/Week 13</text></category></question>
+  <question type="multichoice">
+    <name><text>GIS Week 13 / Q37</text></name>
+    <questiontext format="html"><text>A management zone is:</text></questiontext>
+    <generalfeedback format="html"><text>Zones should be validated with sufficient evidence.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>A hypothesis about similar areas</text><feedback format="html"><text>Zones should be validated with sufficient evidence.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>An automatic fertilizer rate</text><feedback format="html"><text>Review the course lesson and try again. Zones should be validated with sufficient evidence.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A legal cadastral parcel</text><feedback format="html"><text>Review the course lesson and try again. Zones should be validated with sufficient evidence.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 13 / Q38</text></name>
+    <questiontext format="html"><text>A VRT controller needs:</text></questiontext>
+    <generalfeedback format="html"><text>Machine compatibility, calibration and validation matter.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Calibrated equipment and supported prescription format</text><feedback format="html"><text>Machine compatibility, calibration and validation matter.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Only a picture</text><feedback format="html"><text>Review the course lesson and try again. Machine compatibility, calibration and validation matter.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>No positional data</text><feedback format="html"><text>Review the course lesson and try again. Machine compatibility, calibration and validation matter.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 13 / Q39</text></name>
+    <questiontext format="html"><text>kg/ha × ha results in:</text></questiontext>
+    <generalfeedback format="html"><text>Multiplying rate by area produces total applied mass.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>kg</text><feedback format="html"><text>Multiplying rate by area produces total applied mass.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>ha</text><feedback format="html"><text>Review the course lesson and try again. Multiplying rate by area produces total applied mass.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>kg/m²</text><feedback format="html"><text>Review the course lesson and try again. Multiplying rate by area produces total applied mass.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 13 / Q40</text></name>
+    <questiontext format="html"><text>Synthetic zones should be:</text></questiontext>
+    <generalfeedback format="html"><text>Synthetic data cannot justify real prescriptions.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>Used immediately in the field</text><feedback format="html"><text>Review the course lesson and try again. Synthetic data cannot justify real prescriptions.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>Explicitly marked nonoperational</text><feedback format="html"><text>Synthetic data cannot justify real prescriptions.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Converted to legally binding maps</text><feedback format="html"><text>Review the course lesson and try again. Synthetic data cannot justify real prescriptions.</text></feedback></answer>
+  </question>
+  <question type="category"><category><text>$course$/top/Precision Agriculture GIS/Week 14</text></category></question>
+  <question type="multichoice">
+    <name><text>GIS Week 14 / Q41</text></name>
+    <questiontext format="html"><text>A reproducible project includes:</text></questiontext>
+    <generalfeedback format="html"><text>Another student needs data and methodology.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Source data and documented paths</text><feedback format="html"><text>Another student needs data and methodology.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Only a screenshot</text><feedback format="html"><text>Review the course lesson and try again. Another student needs data and methodology.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A PDF without sources</text><feedback format="html"><text>Review the course lesson and try again. Another student needs data and methodology.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 14 / Q42</text></name>
+    <questiontext format="html"><text>A map conclusion should:</text></questiontext>
+    <generalfeedback format="html"><text>Interpretation must remain tied to real evidence.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Reflect evidence and uncertainty</text><feedback format="html"><text>Interpretation must remain tied to real evidence.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Ignore the source</text><feedback format="html"><text>Review the course lesson and try again. Interpretation must remain tied to real evidence.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Use synthetic values as measured</text><feedback format="html"><text>Review the course lesson and try again. Interpretation must remain tied to real evidence.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 14 / Q43</text></name>
+    <questiontext format="html"><text>A good map layout includes:</text></questiontext>
+    <generalfeedback format="html"><text>Cartographic clarity supports scientific communication.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text>Title, legend, scale and attribution</text><feedback format="html"><text>Cartographic clarity supports scientific communication.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>A decorative image only</text><feedback format="html"><text>Review the course lesson and try again. Cartographic clarity supports scientific communication.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Only raw coordinates</text><feedback format="html"><text>Review the course lesson and try again. Cartographic clarity supports scientific communication.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 14 / Q44</text></name>
+    <questiontext format="html"><text>The course synthetic datasets can establish:</text></questiontext>
+    <generalfeedback format="html"><text>Synthetic outputs are instructional only.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>Actual Kurdistan crop yields</text><feedback format="html"><text>Review the course lesson and try again. Synthetic outputs are instructional only.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>A method demonstration, not real field findings</text><feedback format="html"><text>Synthetic outputs are instructional only.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Legal fertilizer rates</text><feedback format="html"><text>Review the course lesson and try again. Synthetic outputs are instructional only.</text></feedback></answer>
+  </question>
+  <question type="multichoice">
+    <name><text>GIS Week 14 / Q65</text></name>
+    <questiontext format="html"><text>Can regional reanalysis pixels resolve soil conditions of an individual small farm?</text></questiontext>
+    <generalfeedback format="html"><text>Coarse model grid cell products require ground validation for farm-scale use.</text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html"><text>Without uncertainty, always</text><feedback format="html"><text>Review the course lesson and try again. Coarse model grid cell products require ground validation for farm-scale use.</text></feedback></answer>
+    <answer fraction="100" format="html"><text>Not at fine field scale without supporting evidence</text><feedback format="html"><text>Coarse model grid cell products require ground validation for farm-scale use.</text></feedback></answer>
+    <answer fraction="0" format="html"><text>Yes, to the nearest centimetre</text><feedback format="html"><text>Review the course lesson and try again. Coarse model grid cell products require ground validation for farm-scale use.</text></feedback></answer>
+  </question>
+</quiz>
