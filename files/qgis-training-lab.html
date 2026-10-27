@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive QGIS Laboratory · Lecture 6 · University of Sulaimani</title>
+<meta name="description" content="Hands-on QGIS introduction with real screenshots, farm GIS training data, clickable interface guide, CRS exercises and graded practice quiz.">
+<style>
+:root{--bg:#f3f7f5;--ink:#20343a;--muted:#536a71;--green:#126149;--line:#d5e2da;--cream:#fff7e4;--pale:#eef8f2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.57 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+header{background:#113c32;padding:12px max(14px,calc((100vw - 1200px)/2));color:#fff;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+header a{color:#def9eb}.wrap{max-width:1200px;margin:auto;padding:24px 14px 56px}.eyebrow{font-size:.77rem;text-transform:uppercase;letter-spacing:.09em;color:#247b61;font-weight:750}
+h1{font-size:clamp(1.8rem,3.4vw,2.65rem);line-height:1.15;margin:6px 0 13px}h2{font-size:1.28rem;line-height:1.3;margin:0 0 10px}h3{font-size:1.08rem;margin:14px 0 6px}p{margin:6px 0 12px}
+a{color:#086e74}a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #d99c26;outline-offset:3px}
+.lede{max-width:940px;color:var(--muted)}.layout{display:grid;grid-template-columns:minmax(0,1fr) 286px;gap:16px;align-items:start}.card{background:white;border:1px solid var(--line);border-radius:13px;padding:20px;margin-bottom:17px;box-shadow:0 3px 12px #17362d08}
+.side{position:sticky;top:14px}.pill{display:inline-block;border-radius:20px;background:#e1f2e9;color:var(--green);font-size:.8rem;padding:5px 12px;font-weight:650;margin:3px 4px 3px 0}
+.note{padding:13px;border-left:4px solid #b7882e;background:var(--cream);border-radius:6px;color:#674919;margin:16px 0}
+button,.button{font:inherit;font-size:.88rem;font-weight:650;border:1px solid var(--green);border-radius:9px;background:var(--green);color:white;padding:8px 12px;cursor:pointer;display:inline-block;text-decoration:none}
+button.secondary,.button.secondary{background:white;color:var(--green);border-color:#8ebea5}button:hover,.button:hover{filter:brightness(.94)}
+.actions{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:12px 0}.sm{font-size:.84rem;color:var(--muted)}.status{border-left:4px solid var(--green);border-radius:4px;background:var(--pale);padding:11px 13px;margin-top:10px;white-space:pre-line}
+.status.bad{background:#fff0ec;border-color:#b64834}.downloads{display:grid;grid-template-columns:1fr 1fr;gap:10px}.download{border:1px solid var(--line);background:#fafcfb;border-radius:9px;padding:11px;display:grid;gap:3px}.download a{font-weight:700;word-break:break-word}.download span{font-size:.78rem;color:var(--muted)}
+.illustration{position:relative;max-width:850px;margin:12px auto}.illustration img{display:block;width:100%;height:auto;min-height:245px;border:1px solid #ccdcd4;border-radius:9px;background:#e6eee9}
+.hotspot{position:absolute;border:2px solid white;border-radius:100%;width:32px;height:32px;display:grid;place-items:center;background:#125d49;box-shadow:0 2px 8px #2146;color:white;padding:0;line-height:1}
+.hotspot[data-part="menu"]{left:48%;top:5%}.hotspot[data-part="toolbar"]{left:50%;top:17%}.hotspot[data-part="browser"]{left:7%;top:35%}.hotspot[data-part="layers"]{left:7%;top:76%}.hotspot[data-part="canvas"]{left:67%;top:48%}.hotspot[data-part="status"]{left:51%;top:93%}
+.names{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.names button{font-size:.8rem}
+.hotspot[aria-pressed="true"]{background:#ae6514}
+img.real{display:block;max-width:100%;max-height:560px;object-fit:contain;border-radius:8px;border:1px solid #ccdcd4;margin:12px auto}
+figcaption{font-size:.79rem;color:var(--muted);margin-top:7px}
+ol{padding-left:22px}li{margin:6px 0}code{background:#f0f5f2;padding:1px 4px;border-radius:4px}
+.formgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.formgrid label{font-size:.88rem;font-weight:700}select{width:100%;padding:9px 5px;border:1px solid #acbeb4;border-radius:8px;background:white;font:inherit;font-size:.9rem}
+table{width:100%;border-collapse:collapse;font-size:.86rem}td,th{text-align:left;padding:7px;border-bottom:1px solid var(--line)}
+fieldset{border:1px solid var(--line);border-radius:9px;margin:13px 0;padding:12px}legend{font-weight:720}label.option{display:block;padding:5px 2px}
+progress{width:100%;height:14px;accent-color:var(--green)}.tracked{border-bottom:1px solid #ecf0ee;padding:7px 0;font-size:.89rem}.tracked.done{color:var(--green);font-weight:700}
+details{border:1px solid var(--line);padding:10px 13px;border-radius:8px;margin-top:12px}summary{cursor:pointer;font-weight:700}.links p{margin:8px 0}
+footer{text-align:center;color:var(--muted);font-size:.8rem;margin-top:25px}
+@media(max-width:810px){.layout{grid-template-columns:1fr}.side{position:static}.card{padding:15px}.downloads,.formgrid{grid-template-columns:1fr}.hotspot{width:27px;height:27px;font-size:.8rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{header,.hotspot,.actions,.names,.side{display:none}.card{break-inside:avoid;box-shadow:none}.layout{display:block}}
+</style></head><body>
+<header><strong>UNIVERSITY OF SULAIMANI · AGRICULTURAL ENGINEERING</strong><a href="../06-introduction-to-qgis.html">← Lecture 6</a></header>
+<main class="wrap"><div class="eyebrow">Precision Agriculture &amp; GIS — Practical · Phase 2</div>
+<h1>Interactive QGIS Training Laboratory</h1>
+<p class="lede">Follow a 75–90-minute practical in <strong>QGIS Desktop</strong>: identify its interface, import farm observations, work with vector layers, reproject a field, and save a reproducible project. Get instant learning feedback and save personal practice progress in your browser.</p>
+<div class="note"><strong>Synthetic teaching data only:</strong> soil measurements, field boundaries and observation locations are fabricated. This website guides and checks the learning process; it does not run QGIS, verify your GIS files, or upload grades.</div>
+<div class="layout"><div>
+<section class="card"><h2>Learning outcomes and preparation</h2>
+<ol><li>Recognize the menu, toolbar, Browser, Layers, canvas and CRS/status bar.</li>
+<li>Import the 12-row agricultural soil CSV with X = longitude, Y = latitude, source CRS EPSG:4326.</li>
+<li>Recognize and import polygon, line and point GeoJSON datasets.</li>
+<li>Distinguish source layer CRS, display/project CRS and exported projected CRS.</li>
+<li>Export a field layer to EPSG:32638 and reopen a saved QGIS project.</li></ol>
+<span class="pill">75–90 minutes</span><span class="pill">QGIS 3.x on Windows/macOS/Linux</span><span class="pill">Free training data</span></section>
+<section class="card" id="interface"><div class="eyebrow">Task 1 · 10 minutes</div><h2>Identify the QGIS interface</h2>
+<p>Use this real, annotated QGIS screenshot. Click each numbered location or choose the labeled buttons below to learn what it does. All six selections unlock this stage.</p>
+<div class="illustration">
+<img src="https://ubc-library-rc.github.io/gis-intro-qgis/content/images/QGIS-GUI-20220518.png" alt="Real QGIS interface: menu and toolbars above; Browser and Layers panels on left; map canvas centre; status bar below." loading="lazy">
+<button class="hotspot" type="button" data-part="menu" aria-label="Identify QGIS menu bar" aria-pressed="false">1</button>
+<button class="hotspot" type="button" data-part="toolbar" aria-label="Identify QGIS toolbar" aria-pressed="false">2</button>
+<button class="hotspot" type="button" data-part="browser" aria-label="Identify QGIS Browser panel" aria-pressed="false">3</button>
+<button class="hotspot" type="button" data-part="layers" aria-label="Identify QGIS Layers panel" aria-pressed="false">4</button>
+<button class="hotspot" type="button" data-part="canvas" aria-label="Identify QGIS map canvas" aria-pressed="false">5</button>
+<button class="hotspot" type="button" data-part="status" aria-label="Identify QGIS status bar" aria-pressed="false">6</button>
+</div>
+<div class="names"><button type="button" class="secondary" data-part="menu">Menu</button><button type="button" class="secondary" data-part="toolbar">Toolbars</button><button type="button" class="secondary" data-part="browser">Browser</button><button type="button" class="secondary" data-part="layers">Layers</button><button type="button" class="secondary" data-part="canvas">Map canvas</button><button type="button" class="secondary" data-part="status">Status bar</button></div>
+<div id="interface-feedback" class="status" role="status" aria-live="polite">Select a labeled component to display its role.</div><p id="interface-count">0 / 6 interface components explored</p>
+<figcaption>Real QGIS teaching screenshot from <a href="https://ubc-library-rc.github.io/gis-intro-qgis/content/qgis-gui.html" target="_blank" rel="noopener">UBC Library Research Commons QGIS GUI guide</a>, not AI-generated. <a href="https://ubc-library-rc.github.io/gis-intro-qgis/content/images/QGIS-GUI-20220518.png" target="_blank" rel="noopener">Original image</a>. Interface details vary by QGIS version; original source controls reuse rights.</figcaption>
+</section>
+<section class="card" id="files"><div class="eyebrow">Task 2 · 10 minutes</div><h2>Download a QGIS-ready agricultural dataset</h2>
+<p>Make a workspace with three subfolders: <code>Lecture06_QGIS/data</code>, <code>Lecture06_QGIS/project</code> and <code>Lecture06_QGIS/outputs</code>. Save the following four files into <code>data</code> using their original extensions.</p>
+<div class="downloads">
+<div class="download"><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/Rawaz83/precision-agriculture-gis-practical/main/data/demo_soil_samples.csv">Soil sample CSV</a><span>12 fictional point observations with pH attributes</span></div>
+<div class="download"><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/Rawaz83/precision-agriculture-gis-practical/main/data/qgis-training-field.geojson">Farm polygon</a><span>1 Polygon feature</span></div>
+<div class="download"><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/Rawaz83/precision-agriculture-gis-practical/main/data/qgis-training-irrigation.geojson">Irrigation line</a><span>1 LineString feature</span></div>
+<div class="download"><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/Rawaz83/precision-agriculture-gis-practical/main/data/qgis-training-observations.geojson">Observation points</a><span>5 Point features</span></div>
+</div>
+<div class="actions"><a class="button secondary" target="_blank" rel="noopener" href="https://raw.githubusercontent.com/Rawaz83/precision-agriculture-gis-practical/main/data/LECTURE06-QGIS-DATA.md">Data guide and expected counts</a><button type="button" data-done="download">I saved all files</button></div>
+<p class="sm">If a file opens as text in a new tab, save it with its correct .csv or .geojson filename—not .html. These files are demonstrations, not measured agricultural records.</p></section>
+<section class="card" id="csv"><div class="eyebrow">Task 3 · 20 minutes</div><h2>Import the CSV and check its coordinate reference</h2>
+<ol><li>Open QGIS. Select <strong>Layer → Add Layer → Add Delimited Text Layer…</strong> or Data Source Manager → Delimited Text.</li><li>Select <code>demo_soil_samples.csv</code>. Choose CSV file format and <strong>Point coordinates</strong>.</li><li>Check the X, Y and Geometry CRS settings below, then apply these exact settings in QGIS.</li><li>Open the attribute table and confirm <strong>12 records</strong>, including <code>sample_id</code>, <code>soil_ph</code> and <code>nitrogen_index</code>.</li></ol>
+<figure><img class="real" src="https://documentation.qgis.org/3.44/_images/delimited_text_dialog.png" alt="Actual QGIS Data Source Manager Delimited Text interface showing X/Y coordinate field selection and geometry CRS." loading="lazy"><figcaption>Real screenshot from the <a target="_blank" rel="noopener" href="https://documentation.qgis.org/3.44/en/docs/user_manual/managing_data_source/opening_data.html">official QGIS manual</a>; its example field names differ from our CSV. <a target="_blank" rel="noopener" href="https://documentation.qgis.org/3.44/_images/delimited_text_dialog.png">View the original screenshot.</a></figcaption></figure>
+<div class="formgrid"><label for="field-x">X coordinate field<select id="field-x"><option value="">Choose</option><option value="latitude">latitude</option><option value="longitude">longitude</option><option value="soil_ph">soil_ph</option></select></label>
+<label for="field-y">Y coordinate field<select id="field-y"><option value="">Choose</option><option value="longitude">longitude</option><option value="latitude">latitude</option><option value="sample_id">sample_id</option></select></label>
+<label for="field-crs">Geometry CRS<select id="field-crs"><option value="">Choose</option><option value="EPSG:32638">EPSG:32638</option><option value="EPSG:4326">EPSG:4326</option><option value="EPSG:3857">EPSG:3857</option></select></label></div>
+<div class="actions"><button type="button" id="check-csv">Check settings</button></div>
+<div id="csv-result" class="status" role="status" aria-live="polite">Choose your import settings and select Check.</div>
+<details><summary>Why can't I select EPSG:32638 for the original CSV?</summary>The source contains WGS 84 longitude/latitude in angular degrees, so EPSG:4326 must be used to interpret its source coordinates. Export to a projected CRS when metric coordinates are needed.</details>
+</section>
+<section class="card" id="vectors"><div class="eyebrow">Task 4 · 15 minutes</div><h2>Prepare the vector map in QGIS</h2>
+<ol><li>Choose Layer → Add Layer → Add Vector Layer for each of the three GeoJSON downloads (or drag each file to the map).</li><li>In Layers, confirm there are polygon, line and point geometries in separate layers.</li><li>Use the attribute table to count each feature type. Compare to the table below.</li><li>Style the field outline green, the irrigation route blue, the soil sampling markers orange and the observation layer a different symbol.</li></ol>
+<table><thead><tr><th>Training layer</th><th>Geometry</th><th>Expected features</th></tr></thead><tbody>
+<tr><td>Soil CSV</td><td>Point</td><td>12</td></tr><tr><td>Field boundary</td><td>Polygon</td><td>1</td></tr><tr><td>Irrigation route</td><td>LineString</td><td>1</td></tr><tr><td>Observation sites</td><td>Point</td><td>5</td></tr></tbody></table>
+<div class="actions"><button type="button" data-done="vector">I checked geometry and feature counts</button></div></section>
+<section class="card" id="reprojection"><div class="eyebrow">Task 5 · 15 minutes</div><h2>Change project CRS and export a projected layer</h2>
+<ol><li>Confirm the original vector source layer is in <strong>EPSG:4326</strong> (degrees).</li>
+<li>Change only the QGIS <strong>project CRS</strong> to <strong>EPSG:32638</strong> (WGS 84 / UTM zone 38N, metres). Note that the original GeoJSON remains geographic.</li>
+<li>Right-click the field layer → <strong>Export → Save Features As…</strong>, select <strong>GeoPackage</strong> and output CRS <strong>EPSG:32638</strong>.</li>
+<li>Save to <code>outputs/field_utm38.gpkg</code>. Inspect the new layer CRS and estimate field area in square metres before dividing by 10,000 for hectares. This is an approximate educational area only.</li></ol>
+<fieldset><legend>Which action creates new projected coordinates on disk?</legend>
+<label class="option"><input name="crs-quiz" type="radio" value="assign"> Assign EPSG:32638 to original degree values</label>
+<label class="option"><input name="crs-quiz" type="radio" value="project"> Only change the QGIS project CRS</label>
+<label class="option"><input name="crs-quiz" type="radio" value="export"> Export → Save Features As… using target EPSG:32638</label>
+</fieldset><button type="button" id="check-crs">Check answer</button><div id="crs-result" class="status" role="status" aria-live="polite">Choose the correct reprojection operation.</div></section>
+<section class="card" id="save"><div class="eyebrow">Task 6 · 10 minutes</div><h2>Save and reopen a reproducible QGIS project</h2>
+<ol><li>Save a QGIS project as <code>project/L06_Agricultural_Map.qgz</code>.</li><li>Close QGIS and reopen the saved file. Verify that all layers load without missing-source warnings.</li><li>Export a screenshot containing the Layers panel, agricultural map and CRS status; save in <code>outputs</code>.</li><li>Record the data origin, source and exported CRSs, plus one limitation of using synthetic data.</li></ol>
+<div class="actions"><button type="button" data-done="save">I reopened my QGIS project</button></div></section>
+<section class="card" id="quiz"><div class="eyebrow">Formative assessment · 10 minutes</div><h2>Knowledge check: six questions</h2>
+<p>Answer all six multiple-choice questions and get instant explanations. At least <strong>5/6</strong> is required for the browser's practice completion badge. You can retry.</p>
+<form id="quiz-form">
+<fieldset><legend>1. What is the X field for the soil CSV?</legend><label class="option"><input type="radio" name="q1" value="lat"> latitude</label><label class="option"><input type="radio" name="q1" value="lon"> longitude</label><label class="option"><input type="radio" name="q1" value="ph"> soil_ph</label></fieldset>
+<fieldset><legend>2. What CRS do the original latitude/longitude values use?</legend><label class="option"><input type="radio" name="q2" value="utm"> EPSG:32638</label><label class="option"><input type="radio" name="q2" value="wgs"> EPSG:4326</label><label class="option"><input type="radio" name="q2" value="web"> EPSG:3857</label></fieldset>
+<fieldset><legend>3. How many synthetic soil observations should import?</legend><label class="option"><input type="radio" name="q3" value="5"> 5</label><label class="option"><input type="radio" name="q3" value="12"> 12</label><label class="option"><input type="radio" name="q3" value="20"> 20</label></fieldset>
+<fieldset><legend>4. What geometry represents the training irrigation route?</legend><label class="option"><input type="radio" name="q4" value="point"> Point</label><label class="option"><input type="radio" name="q4" value="line"> LineString</label><label class="option"><input type="radio" name="q4" value="polygon"> Polygon</label></fieldset>
+<fieldset><legend>5. How do you create projected EPSG:32638 field geometry?</legend><label class="option"><input type="radio" name="q5" value="rename"> Rename the field layer</label><label class="option"><input type="radio" name="q5" value="export"> Export with a target CRS EPSG:32638</label><label class="option"><input type="radio" name="q5" value="zoom"> Zoom to the field</label></fieldset>
+<fieldset><legend>6. Which conclusion is justified using the synthetic course data?</legend><label class="option"><input type="radio" name="q6" value="rate"> Calculate a real fertilizer prescription</label><label class="option"><input type="radio" name="q6" value="practice"> Demonstrate GIS data preparation and mapping methods</label><label class="option"><input type="radio" name="q6" value="legal"> Certify a surveyed property boundary</label></fieldset>
+<div class="actions"><button type="submit">Grade my answers</button><button type="reset" class="secondary">Clear answers</button></div></form><div id="quiz-result" class="status" role="status" aria-live="polite">Your explanations will appear here after grading.</div></section>
+<section class="card" id="submit"><h2>Assignment submission and academic rubric</h2>
+<p>Submit actual QGIS output files through your lecturer's approved university system. Nothing is uploaded through this practice page.</p>
+<ol><li><code>L06_Agricultural_Map.qgz</code> with its source GIS files.</li><li>Projected field GeoPackage <code>field_utm38.gpkg</code> with EPSG:32638.</li><li>A labeled map screenshot.</li><li>A 100–150-word explanation of source CRS, project CRS, export CRS and uncertainty.</li></ol>
+<table><thead><tr><th>Criterion</th><th>Marks</th></tr></thead><tbody><tr><td>Correct CSV X/Y/CRS</td><td>2</td></tr><tr><td>Vector geometries and counts</td><td>2</td></tr><tr><td>Projected GeoPackage output</td><td>2</td></tr><tr><td>Reproducible QGIS project</td><td>2</td></tr><tr><td>Map and defensible scientific explanation</td><td>2</td></tr><tr><th>Total</th><th>10</th></tr></tbody></table>
+<p class="sm">Further reading: <a href="https://documentation.qgis.org/3.44/en/docs/user_manual/introduction/qgis_gui.html" target="_blank" rel="noopener">official QGIS interface guide</a>, <a href="https://documentation.qgis.org/3.44/en/docs/user_manual/managing_data_source/opening_data.html" target="_blank" rel="noopener">QGIS data source guide</a>, and <a href="https://epsg.io/32638" target="_blank" rel="noopener">EPSG:32638 description</a>.</p></section></div>
+<aside class="side"><div class="card"><h2>My practice progress</h2><p id="progress-text">0 / 7 tasks</p><progress id="progress" value="0" max="7">0 of 7</progress><div id="steps"></div><p class="sm">Saved only in this browser. Not a verified academic record. Manually completed steps are self-reported.</p><div class="actions"><button type="button" class="secondary" id="report">Download my self-report</button><button type="button" class="secondary" id="reset">Reset</button></div><p id="store-note" class="sm" role="status"></p></div>
+<div class="card links"><h2>Jump to a task</h2><p><a href="#interface">1. QGIS interface</a></p><p><a href="#files">2. Download files</a></p><p><a href="#csv">3. CSV import</a></p><p><a href="#vectors">4. Vector layers</a></p><p><a href="#reprojection">5. CRS &amp; export</a></p><p><a href="#save">6. Save project</a></p><p><a href="#quiz">7. Self-marking quiz</a></p><p><a href="interactive-lab.html">Phase 1 Farm GIS lab</a></p></div></aside></div>
+</main><footer>University of Sulaimani · College of Agricultural Engineering Sciences · 2026–2027<br>Externally sourced, credited QGIS screenshots. This page does not run desktop GIS or collect private student information.</footer>
+<script>
+"use strict";
+(function(){
+var KEY="uos-precision-gis-lecture06-progress-v1";
+var names=["interface","download","csv","vector","crs","save","quiz"];
+var descriptions=["Identify 6 QGIS components","Obtain training files","Choose correct CSV import settings","Verify vector layer counts","Choose reprojected export","Reopen saved QGIS project","Pass practice quiz"];
+var state={done:{},spots:{}};
+var meanings={menu:"Menu bar: access Project, Layer, Vector, Raster, Processing and other QGIS commands.",toolbar:"Toolbars: shortcuts for navigation, editing and map operations.",browser:"Browser panel: navigate files, GeoPackages and data connections.",layers:"Layers panel: organize and style loaded spatial layers.",canvas:"Map canvas: shows mapped geometries and imagery.",status:"Status bar: shows scale, coordinates and the current project CRS."};
+function el(id){return document.getElementById(id);}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(state.done));}catch(e){el("store-note").textContent="Browser storage is disabled. Progress will last only until this page closes.";}}
+function update(){var count=names.filter(function(k){return !!state.done[k];}).length;el("progress").value=count;el("progress-text").textContent=count+" / 7 tasks completed";el("steps").replaceChildren();names.forEach(function(k,i){var line=document.createElement("p");line.className="tracked"+(state.done[k]?" done":"");line.textContent=(state.done[k]?"✓ ":"○ ")+descriptions[i];el("steps").appendChild(line);});document.querySelectorAll("[data-done]").forEach(function(b){b.textContent=state.done[b.dataset.done]?"✓ Recorded — click to undo":b.dataset.done==="download"?"I saved all files":b.dataset.done==="vector"?"I checked geometry and feature counts":"I reopened my QGIS project";});}
+function done(k,v){state.done[k]=v!==false;persist();update();}
+try{var a=JSON.parse(localStorage.getItem(KEY)||"{}");names.forEach(function(k){if(a[k]===true)state.done[k]=true;});}catch(e){el("store-note").textContent="Previous progress could not be read.";}update();
+document.querySelectorAll("[data-done]").forEach(function(b){b.addEventListener("click",function(){done(b.dataset.done,!state.done[b.dataset.done]);});});
+document.querySelectorAll("[data-part]").forEach(function(b){b.addEventListener("click",function(){var k=b.dataset.part;state.spots[k]=true;document.querySelectorAll("[data-part]").forEach(function(x){if(x.dataset.part===k)x.setAttribute("aria-pressed","true");});el("interface-feedback").textContent=meanings[k];var n=Object.keys(state.spots).length;el("interface-count").textContent=n+" / 6 interface components explored";if(n===6)done("interface",true);});});
+el("check-csv").addEventListener("click",function(){var x=el("field-x").value,y=el("field-y").value,crs=el("field-crs").value;var errors=[];if(x!=="longitude")errors.push("X must be longitude.");if(y!=="latitude")errors.push("Y must be latitude.");if(crs!=="EPSG:4326")errors.push("Source coordinates are geographic WGS 84 degrees, EPSG:4326.");el("csv-result").textContent=errors.length?errors.join("\n"):"Correct: X=longitude, Y=latitude, source CRS=EPSG:4326. Now verify 12 imported records in the actual QGIS attribute table.";el("csv-result").classList.toggle("bad",!!errors.length);if(!errors.length)done("csv",true);});
+el("check-crs").addEventListener("click",function(){var x=document.querySelector('input[name="crs-quiz"]:checked');var yes=x&&x.value==="export";el("crs-result").classList.toggle("bad",!yes);el("crs-result").textContent=yes?"Correct: exporting with target CRS EPSG:32638 writes new projected coordinates into a GeoPackage.":"Try again: changing a project's display CRS or reassigning source CRS does not rewrite source coordinates.";if(yes)done("crs",true);});
+var keys=["lon","wgs","12","line","export","practice"];
+var reasons=["X is longitude, not latitude.","WGS 84 latitude/longitude is EPSG:4326 in degrees.","The sample CSV has 12 synthetic observations.","An irrigation route is a line.","Exporting into EPSG:32638 creates a projected copy.","Synthetic files can teach the mapping method, not actual field prescriptions."];
+el("quiz-form").addEventListener("submit",function(e){e.preventDefault();var score=0,lines=[];keys.forEach(function(k,i){var selected=document.querySelector('input[name="q'+(i+1)+'"]:checked');var yes=!!selected&&selected.value===k;if(yes)score++;lines.push((yes?"✓ ":"✗ ")+(i+1)+". "+reasons[i]);});var pass=score>=5;el("quiz-result").textContent="Score: "+score+"/6 — "+(pass?"Passed the practice check.":"Review and try again.")+"\n"+lines.join("\n");el("quiz-result").classList.toggle("bad",!pass);done("quiz",pass);});
+el("quiz-form").addEventListener("reset",function(){el("quiz-result").textContent="Answers cleared. Your previous practice-completion record remains until you reset progress.";});
+el("reset").addEventListener("click",function(){if(!confirm("Reset this browser's Lecture 6 progress?"))return;state.done={};state.spots={};document.querySelectorAll(".hotspot").forEach(function(b){b.setAttribute("aria-pressed","false");});el("interface-feedback").textContent="Select a component to see its role.";el("interface-count").textContent="0 / 6 interface components explored";persist();update();});
+el("report").addEventListener("click",function(){var record={course:"Precision Agriculture and GIS — Practical",lab:"Lecture 6 QGIS",timestamp:new Date().toISOString(),completed:state.done,source:"browser only, self-reported",official_grade:false};var blob=new Blob([JSON.stringify(record,null,2)],{type:"application/json"});var uri=URL.createObjectURL(blob),a=document.createElement("a");a.href=uri;a.download="Lecture06_QGIS_self_report.json";document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(uri);},4000);});
+})();
+</script></body></html>
