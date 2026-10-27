@@ -44,3 +44,45 @@ The separate `02 Publish: Interactive GIS Laboratory` GitHub workflow restores
 the standalone app to the `gh-pages` publishing branch after routine Workbench
 builds, because Workbench does not automatically publish arbitrary standalone
 HTML from its source `files/` directory.
+
+## Lecture 6 (Phase 2): Interactive QGIS laboratory
+
+Public student page: [Interactive QGIS Training](files/qgis-training-lab.html).
+Source standalone HTML: files/qgis-training-lab.html on main.
+
+### Teaching sequence (75–90 minutes)
+
+1. 0–10 min: identify menu, toolbar, Browser, Layers, map canvas, status bar.
+2. 10–20 min: download 4 practice datasets and create project folders.
+3. 20–40 min: CSV import with X longitude, Y latitude, EPSG:4326; expect 12 features.
+4. 40–55 min: import 1 polygon, 1 line, 5 observation points from separate GeoJSON.
+5. 55–70 min: project CRS EPSG:32638; export the field to EPSG:32638 GeoPackage.
+6. 70–80 min: save/reopen project including source files and screenshot evidence.
+7. 80–90 min: six-question self-marking formative quiz and limitations discussion.
+
+### Instructor verification and rubric
+
+Check that the downloaded GIS files have 1 polygon, 1 line, and 5 point
+features; soil CSV contains 12 rows. Confirm the exported GeoPackage CRS is
+EPSG:32638 and the project reopens without missing-layer warnings.
+
+10 marks: correct CSV XY/CRS import (2), vector counts (2), projected GeoPackage
+(2), reproducible project (2), map and scientific limitations explanation (2).
+
+All practice features and soil values are SYNTHETIC and cannot support
+research findings or real farm management.
+
+### Browser interactions and accessibility
+
+The annotated real QGIS screenshot has textual alternative controls, so
+students can identify components using a keyboard. Accept offline equivalent
+work where remote images or JavaScript cannot load. The browser's progress
+tracker is self-reported and unverified; it does not capture student identity
+or submit work to Moodle or Google Classroom.
+
+Acceptance test: inspect screenshot source links; check 6 component
+explanations, download URLs, wrong/correct CSV and CRS feedback, quiz grading,
+refresh persistence and practice report download on PC and mobile.
+
+The existing 02 Publish workflow has been extended to republish both
+the farm GIS and QGIS training HTML files on every successful site rebuild.

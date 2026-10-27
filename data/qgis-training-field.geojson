@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "name": "Training field",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "field_id": "SYN_FARM_01",
+        "crop": "wheat_demo",
+        "warning": "SYNTHETIC TRAINING BOUNDARY, NOT SURVEYED"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              45.3635,
+              35.53631
+            ],
+            [
+              45.36485,
+              35.53631
+            ],
+            [
+              45.36485,
+              35.53812
+            ],
+            [
+              45.3635,
+              35.53812
+            ],
+            [
+              45.3635,
+              35.53631
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

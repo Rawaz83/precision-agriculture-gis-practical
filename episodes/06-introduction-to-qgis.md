@@ -55,6 +55,14 @@ All supplied course CSV data are **synthetic educational examples**, not real fi
 
 **Observation task:** For each figure, explain which mapped property is actually observable and which agricultural decision would still require a field measurement.
 
+## Lecture 6 companion: Interactive QGIS practical
+
+**[Launch the interactive QGIS training laboratory](files/qgis-training-lab.html)**.
+Complete its screenshot-based interface activity, source data downloads,
+CSV import check (X longitude, Y latitude, EPSG:4326), GeoJSON layers,
+reprojection concept check, QGIS project verification, and formative quiz.
+Submit actual project and exported GIS files to your lecturer using the
+official university method. Browser progress is not an official grade.
 ## 2. Practical exercise — step by step
 
 ### Watch: Import/export CSV coordinates with QGIS

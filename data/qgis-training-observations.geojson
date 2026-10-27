@@ -1,0 +1,76 @@
+{
+  "type": "FeatureCollection",
+  "name": "Training observations",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "point_id": "OBS_01",
+        "site_note": "SYNTHETIC TRAINING POINT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.36373,
+          35.53659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "point_id": "OBS_02",
+        "site_note": "SYNTHETIC TRAINING POINT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.36414,
+          35.53686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "point_id": "OBS_03",
+        "site_note": "SYNTHETIC TRAINING POINT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.36455,
+          35.53716
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "point_id": "OBS_04",
+        "site_note": "SYNTHETIC TRAINING POINT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.36383,
+          35.53763
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "point_id": "OBS_05",
+        "site_note": "SYNTHETIC TRAINING POINT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.36445,
+          35.53793
+        ]
+      }
+    }
+  ]
+}

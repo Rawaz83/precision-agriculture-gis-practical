@@ -1,0 +1,30 @@
+{
+  "type": "FeatureCollection",
+  "name": "Training irrigation route",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "IRRIGATION_01",
+        "warning": "SYNTHETIC TRAINING LINE"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            45.36364,
+            35.53648
+          ],
+          [
+            45.36385,
+            35.53706
+          ],
+          [
+            45.36448,
+            35.53783
+          ]
+        ]
+      }
+    }
+  ]
+}
