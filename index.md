@@ -85,6 +85,10 @@ quick previews; open the full lessons to see each item in its teaching context.
 
 ## Complete interactive learning pathway
 
+**Lecture 2:** [Try the interactive coordinate-conversion tool](files/interactive-lab.html#coord) before attempting the WGS 84 and UTM practical.
+
+
+
 In addition to the **[Interactive Farm GIS Laboratory](files/interactive-lab.html)** and the **[Lecture 6 Interactive QGIS Training Laboratory](files/qgis-training-lab.html)**, the course now has an **[11-module interactive practical hub](files/course-interactives.html?lecture=3)** covering the other hands-on lessons.
 
 | Week | Interactive activity | Open practice |
