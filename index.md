@@ -11,6 +11,14 @@ site: sandpaper::sandpaper_site
 
 ## Welcome
 
+## Lecture 6 — Interactive QGIS Training Laboratory
+
+**[Open the interactive QGIS training laboratory](files/qgis-training-lab.html)**.
+This is a 75–90-minute practical for students using actual QGIS Desktop.
+It includes two real QGIS screenshots, clickable interface identification,
+synthetic agricultural training files, instant feedback, a six-question
+formative quiz, and browser-only progress saving. It does not run QGIS
+or collect official grades.
 ## Interactive GIS laboratory — start here
 
 **[Open the Interactive Farm GIS Laboratory](files/interactive-lab.html)** — a free browser-based practical activity using synthetic agricultural training data from this course. Students can turn map layers on and off, inspect soil-sampling attributes, draw and export their own field polygon, measure approximate area, experiment with NDVI, and complete a five-question self-marking quiz.
