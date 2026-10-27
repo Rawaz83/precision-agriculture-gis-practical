@@ -83,6 +83,26 @@ quick previews; open the full lessons to see each item in its teaching context.
 
 ---
 
+## Complete interactive learning pathway
+
+In addition to the **[Interactive Farm GIS Laboratory](files/interactive-lab.html)** and the **[Lecture 6 Interactive QGIS Training Laboratory](files/qgis-training-lab.html)**, the course now has an **[11-module interactive practical hub](files/course-interactives.html?lecture=3)** covering the other hands-on lessons.
+
+| Week | Interactive activity | Open practice |
+|---|---|---|
+| 3 | GNSS positioning | [Start Lecture 3 activity](files/course-interactives.html?lecture=3) |
+| 4 | Google Earth polygons | [Start Lecture 4 activity](files/course-interactives.html?lecture=4) |
+| 5 | Google My Maps imports | [Start Lecture 5 activity](files/course-interactives.html?lecture=5) |
+| 7 | Vector layers and area | [Start Lecture 7 activity](files/course-interactives.html?lecture=7) |
+| 8 | Raster cell size | [Start Lecture 8 activity](files/course-interactives.html?lecture=8) |
+| 9 | Soil pH mapping | [Start Lecture 9 activity](files/course-interactives.html?lecture=9) |
+| 10 | Satellite image suitability | [Start Lecture 10 activity](files/course-interactives.html?lecture=10) |
+| 11 | NDVI calculation | [Start Lecture 11 activity](files/course-interactives.html?lecture=11) |
+| 12 | Drone GSD | [Start Lecture 12 activity](files/course-interactives.html?lecture=12) |
+| 13 | Variable-rate quantities | [Start Lecture 13 activity](files/course-interactives.html?lecture=13) |
+| 14 | Final GIS project | [Start Lecture 14 activity](files/course-interactives.html?lecture=14) |
+
+The exercises provide topic-specific calculations, original external imagery and embedded teaching videos, downloadable synthetic GIS datasets, 44 short explanatory quiz questions, and browser-only progress tracking. They are **formative practice**, not verified grades; complete and submit GIS deliverables through the university's approved channels.
+
 ## Learning goals
 
 By the end of the course, students should be able to collect and validate geographic data, create maps in Google Earth and QGIS, work with vector and raster data, interpret crop-related maps cautiously, and submit a reproducible GIS project.

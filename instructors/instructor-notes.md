@@ -86,3 +86,33 @@ refresh persistence and practice report download on PC and mobile.
 
 The existing 02 Publish workflow has been extended to republish both
 the farm GIS and QGIS training HTML files on every successful site rebuild.
+
+## Interactive modules for Lectures 3–5 and 7–14
+
+[Open the course-wide interactive hub](files/course-interactives.html?lecture=3). This provides eleven practical simulations using synthetic GIS datasets. Students access each module using the link from its corresponding lecture. The original two interactive laboratories for introductory farm GIS and desktop QGIS remain available separately.
+
+### Suggested use and formal assessment
+
+In every module: read the full lesson, discuss image/video examples, download synthetic GIS data, complete the software-based practical, use the numerical concept calculator and answer the four-question formative quiz (3/4 pass). The browser records three self-reported milestones: file download, practical completion, and quiz pass. Records are stored in the student's current browser, and students may clear them. **They are not official academic grades or evidence that QGIS work occurred.** Require project files, maps, analysis logs and written discussion through the university's permitted submission route for formal grading.
+
+### Topic-specific interpretation and safeguards
+
+| Lecture | Interactive calculation/check | Limit |
+|---|---|---|
+| 3 | Geodesic point-to-point separation | Does not measure positioning accuracy |
+| 4 | Rectangle area in hectares | Not a property survey |
+| 5 | Longitude/latitude CSV X/Y assignment | Sharing and privacy must be checked separately |
+| 7 | Square metres to hectares and feature geometry | Assumes trustworthy source area |
+| 8 | Raster grid ground footprint | Spatial cell size is not measurement accuracy |
+| 9 | Soil sample threshold count and pH arithmetic mean | No interpolation or soil recommendation |
+| 10 | Illustrative cloud-free pixel count | Not a real satellite scene analysis |
+| 11 | NDVI from red/NIR reflectance | Not a disease or fertilizer diagnosis |
+| 12 | Simplified UAV ground-sampling distance | GSD is not horizontal mapping accuracy |
+| 13 | Area × illustrative application rate | Not an operational rate prescription |
+| 14 | GIS capstone deliverable checklist | Browser cannot verify the submitted data |
+
+### Instructor quality checks
+
+Open all 11 deep links in a desktop browser and confirm that each displays the matching topic, reference image and linked source, embedded video or YouTube fallback, correct download filenames and question set. Check units, negative and zero inputs, mathematical output, feedback for wrong and correct answers, and local progress saving/reloading. For low-bandwidth or accessibility needs, let students complete the equivalent text- and QGIS-based activity offline. External media retains third-party author/license terms as detailed in the lesson captions.
+
+The Workbench publishing workflow now synchronizes all **three** standalone HTML apps into the generated `gh-pages` branch after successful course builds.

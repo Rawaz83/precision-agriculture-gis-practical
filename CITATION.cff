@@ -1,22 +1,21 @@
-# This template CITATION.cff file was generated with cffinit.
-# Visit https://bit.ly/cffinit to replace its contents
-# with information about your lesson.
-# Remember to update this file periodically, 
-# ensuring that the author list and other fields remain accurate.
-
 cff-version: 1.2.0
-title: FIXME
-message: >-
-  Please cite this lesson using the information in this file
-  when you refer to it in publications, and/or if you
-  re-use, adapt, or expand on the content in your own
-  training material.
-type: dataset
+title: "Precision Agriculture & GIS — Practical"
+message: "Please cite this open educational resource when reusing original lessons, teaching software and synthetic course datasets."
+type: software
 authors:
-  - given-names: FIXME
-    family-names: FIXME
+  - given-names: Rawaz
+    family-names: Hama Ali
 abstract: >-
-  FIXME Replace this with a short abstract describing the
-  lesson, e.g. its target audience and main intended
-  learning objectives.
+  An open educational resource for undergraduate agricultural engineering
+  students at the University of Sulaimani, Kurdistan Region of Iraq.
+  It provides 14 lessons, practical GIS activities, browser-based formative
+  quizzes, downloadable synthetic GIS datasets, and instructor guidance.
+repository-code: "https://github.com/Rawaz83/precision-agriculture-gis-practical"
+url: "https://rawaz83.github.io/precision-agriculture-gis-practical/"
 license: CC-BY-4.0
+keywords:
+  - precision agriculture
+  - geographic information systems
+  - agricultural engineering
+  - QGIS
+  - open educational resources
