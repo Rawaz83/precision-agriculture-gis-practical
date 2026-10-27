@@ -1,0 +1,27 @@
+name: "Validate Educational GIS Assets"
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "moodle/**"
+      - "data/regional/**"
+      - "files/**"
+      - "episodes/**"
+      - "index.md"
+      - "scripts/validate_course_assets.py"
+      - ".github/workflows/validate-teaching-assets.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: '35 3 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate XML, CSV, interactive JavaScript and course navigation
+        run: python3 scripts/validate_course_assets.py
